@@ -7,7 +7,7 @@ module.exports = {
     new PugPlugin({
       entry: {
         // define many page templates here
-        index: 'src/views/index.pug', // => dist/index.html
+        index: './src/index/index.pug', // => dist/index.html
       },
       js: {
         // JS output filename
