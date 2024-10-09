@@ -1,5 +1,6 @@
 const path = require('path');
 const PugPlugin = require('pug-plugin');
+const StylelintPlugin = require('stylelint-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -18,6 +19,7 @@ module.exports = {
         filename: 'css/[name].[contenthash:8].css',
       },
     }),
+    new StylelintPlugin(),
   ],
   module: {
     rules: [
