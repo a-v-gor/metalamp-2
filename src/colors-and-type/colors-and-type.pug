@@ -1,0 +1,26 @@
+-
+  const arrColors = [
+    {name: 'Dark Shade 100%', description:'#1F2041'},
+    {name: 'Dark Shade 75%', description:'#1F2041'},
+    {name: 'Dark Shade 50%', description:'#1F2041'},
+    {name: 'Dark Shade 25%', description:'#1F2041'},
+    {name: 'Dark Shade 5%', description:'#1F2041'},
+    {name: 'Purple', description:'#BC9CFF'},
+    {name: 'Green', description:'#6FCF97'},
+  ]
+
+mixin color(colorItem)
+  li.colors__color-block
+    .colors__color
+    .colors__description-wrapper
+      .colors__name #{colorItem.name}
+      .colors__description #{colorItem.description}
+
+include ../block-wrapper/block-wrapper
+  h2.title Colors and type
+  h3.title Colors
+  ul.colors
+    each color in arrColors
+      +color(color)
+    
+      
