@@ -7,5 +7,8 @@
     "stylelint-config-standard-scss",
     "stylelint-config-htmlacademy",
     "stylelint-order-htmlacademy"
-  ]
+  ],
+  "rules": {
+    "@stylistic/string-quotes": "single"
+  }
 }

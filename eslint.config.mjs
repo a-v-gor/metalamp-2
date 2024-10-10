@@ -7,5 +7,10 @@ export default [
   {languageOptions: { globals: globals.browser }},
   pluginJs.configs.recommended,
   eslintConfigPrettier,
-  {ignores: ["**/*.config.mjs"]},
+  {ignores: ["**/*.config.mjs", "./node_modules"]},
+  {env: {
+    "es6": true,
+    "browser": true,
+    "node": true
+  }},
 ];

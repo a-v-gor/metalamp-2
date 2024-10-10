@@ -2,6 +2,7 @@
   "name": "metalamp-2",
   "version": "1.0.0",
   "description": "Проект создан в рамках обучения в MetaLamp. Настоящий репозиторий создан для выполнения задания №2 \"Практика верстки\".",
+  "main": "./src/index/index.js",
   "scripts": {
     "build": "webpack",
     "serve": "npx webpack serve",

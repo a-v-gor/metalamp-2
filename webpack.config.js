@@ -34,6 +34,14 @@ module.exports = {
           filename: 'img/[name].[hash:8][ext][query]',
         },
       },
+      {
+        // To use fonts on pug files:
+        test: /\.(woff|woff2|eot|ttf|otf|svg)$/i,
+        type: 'asset/resource',
+        generator: {
+          filename: 'assets/fonts/[name][ext][query]'
+        }
+      }
     ],
   },
   resolve: {
