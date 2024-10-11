@@ -1,0 +1,17 @@
+-
+  const arrTypes = [
+    {name: 'H1', description:'This one is the sub-section or widget title'},
+    {name: 'H2', description:'Next one is the item title inside widgets'},
+    {name: 'H3', description:'This is a label or CTA text'},
+    {name: 'Body', description:'This is the body text which is used for most of the design, like paragraphs, lists, etc.'}
+  ]
+
+mixin type(typeItem)
+  li.types__type-block
+    .types__name #{typeItem.name}
+    .types__description #{typeItem.description}
+
+h3.title Types
+ul.types
+  each item in arrTypes
+    +type(item)

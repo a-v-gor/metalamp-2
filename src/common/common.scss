@@ -20,6 +20,23 @@ html {
   color: $color-dark-shade-75;
 }
 
+body {
+  margin: 0;
+}
+
 .title {
   display: none;
+}
+
+.screen-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 14.5rem 15rem;
+  background-image: url('./img/logo-grey.svg');
+  background-repeat: no-repeat;
+  background-position: 3rem 3rem;
+}
+
+.block-wrapper {
+  max-width: 39%;
 }

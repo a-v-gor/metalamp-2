@@ -1,0 +1,44 @@
+.types {
+  display: flex;
+  margin-block: 0;
+  flex-direction: column;
+  padding: 0;
+  row-gap: 5.1rem;
+
+  &__type-block {
+    display: flex;
+    column-gap: 3rem;
+
+    & > .types__description {
+      font-weight: 700;
+      color: $color-dark-shade-100;
+    }
+
+    &:nth-child(1) {
+      font-size: 2.4em;
+    }
+
+    &:nth-child(2) {
+      font-size: 1.9em;
+    }
+
+    &:nth-child(3) {
+      font-size: 1.2em;
+    }
+
+    &:nth-child(4) {
+      font-size: 1.4em;
+
+      & > .types__description {
+        font-weight: 400;
+        color: $color-dark-shade-75;
+      }
+    }
+  }
+
+  &__name {
+    width: 3.7rem;
+    text-align: end;
+    color: $color-dark-shade-25;
+  }
+}
