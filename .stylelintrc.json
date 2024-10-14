@@ -9,6 +9,8 @@
     "stylelint-order-htmlacademy"
   ],
   "rules": {
-    "@stylistic/string-quotes": "single"
+    "@stylistic/string-quotes": "single",
+    "at-rule-no-unknown": null,
+    "scss/at-rule-no-unknown": true
   }
 }

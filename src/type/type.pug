@@ -7,11 +7,11 @@
   ]
 
 mixin type(typeItem)
-  li.types__type-block
-    .types__name #{typeItem.name}
-    .types__description #{typeItem.description}
+  li.type__type-block
+    div(class!="type__name type__" + (typeItem.name).toLowerCase()) #{typeItem.name}
+    div(class!="type__description type__" + (typeItem.name).toLowerCase()) #{typeItem.description}
 
 h3.title Types
-ul.types
+ul.type
   each item in arrTypes
     +type(item)
