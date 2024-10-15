@@ -10,6 +10,19 @@
   padding: 0;
   row-gap: 5.1rem;
 
+  &__description {
+    max-width: 15.7em;
+
+    &.type__h2 {
+      max-width: 17em;
+    }
+
+    &.type__body {
+      max-width: 20em;
+      line-height: 1.7;
+    }
+  }
+
   &__h1 {
     @extend %title;
 
