@@ -1,8 +1,3 @@
-%input-text {
-  font-size: 1.4em;
-  color: $color-dark-shade-25;
-}
-
 .form-elements {
   &__form {
     display: flex;
@@ -10,9 +5,34 @@
     row-gap: 2rem;
   }
 
+  &__input {
+    grid-area: 2 / 1 / 3 / 3;
+    width: 32rem;
+    padding: 1.3rem 1.5rem;
+    font-size: 1.4em;
+    font-family: 'Montserrat', 'Arial', sans-serif;
+    border: 0.1rem solid $color-dark-shade-25;
+    border-radius: 0.4rem;
+    outline: none;
+
+    &::placeholder {
+      color: $color-dark-shade-25;
+    }
+
+    &:focus,
+    &:hover,
+    &:active {
+      border-color: $color-dark-shade-50;
+
+      &::placeholder {
+        color: $color-dark-shade-75;
+      }
+    }
+  }
+
   &__input-wrapper {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, auto);
     grid-template-rows: repeat(2, auto);
     row-gap: 0.5rem;
   }
@@ -33,28 +53,23 @@
     text-transform: uppercase;
   }
 
-  &__input {
-    @extend %input-text;
+  &__input-select {
+    background-image: url('./img/expand_more.svg');
+    background-repeat: no-repeat;
+    background-position: right 1.5rem center;
+  }
 
-    grid-area: 2 / 1 / 3 / 3;
-    width: 32rem;
-    padding: 1.3rem 1.5rem;
-    border: 0.1rem solid $color-dark-shade-25;
-    border-radius: 0.4rem;
-    outline: none;
+  &__date-group {
+    display: flex;
+    column-gap: 2rem;
+  }
 
-    &::placeholder {
-      @extend %input-text;
-    }
+  &__input-date {
+    width: 15rem;
+    text-transform: uppercase;
 
-    &:focus,
-    &:hover,
-    &:active {
-      border-color: $color-dark-shade-50;
-
-      &::placeholder {
-        color: $color-dark-shade-75;
-      }
+    &:hover {
+      cursor: pointer;
     }
   }
 }

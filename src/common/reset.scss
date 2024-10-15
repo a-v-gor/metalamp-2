@@ -17,10 +17,11 @@ body {
   margin: 0;
 }
 
+select,
 progress[value] {
   appearance: none;
 }
 
-select {
-  appearance: none;
+input[type='date']::-webkit-calendar-picker-indicator {
+  opacity: 0;
 }
