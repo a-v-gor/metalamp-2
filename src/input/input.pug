@@ -1,0 +1,6 @@
+mixin input(inputData)
+  .input__wrapper
+    if inputData.condition.length
+      .input__condition= inputData.condition
+    label.input__label(for!= inputData.id)= inputData.text
+    input.input__input(placeholder = inputData.placeholder, id = inputData.id)&attributes(attributes)
