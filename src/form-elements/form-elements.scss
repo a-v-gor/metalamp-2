@@ -11,7 +11,7 @@
     row-gap: 2rem;
   }
 
-  &__input {
+  &__element-input {
     order: 2;
     width: 100%;
     padding: 1.3rem 1.5rem;
@@ -36,15 +36,14 @@
     }
   }
 
-  &__input-wrapper {
+  &__element-wrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     row-gap: 0.5rem;
-    width: 32rem;
   }
 
-  &__input-condition {
+  &__element-condition {
     order: 1;
     font-size: 1.2em;
     text-align: end;
@@ -52,7 +51,7 @@
     text-transform: uppercase;
   }
 
-  &__input-label {
+  &__element-label {
     order: 0;
     font-weight: 700;
     font-size: 1.2em;
@@ -60,7 +59,7 @@
     text-transform: uppercase;
   }
 
-  &__input-select {
+  &__element-dropdown {
     background-image: url('./img/expand_more.svg');
     background-repeat: no-repeat;
     background-position: right 1.5rem center;

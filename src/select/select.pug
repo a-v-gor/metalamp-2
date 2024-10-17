@@ -1,0 +1,8 @@
+mixin option(optionData)
+  option&attributes(attributes)= optionData.text
+
+mixin select(selectData)
+  .form-elements__element-wrapper
+    label.form-elements__element-label(for!= selectData.id)= selectData.label
+    select.form-elements__element-input.form-elements__element-dropdown(id = selectData.id)
+      +option({text: selectData.optionText})(disabled selected value="")
