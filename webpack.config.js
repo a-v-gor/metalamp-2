@@ -19,7 +19,7 @@ module.exports = {
         filename: 'css/[name].[contenthash:8].css',
       },
     }),
-    new StylelintPlugin(),
+    new StylelintPlugin()
   ],
   module: {
     rules: [
@@ -36,7 +36,7 @@ module.exports = {
       },
       {
         // To use fonts on pug files:
-        test: /\.(woff|woff2|eot|ttf|otf|svg)$/i,
+        test: /\.(woff|woff2|eot|ttf|otf)$/i,
         type: 'asset/resource',
         generator: {
           filename: 'assets/fonts/[name][ext][query]'
@@ -48,5 +48,18 @@ module.exports = {
     alias: {
     "@images": path.resolve(__dirname, "./src/assets/images/"),
    }
- }
+ },
+  devServer: {
+    static: {
+      directory: path.join(__dirname, 'dist'),
+    },
+    watchFiles: {
+      paths: ['src/**/*.*'], 
+        options: {
+          usePolling: true,
+        },
+    },
+    port: 8080,
+  },
+  devtool: 'source-map'
 };
