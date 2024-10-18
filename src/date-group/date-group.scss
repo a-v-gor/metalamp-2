@@ -1,0 +1,14 @@
+.date-group {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 2rem;
+
+  &__input-date {
+    width: 15rem;
+    text-transform: uppercase;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

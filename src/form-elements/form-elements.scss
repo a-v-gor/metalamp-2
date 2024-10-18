@@ -1,4 +1,12 @@
 .form-elements {
+  &__wide-element {
+    width: 32rem;
+  }
+
+  &__mid-element {
+    width: 26.6rem;
+  }
+
   &__form {
     display: flex;
     flex-direction: column;
@@ -63,23 +71,5 @@
     background-image: url('./img/expand_more.svg');
     background-repeat: no-repeat;
     background-position: right 1.5rem center;
-  }
-
-  &__date-group {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  &__date-wrapper {
-    width: 15rem;
-  }
-
-  &__input-date {
-    width: 15rem;
-    text-transform: uppercase;
-
-    &:hover {
-      cursor: pointer;
-    }
   }
 }
