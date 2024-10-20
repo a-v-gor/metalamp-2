@@ -1,0 +1,12 @@
+.form-subscribe-email {
+  position: relative;
+
+  &__input-submit {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: block;
+    width: 4.4rem;
+    height: 4.4rem;
+  }
+}

@@ -72,4 +72,10 @@
     background-repeat: no-repeat;
     background-position: right 1.5rem center;
   }
+
+  &__arrow-submit {
+    background-image: url('./img/arrow_forward.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
 }
