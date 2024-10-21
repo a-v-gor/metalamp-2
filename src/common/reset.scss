@@ -29,3 +29,12 @@ input[type='date']::-webkit-calendar-picker-indicator {
 input {
   background-color: initial;
 }
+
+@supports (-webkit-appearance: none) or (-moz-appearance: none) {
+  input[type='checkbox'],
+  input[type='radio'] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+}

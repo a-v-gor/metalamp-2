@@ -11,6 +11,7 @@
   "rules": {
     "@stylistic/string-quotes": "single",
     "at-rule-no-unknown": null,
+    "property-no-vendor-prefix": null,
     "scss/at-rule-no-unknown": true
   }
 }
