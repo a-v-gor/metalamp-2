@@ -3,4 +3,4 @@ mixin input(inputData)
     if inputData.condition
       .form-elements__element-condition= inputData.condition
     label.form-elements__element-label.input-textfilds__element-label(for!= inputData.id)= inputData.label
-    input.form-elements__element-input(placeholder = inputData.placeholder, id = inputData.id, type = inputData.type,  pattern=inputData.pattern)&attributes(attributes)
+    input.form-elements__element-input(placeholder = inputData.placeholder, id = inputData.id, type = inputData.type,  pattern=inputData.pattern title=inputData.title)&attributes(attributes)

@@ -8,7 +8,7 @@ include ../select/select
       +input({condition: 'Default', id: 'email', label: 'Text Field', placeholder: 'Email'})
       +input({condition: 'Hover / Focus', id: 'text', label: 'Text Field', placeholder: 'This is pretty awesome'})(autofocus)
       +select({id: 'select', label: 'Dropdown', optionText: 'Сколько гостей'})
-      +input({id: 'input-masked', label: 'masked text field', placeholder: 'ДД.ММ.ГГГГ', pattern: '(0[1-9]|[12][0-9]|3[01]).(0[1-9]|1[012]).202[4-6]'})
+      +input({id: 'input-masked', label: 'masked text field', placeholder: 'ДД.ММ.ГГГГ', pattern: '(0[1-9]|[12][0-9]|3[01]).(0[1-9]|1[012]).202[4-6]', title: 'Введите дату в формате ДД.ММ.ГГГГ'})
     include ../date-group/date-group
     include ../filter-date/filter-date
     include ../form-subscribe-email/form-subscribe-email
