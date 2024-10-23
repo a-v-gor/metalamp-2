@@ -1,8 +1,8 @@
-fieldset.form-elements__element-wrapper.radio-buttons
-  legend.form-elements__element-label Radio Buttons
-  .radio-buttons__input-wrapper
-    input(type='radio').radio-buttons__input#gender-man
-    label(for='gender-man' checked).radio-buttons__input-label Мужчина
-  .radio-buttons__input-wrapper
-    input(type='radio').radio-buttons__input#gender-woman
-    label(for='gender-woman').radio-buttons__input-label Женщина
+fieldset.form-elements__element-wrapper.input-buttons.radio-buttons
+  legend.form-elements__element-label.input-buttons__legend Radio Buttons
+  .input-buttons__input-wrapper
+    input(type='radio' name='radio' checked).input-buttons__input.radio-buttons__input#gender-man
+    label(for='gender-man').input-buttons__input-label Мужчина
+  .input-buttons__input-wrapper
+    input(type='radio' name='radio').input-buttons__input.radio-buttons__input#gender-woman
+    label(for='gender-woman').input-buttons__input-label Женщина

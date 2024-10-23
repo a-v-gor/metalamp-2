@@ -2,5 +2,5 @@ mixin input(inputData)
   .form-elements__element-wrapper.form-elements__wide-element
     if inputData.condition
       .form-elements__element-condition= inputData.condition
-    label.form-elements__element-label(for!= inputData.id)= inputData.label
+    label.form-elements__element-label.input-textfilds__element-label(for!= inputData.id)= inputData.label
     input.form-elements__element-input(placeholder = inputData.placeholder, id = inputData.id, type = inputData.type,  pattern=inputData.pattern)&attributes(attributes)
