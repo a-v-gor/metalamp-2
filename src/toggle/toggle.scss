@@ -1,0 +1,25 @@
+.toggle {
+  &__input {
+    justify-content: start;
+    width: 4rem;
+    height: 2rem;
+    padding: 0.4rem;
+    border-radius: 1rem;
+
+    & + .input-buttons__input-label {
+      color: $color-dark-shade-75;
+    }
+
+    &::after {
+      content: '';
+      background: $color-dark-shade-25;
+      transform: translateX(0);
+    }
+
+    &:checked {
+      &::after {
+        transform: translateX(1.8rem);
+      }
+    }
+  }
+}

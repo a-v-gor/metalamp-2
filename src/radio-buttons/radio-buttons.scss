@@ -4,6 +4,12 @@
   &__input {
     border-radius: 50%;
 
+    &:checked {
+      &::after {
+        background: linear-gradient(to bottom, $color-purple, $color-blue);
+      }
+    }
+
     &:checked + .input-buttons__input-label {
       color: $color-dark-shade-75;
     }
@@ -12,7 +18,6 @@
       position: absolute;
       width: 1.2rem;
       height: 1.2rem;
-      background: linear-gradient(to bottom, $color-purple, $color-blue);
       border-radius: 50%;
     }
   }
