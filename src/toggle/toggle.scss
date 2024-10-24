@@ -1,4 +1,6 @@
 .toggle {
+  flex-direction: column;
+
   &__input {
     justify-content: start;
     width: 4rem;
