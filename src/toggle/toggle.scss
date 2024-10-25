@@ -14,12 +14,17 @@
 
     &::after {
       content: '';
+      position: absolute;
+      width: 1.2rem;
+      height: 1.2rem;
       background: $color-dark-shade-25;
+      border-radius: 50%;
       transform: translateX(0);
     }
 
     &:checked {
       &::after {
+        background: linear-gradient(to bottom, $color-purple, $color-blue);
         transform: translateX(1.8rem);
       }
     }
