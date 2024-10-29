@@ -4,7 +4,7 @@ include ../select/select
 .screen-wrapper
   h2.title Form elements
   .form-elements__group-elements
-    form.form-elements__form
+    form.form
       +input({condition: 'Default', id: 'email', label: 'Text Field', placeholder: 'Email'})
       +input({condition: 'Hover / Focus', id: 'text', label: 'Text Field', placeholder: 'This is pretty awesome'})(autofocus)
       +select({id: 'select', label: 'Dropdown', optionText: 'Сколько гостей'})

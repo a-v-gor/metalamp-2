@@ -1,6 +1,6 @@
 mixin input(inputData)
-  .form-elements__element-wrapper.form-elements__wide-element
+  .form-elements__element-wrapper.element__wrapper.element__wide
     if inputData.condition
       .form-elements__element-condition= inputData.condition
-    label.form-elements__element-label.input-textfilds__element-label(for!= inputData.id)= inputData.label
-    input.form-elements__element-input(placeholder = inputData.placeholder, id = inputData.id, type = inputData.type,  pattern=inputData.pattern title=inputData.title)&attributes(attributes)
+    label.element__label(for!= inputData.id)= inputData.label
+    input.element__input(placeholder = inputData.placeholder, id = inputData.id, type = inputData.type,  pattern=inputData.pattern title=inputData.title)&attributes(attributes)

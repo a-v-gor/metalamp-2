@@ -1,0 +1,54 @@
+.element {
+  &__wrapper {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__wide {
+    width: 32rem;
+  }
+
+  &__label {
+    padding-bottom: 0.5rem;
+    font-weight: 700;
+    font-size: 1.2em;
+    color: $color-dark-shade-100;
+    text-transform: uppercase;
+  }
+
+  &__input {
+    order: 2;
+    width: 100%;
+    padding: 1.3rem 1.5rem;
+    font-size: 1.4em;
+    font-family: 'Montserrat', 'Arial', sans-serif;
+    border: 0.1rem solid $color-dark-shade-25;
+    border-radius: 0.4rem;
+    outline: none;
+
+    &::placeholder {
+      color: $color-dark-shade-25;
+    }
+
+    &:focus,
+    &:hover,
+    &:active {
+      border-color: $color-dark-shade-50;
+
+      &::placeholder {
+        color: $color-dark-shade-75;
+      }
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 4.4rem;
+    height: 4.4rem;
+    padding: 1rem;
+    color: $color-dark-shade-50;
+  }
+}

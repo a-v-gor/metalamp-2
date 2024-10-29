@@ -2,7 +2,8 @@ mixin option(optionData)
   option&attributes(attributes)= optionData.text
 
 mixin select(selectData)
-  .form-elements__element-wrapper.form-elements__wide-element
-    label.form-elements__element-label.input-textfilds__element-label(for!= selectData.id)= selectData.label
-    select.form-elements__element-input.form-elements__element-dropdown(id = selectData.id)
+  .element__wrapper.element__wide
+    label.element__label(for!= selectData.id)= selectData.label
+    select.element__input(id = selectData.id)
       +option({text: selectData.optionText})(disabled selected value="")
+    i.material-icons.element__icon expand_more

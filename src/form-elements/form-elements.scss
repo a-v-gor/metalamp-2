@@ -1,6 +1,6 @@
 .form-elements {
-  &__wide-element {
-    width: 32rem;
+  &__element-wrapper {
+    justify-content: space-between;
   }
 
   &__mid-element {
@@ -11,47 +11,10 @@
     width: 22.2rem;
   }
 
-  &__form {
-    display: flex;
-    flex-direction: column;
-    row-gap: 2rem;
-  }
-
   &__group-elements {
     display: flex;
     flex-direction: column;
     row-gap: 4rem;
-  }
-
-  &__element-input {
-    order: 2;
-    width: 100%;
-    padding: 1.3rem 1.5rem;
-    font-size: 1.4em;
-    font-family: 'Montserrat', 'Arial', sans-serif;
-    border: 0.1rem solid $color-dark-shade-25;
-    border-radius: 0.4rem;
-    outline: none;
-
-    &::placeholder {
-      color: $color-dark-shade-25;
-    }
-
-    &:focus,
-    &:hover,
-    &:active {
-      border-color: $color-dark-shade-50;
-
-      &::placeholder {
-        color: $color-dark-shade-75;
-      }
-    }
-  }
-
-  &__element-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
   }
 
   &__element-condition {
@@ -59,14 +22,6 @@
     font-size: 1.2em;
     text-align: end;
     color: $color-dark-shade-50;
-    text-transform: uppercase;
-  }
-
-  &__element-label {
-    order: 0;
-    font-weight: 700;
-    font-size: 1.2em;
-    color: $color-dark-shade-100;
     text-transform: uppercase;
   }
 
