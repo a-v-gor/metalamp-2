@@ -6,6 +6,15 @@
   &__input-date {
     width: 15rem;
     text-transform: uppercase;
+    letter-spacing: -0.03em;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .element__icon {
+    z-index: 1;
 
     &:hover {
       cursor: pointer;

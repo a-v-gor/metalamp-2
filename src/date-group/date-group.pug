@@ -1,7 +1,9 @@
-.form-elements__date-group.date-group.form-elements__wide-element
-  .form-elements__element-wrapper
-    label.form-elements__element-label.input-textfilds__element-label(for="date-dropdown-start") date Dropdown
-    input(type="date").form-elements__element-input.form-elements__element-dropdown.date-group__input-date#date-dropdown-start
-  .form-elements__element-wrapper
-    label.form-elements__element-label.input-textfilds__element-label(for="date-dropdown-end") date Dropdown
-    input(type="date" value="2019-08-19").form-elements__element-input.form-elements__element-dropdown.date-group__input-date#date-dropdown-end
+.date-group.element__width-wide
+  .element__wrapper
+    label.element__label(for="date-dropdown-start") date Dropdown
+    input(type="date").element__input.date-group__input-date#date-dropdown-start
+    i.material-icons.element__icon expand_more
+  .element__wrapper
+    label.element__label(for="date-dropdown-end") date Dropdown
+    input(type="date" value="2019-08-19").element__input.date-group__input-date#date-dropdown-end
+    i.material-icons.element__icon expand_more

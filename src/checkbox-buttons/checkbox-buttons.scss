@@ -1,5 +1,5 @@
 .checkbox-buttons {
-  flex-direction: column;
+  row-gap: 1rem;
 
   &__input {
     border-radius: 0.4rem;
@@ -10,7 +10,9 @@
       border: 0.2rem solid transparent;
       border-top: 0;
       border-left: 0;
-      border-image: linear-gradient(to left bottom, $color-purple, $color-blue);
+
+      @include gradient($property: border-image, $direction: left bottom);
+
       border-image-slice: 1;
       transform: rotate(45deg);
     }

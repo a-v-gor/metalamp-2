@@ -5,7 +5,15 @@
     flex-wrap: wrap;
   }
 
-  &__wide {
+  &__width-middle {
+    width: 26.6rem;
+  }
+
+  &__width-tight {
+    width: 22.2rem;
+  }
+
+  &__width-wide {
     width: 32rem;
   }
 
@@ -20,9 +28,11 @@
   &__input {
     order: 2;
     width: 100%;
+    height: 4.4rem;
     padding: 1.3rem 1.5rem;
     font-size: 1.4em;
     font-family: 'Montserrat', 'Arial', sans-serif;
+    background: transparent;
     border: 0.1rem solid $color-dark-shade-25;
     border-radius: 0.4rem;
     outline: none;
@@ -46,6 +56,7 @@
     position: absolute;
     right: 0;
     bottom: 0;
+    z-index: -1;
     width: 4.4rem;
     height: 4.4rem;
     padding: 1rem;

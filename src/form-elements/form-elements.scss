@@ -3,14 +3,6 @@
     justify-content: space-between;
   }
 
-  &__mid-element {
-    width: 26.6rem;
-  }
-
-  &__tight-element {
-    width: 22.2rem;
-  }
-
   &__group-elements {
     display: flex;
     flex-direction: column;
@@ -23,18 +15,6 @@
     text-align: end;
     color: $color-dark-shade-50;
     text-transform: uppercase;
-  }
-
-  &__element-dropdown {
-    background-image: url('./img/expand_more.svg');
-    background-repeat: no-repeat;
-    background-position: right 1.5rem center;
-  }
-
-  &__arrow-submit {
-    background-image: url('./img/arrow_forward.svg');
-    background-repeat: no-repeat;
-    background-position: center center;
   }
 
   &__input-buttons {
