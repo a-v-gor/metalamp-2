@@ -1,12 +1,12 @@
 .radio-buttons {
-  flex-direction: row;
+  column-gap: 2rem;
 
   &__input {
     border-radius: 50%;
 
     &:checked {
       &::after {
-        background: linear-gradient(to bottom, $color-purple, $color-blue);
+        @include gradient($property: background, $direction: bottom);
       }
     }
 
