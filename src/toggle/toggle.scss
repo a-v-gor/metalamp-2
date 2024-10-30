@@ -1,5 +1,6 @@
 .toggle {
   flex-direction: column;
+  row-gap: 1rem;
 
   &__input {
     justify-content: start;
@@ -24,7 +25,8 @@
 
     &:checked {
       &::after {
-        background: linear-gradient(to bottom, $color-purple, $color-blue);
+        @include gradient($property: background, $direction: bottom);
+
         transform: translateX(1.8rem);
       }
     }
