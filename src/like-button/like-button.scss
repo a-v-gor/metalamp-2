@@ -15,7 +15,8 @@
 
     &:checked {
       & ~ .like-button__icon_checked {
-        background: linear-gradient(to bottom, $color-purple, $color-blue);
+        @include gradient($property: background, $direction: bottom);
+
         background-clip: text;
         opacity: 1;
         -webkit-text-fill-color: transparent;
