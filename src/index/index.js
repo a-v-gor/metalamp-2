@@ -1,1 +1,3 @@
-console.log('pug ok');
+import updateRatingButton from "../rate-button/rate-button";
+
+updateRatingButton();

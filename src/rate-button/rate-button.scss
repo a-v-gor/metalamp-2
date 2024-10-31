@@ -1,0 +1,9 @@
+.rate-button {
+  &__label::after {
+    content: 'star_border';
+  }
+
+  &__label_active::after {
+    content: 'star';
+  }
+}
