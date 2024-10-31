@@ -1,12 +1,6 @@
-fieldset.element__wrapper.input-buttons__input-wrapper
-  legend.element__label.input-buttons__legend like button
+mixin like-button(buttonData)
   .input-buttons__input-wrapper.like-button__input-wrapper
-    input(type='checkbox').input-buttons__input.like-button__input#like
+    input(type='checkbox' checked=buttonData.checked id=buttonData.id).input-buttons__input.like-button__input
     i.like-button__icon.like-button__icon_unchecked.material-icons favorite_border
     i.like-button__icon.like-button__icon_checked.material-icons favorite
-    label(for='like').like-button__input-label 2
-  .input-buttons__input-wrapper.like-button__input-wrapper
-    input(type='checkbox' checked).input-buttons__input.like-button__input#like-checked
-    i.like-button__icon.like-button__icon_unchecked.material-icons favorite_border
-    i.like-button__icon.like-button__icon_checked.material-icons favorite
-    label(for='like-checked').like-button__input-label 12
+    label(for=buttonData.id).like-button__input-label= buttonData.value

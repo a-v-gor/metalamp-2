@@ -1,6 +1,7 @@
 include ../input/input
 include ../select/select
 include ../toggle/toggle
+include ../like-button/like-button
 
 .screen-wrapper
   h2.title Form elements
@@ -22,6 +23,10 @@ include ../toggle/toggle
       legend.element__label.input-buttons__legend Toggle
       +toggle({checked: true, id: 'get-spec'})
       +toggle({checked: false, id: 'get-spec-test'})
-      include ../toggle/toggle
-    include ../like-button/like-button
-    include ../rate-button/rate-button
+    fieldset.element__wrapper.input-buttons__input-wrapper
+      legend.element__label.input-buttons__legend like button
+      +like-button({checked: false, id: 'like', value: '2'})
+      +like-button({checked: true, id: 'like-test', value: '12'})
+    fieldset.element__wrapper.input-buttons__input-wrapper
+      legend.element__label.input-buttons__legend rate button
+      include ../rate-button/rate-button
