@@ -1,8 +1,4 @@
-fieldset.element__wrapper.toggle
-  legend.element__label.input-buttons__legend Toggle
+mixin toggle(toggleData)
   .input-buttons__input-wrapper
-    input(type='checkbox' checked).input-buttons__input.toggle__input#get-spec
-    label(for='get-spec').input-buttons__input-label Получать спецпредложения
-  .input-buttons__input-wrapper
-    input(type='checkbox').input-buttons__input.toggle__input#get-spec-test
-    label(for='get-spec-test').input-buttons__input-label Получать спецпредложения
+    input(type='checkbox' checked=toggleData.checked id=toggleData.id).input-buttons__input.toggle__input
+    label(for=toggleData.id).input-buttons__input-label Получать спецпредложения

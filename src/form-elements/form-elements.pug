@@ -1,5 +1,6 @@
 include ../input/input
 include ../select/select
+include ../toggle/toggle
 
 .screen-wrapper
   h2.title Form elements
@@ -14,7 +15,13 @@ include ../select/select
     include ../form-subscribe-email/form-subscribe-email
   .form-elements__group-elements
     include ../checkbox-buttons/checkbox-buttons
-    include ../radio-buttons/radio-buttons
-    include ../toggle/toggle
+    fieldset.element__wrapper.radio-buttons
+      legend.element__label.input-buttons__legend Radio Buttons
+      include ../radio-buttons/radio-buttons
+    fieldset.element__wrapper.toggle
+      legend.element__label.input-buttons__legend Toggle
+      +toggle({checked: true, id: 'get-spec'})
+      +toggle({checked: false, id: 'get-spec-test'})
+      include ../toggle/toggle
     include ../like-button/like-button
     include ../rate-button/rate-button
