@@ -1,3 +1,4 @@
 import updateRatingButton from "../rate-button/rate-button";
 
-updateRatingButton();
+updateRatingButton('rate-button');
+updateRatingButton('rate-button-test');

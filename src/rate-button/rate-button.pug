@@ -1,11 +1,6 @@
-form(action="#" id='rate-button').rate-button__form
-  input#st-1(type="radio", value="rate-1" name="rate").rate-button__input
-  label(for="st-1").material-icons.rate-button__label.rate-button__label_active
-  input#st-2(type="radio", value="rate-2" name="rate").rate-button__input
-  label(for="st-2").material-icons.rate-button__label.rate-button__label_active
-  input#st-3(type="radio", value="rate-3" name="rate").rate-button__input
-  label(for="st-3").material-icons.rate-button__label.rate-button__label_active
-  input#st-4(type="radio", value="rate-4" name="rate" checked).rate-button__input
-  label(for="st-4").material-icons.rate-button__label.rate-button__label_active
-  input#st-5(type="radio", value="rate-5" name="rate").rate-button__input
-  label(for="st-5").material-icons.rate-button__label
+mixin rate-button(data)
+  form(action="#" id=data.id).rate-button__form
+   - for (let i = 1; i < 6; i += 1)
+      - const checked = data.checked >= i
+      input(type="radio", value="rate-"+i name="rate" id=data.id+"-st-"+i).rate-button__input
+      label(for=data.id+"-st-"+i class=checked?'rate-button__label_active':'').material-icons.rate-button__label

@@ -2,6 +2,7 @@ include ../input/input
 include ../select/select
 include ../toggle/toggle
 include ../like-button/like-button
+include ../rate-button/rate-button
 
 .screen-wrapper
   h2.title Form elements
@@ -29,4 +30,5 @@ include ../like-button/like-button
       +like-button({checked: true, id: 'like-test', value: '12'})
     fieldset.element__wrapper.input-buttons__input-wrapper
       legend.element__label.input-buttons__legend rate button
-      include ../rate-button/rate-button
+      +rate-button({id: 'rate-button', checked: 4})
+      +rate-button({id: 'rate-button-test', checked: 5})

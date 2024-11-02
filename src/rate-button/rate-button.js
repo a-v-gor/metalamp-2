@@ -1,5 +1,5 @@
-export default function updateRatingButton() {
-  const rateButtonForm = document.getElementById('rate-button');
+export default function updateRatingButton(formID) {
+  const rateButtonForm = document.getElementById(formID);
 
   const formLabels = rateButtonForm.querySelectorAll('.rate-button__label');
 
@@ -12,12 +12,10 @@ export default function updateRatingButton() {
   };
 
   const actualizeActiveLabels = (event) => {
-    if (event.target.className === "rate-button__input") {
-      removeActiveLabels();
-      const num = +event.target.id.slice(-1);
-      for (let i = 0; i < num; i += 1) {
-        formLabels[i].classList.add('rate-button__label_active');
-      }
+    removeActiveLabels();
+    const num = +event.target.id.slice(-1);
+    for (let i = 0; i < num; i += 1) {
+      formLabels[i].classList.add('rate-button__label_active');
     }
   }
 
