@@ -61,5 +61,8 @@ module.exports = {
     },
     port: 8080,
   },
-  devtool: 'source-map'
+  devtool: 'source-map',
+  externals: {
+    jquery: 'jQuery',
+  }
 };
