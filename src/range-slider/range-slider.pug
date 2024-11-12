@@ -1,3 +1,8 @@
 .form-elements__element-wrapper.element__wrapper.element__width-middle
-  .element__description 5 000₽ - 10 000₽
-  label.element__label Range Slider
+  .element__description
+    label.range-slider__label(for="range-min" id="range-label-min") 5 000₽
+    i= " - "
+    label.range-slider__label(for="range-max" id="range-label-max") 10 000₽
+  .element__label Range Slider
+  input.element__input.range-slider__input(type="range" max="15000" step="100" value="5000" id="range-min")
+  input.element__input.range-slider__input(type="range" max="15000" step="100" value="10000" id="range-max")
