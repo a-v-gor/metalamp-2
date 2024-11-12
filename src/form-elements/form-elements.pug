@@ -17,19 +17,19 @@ include ../rate-button/rate-button
     include ../form-subscribe-email/form-subscribe-email
   .form-elements__group-elements
     include ../checkbox-buttons/checkbox-buttons
-    fieldset.element__wrapper.radio-buttons
-      legend.element__label.input-buttons__legend Radio Buttons
+    .element__wrapper.element__width-tight.radio-buttons
+      .element__label.input-buttons__legend Radio Buttons
       include ../radio-buttons/radio-buttons
-    fieldset.element__wrapper.toggle
-      legend.element__label.input-buttons__legend Toggle
+    .element__wrapper.toggle
+      .element__label.input-buttons__legend Toggle
       +toggle({checked: true, id: 'get-spec'})
       +toggle({checked: false, id: 'get-spec-test'})
-    fieldset.element__wrapper.input-buttons__input-wrapper
-      legend.element__label.input-buttons__legend like button
+    .element__wrapper.element__width-tighter.input-buttons__input-wrapper
+      .element__label.input-buttons__legend like button
       +like-button({checked: false, id: 'like', value: '2'})
       +like-button({checked: true, id: 'like-test', value: '12'})
-    fieldset.element__wrapper.input-buttons__input-wrapper
-      legend.element__label.input-buttons__legend rate button
+    .element__wrapper.element__width-middle.input-buttons__input-wrapper
+      .element__label.input-buttons__legend rate button
       +rate-button({id: 'rate-button', checked: 4})
       +rate-button({id: 'rate-button-test', checked: 5})
   .form-elements__group-elements

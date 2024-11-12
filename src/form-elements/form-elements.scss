@@ -14,12 +14,4 @@
     flex-direction: column;
     row-gap: 4rem;
   }
-
-  &__element-condition {
-    order: 1;
-    font-size: 1.2em;
-    text-align: end;
-    color: $color-dark-shade-50;
-    text-transform: uppercase;
-  }
 }
