@@ -31,18 +31,19 @@ export default function rangeSlider() {
     } 
 
     if (mouseCoordinateX <= middlePointCoordinateX) {
-      makeElementActive(inputMin)
-      makeElementUnactive(inputMax)
-      inputMin.max=inputMax.value;
-      inputMin.style.width=inputMax.value/150+'%';
-      
-    } else {
-      makeElementActive(inputMax)
-      makeElementUnactive(inputMin)
-      inputMax.min=inputMin.value;
-      inputMin.style.width=inputMin.value/150+'%';
-      inputMin.max=inputMin.value;
-      inputMax.style.width=(15000-inputMin.value)/150+'%';
+      makeElementActive(inputMin);
+      makeElementUnactive(inputMax);
+      inputMin.max=inputMax.value-100;
+      inputMax.min=inputMax.value;
+      inputMin.style.width=((inputMin.max)/150)*266-14+'px';
+      inputMax.style.width=266-(((inputMin.max)/150)*266-14)+'px';
+    // } else {
+    //   makeElementUnactive(inputMin);
+    //   makeElementActive(inputMax);
+    //   inputMax.min=inputMin.value+100;
+    //   inputMin.max=inputMin.value;
+    //   inputMin.style.width=
+    //   inputMax.style.width=(15000-inputMin.value+14)/150+'%';
     }
   }
 
