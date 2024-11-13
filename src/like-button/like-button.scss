@@ -15,7 +15,7 @@
 
     &:checked {
       & ~ .like-button__icon_checked {
-        @include gradient($property: background, $direction: bottom);
+        @include primary-gradient($property: background, $direction: bottom);
 
         background-clip: text;
         opacity: 1;

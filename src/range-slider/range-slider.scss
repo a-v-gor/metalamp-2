@@ -1,5 +1,39 @@
 .range-slider {
-  &__input {
+  &__input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    order: 1;
+    width: 100%;
     padding: 0;
+  }
+
+  &__input {
+    position: absolute;
+    width: 100%;
+    background: transparent;
+    cursor: pointer;
+    transition: width 0s;
+    -webkit-appearance: none;
+    appearance: none;
+
+    &_active {
+      z-index: 1;
+    }
+
+    &_unactive {
+      z-index: 0;
+    }
+
+    &::-webkit-slider-thumb {
+      @include secondary-gradient($property: background, $direction: bottom);
+
+      width: 1.4rem;
+      height: 1.4rem;
+      border: solid 0.2rem #ffffff;
+      border-radius: 50%;
+      -webkit-appearance: none;
+      appearance: none;
+    }
   }
 }

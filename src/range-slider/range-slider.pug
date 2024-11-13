@@ -4,5 +4,6 @@
     i= " - "
     label.range-slider__label(for="range-max" id="range-label-max") 10 000₽
   .element__label Range Slider
-  input.element__input.range-slider__input(type="range" max="15000" step="100" value="5000" id="range-min")
-  input.element__input.range-slider__input(type="range" max="15000" step="100" value="10000" id="range-max")
+  .element__input.range-slider__input-wrapper#range-input-wrapper
+    input.range-slider__input.range-slider__input_unactive(type="range" max="15000" step="100" value="5000" id="range-min")
+    input.range-slider__input.range-slider__input_unactive(type="range" max="15000" step="100" value="10000" id="range-max")

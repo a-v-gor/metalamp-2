@@ -25,7 +25,7 @@
 
     &:checked {
       &::after {
-        @include gradient($property: background, $direction: bottom);
+        @include primary-gradient($property: background, $direction: bottom);
 
         transform: translateX(1.8rem);
       }

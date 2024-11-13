@@ -6,13 +6,18 @@ $color-dark-shade-5: rgba(31, 32, 65, 5%);
 $color-purple: #bc9cff;
 $color-green: #6fcf97;
 $color-blue: #8ba4f9;
+$color-gradient-blue: #66d2ea;
 
-@mixin gradient($property, $direction) {
+@mixin primary-gradient($property, $direction) {
   #{$property}: linear-gradient(to $direction, $color-purple, $color-blue);
 }
 
+@mixin secondary-gradient($property, $direction) {
+  #{$property}: linear-gradient(to $direction, $color-green, $color-gradient-blue);
+}
+
 @mixin text-gradient($direction) {
-  @include gradient($property: background, $direction: $direction);
+  @include primary-gradient($property: background, $direction: $direction);
 
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
