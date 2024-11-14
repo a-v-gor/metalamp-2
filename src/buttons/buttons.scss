@@ -1,0 +1,68 @@
+.buttons__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem 2rem;
+}
+
+.button {
+  width: 9.9rem;
+  padding: 1.4rem 1.9rem 1.5rem;
+  font-weight: 700;
+  font-size: 1.2em;
+  font-family: 'Montserrat', 'Arial', sans-serif;
+  border-radius: 2.2rem;
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.5;
+  }
+}
+
+.button-dark {
+  @include primary-gradient($property: background, $direction: bottom);
+
+  color: #ffffff;
+
+  &_hovered {
+    opacity: 0.5;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.button-light {
+  &__wrapper {
+    @include primary-gradient($property: background, $direction: bottom);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.2rem;
+    border-radius: 2.2rem;
+    transition: background 0.3s linear;
+
+    &:hover {
+      background: linear-gradient(to bottom, rgba(188, 156, 255, 50%), rgba(139, 164, 249, 50%));
+      cursor: pointer;
+    }
+
+    &_hovered {
+      background: linear-gradient(to bottom, rgba(188, 156, 255, 50%), rgba(139, 164, 249, 50%));
+      cursor: pointer;
+    }
+  }
+
+  &__button {
+    width: 9.5rem;
+    padding: 14px 12px 15px;
+    color: $color-purple;
+    background-color: #ffffff;
+    border-radius: 2rem;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
