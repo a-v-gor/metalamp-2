@@ -1,9 +1,12 @@
-.form-elements__element-wrapper.element__wrapper.element__width-middle
+.form-elements__element-wrapper.element__wrapper.element__width-middle.range-slider__element-wrapper
   .element__description
-    label.range-slider__label(for="range-min" id="range-label-min") 5 000₽
+    label.range-slider__label(id="range-label-min")
     i= " - "
-    label.range-slider__label(for="range-max" id="range-label-max") 10 000₽
+    label.range-slider__label(id="range-label-max")
   .element__label Range Slider
-  .element__input.range-slider__input-wrapper#range-input-wrapper
-    input.range-slider__input.range-slider__input_unactive(type="range" min="0" max="9900" step="100" value="5000" id="range-min")
-    input.range-slider__input.range-slider__input_unactive(type="range" min="5100" max="15000" step="100" value="10000" id="range-max")
+  .range-slider__input-wrapper#range-input-wrapper
+    input.range-slider__input(type="range" min="0" max="15000" step="100" value="5000")
+    input.range-slider__input(type="range" min="0" max="15000" step="100" value="10000")
+    .range-slider__track.range-slider__track_unactive
+    .range-slider__track.range-slider__track_active
+    .range-slider__track.range-slider__track_unactive

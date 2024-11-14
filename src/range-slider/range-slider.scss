@@ -1,4 +1,8 @@
 .range-slider {
+  &__element-wrapper {
+    row-gap: 1.8rem;
+  }
+
   &__input-wrapper {
     position: relative;
     display: flex;
@@ -9,6 +13,8 @@
   }
 
   &__input {
+    position: absolute;
+    width: 100%;
     background: transparent;
     cursor: pointer;
     transition: width 0s;
@@ -26,12 +32,28 @@
     &::-webkit-slider-thumb {
       @include secondary-gradient($property: background, $direction: bottom);
 
-      width: 1.4rem;
-      height: 1.4rem;
+      width: 1.6rem;
+      height: 1.6rem;
       border: solid 0.2rem #ffffff;
       border-radius: 50%;
       -webkit-appearance: none;
       appearance: none;
+    }
+  }
+
+  &__track {
+    flex-grow: 1;
+    height: 0.6rem;
+    border-radius: 0.3rem;
+    transition: width 0s;
+
+    &_active {
+      @include secondary-gradient($property: background, $direction: bottom);
+    }
+
+    &_unactive {
+      background: transparent;
+      border: 0.1rem solid $color-dark-shade-25;
     }
   }
 }
