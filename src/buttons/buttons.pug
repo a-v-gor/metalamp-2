@@ -1,11 +1,21 @@
+include ../buttons/button
+
 .element__wrapper.element__width-wide
   .element__label.input-buttons__legend buttons
   .buttons__wrapper
-    button.button.button-dark CLICK ME
-    button.button.button-dark.button-dark_hovered CLICK ME
-    .button-light__wrapper
-      .button-light__back
-      button.button.button-light__button CLICK ME
-    .button-light__wrapper.button-light__wrapper_hovered
-      .button-light__back
-      button.button.button-light__button CLICK ME
+    .element__width-middle.buttons__wrapper
+      +button({size:'small', color:'dark'})
+      +button({size:'small', color:'dark', hovered: true})
+      +button({size:'small', color:'light'})
+      +button({size:'small', color:'light', hovered: true})
+    //-   .button-light__wrapper.button-small-width
+    //-     .button-light__back
+    //-     button.button.button-light__button CLICK ME
+    //-   .button-light__wrapper.button-small-width.button-light__wrapper_hovered
+    //-     .button-light__back
+    //-     button.button.button-light__button CLICK ME
+    //-   a.button.button-link(href='#') CLICK ME
+    //-   a.button.button-link.button-link_hovered(href='#') CLICK ME
+    //- .element__width-wide
+    //-   button.button.button-dark.element__input перейти к оплате
+    //-   i.material-icons.element__icon arrow_forward

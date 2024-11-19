@@ -1,7 +1,5 @@
 .form-subscribe-email {
   .element__icon {
     @include text-gradient(bottom);
-
-    z-index: 1;
   }
 }

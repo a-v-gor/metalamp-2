@@ -17,6 +17,16 @@ body {
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+  color: unset;
+  background-color: unset;
+}
+
 select,
 progress[value] {
   appearance: none;
