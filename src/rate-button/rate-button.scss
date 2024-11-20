@@ -1,8 +1,14 @@
 .rate-button {
-  &__label::after {
-    content: 'star_border';
+  &__label {
+    &:hover {
+      cursor: pointer;
+    }
 
-    @include text-gradient(bottom);
+    &::after {
+      content: 'star_border';
+
+      @include text-gradient(bottom);
+    }
   }
 
   &__label_active::after {
