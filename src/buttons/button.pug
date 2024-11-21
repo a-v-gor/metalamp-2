@@ -1,6 +1,6 @@
 mixin button (buttonData)
   if buttonData.type=='link'
-    a.button-link(
+    button.button-link(
       class=buttonData.hovered?'button-link_hovered':''
     )(href=buttonData.link)= buttonData.text
   else
