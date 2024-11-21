@@ -1,0 +1,28 @@
+.dropdown {
+  &__checkbox {
+    width: 20px;
+    height: 20px;
+    background-color: #00ffff;
+
+    &:checked {
+      background-color: #ff0000;
+
+      ~ .dropdown__expand {
+        height: 50px;
+      }
+    }
+  }
+
+  &__expand {
+    position: absolute;
+    top: 6.4rem;
+    order: 3;
+    width: 100%;
+    height: 0;
+    background: #00ffff;
+  }
+
+  .element__icon {
+    z-index: -1;
+  }
+}

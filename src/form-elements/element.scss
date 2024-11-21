@@ -54,6 +54,10 @@
       color: $color-dark-shade-25;
     }
 
+    &:hover {
+      cursor: pointer;
+    }
+
     &:focus,
     &:hover,
     &:active {
@@ -67,8 +71,8 @@
 
   &__icon {
     position: absolute;
+    top: 2.1rem;
     right: 0;
-    bottom: 0;
     width: 4.4rem;
     height: 4.4rem;
     padding: 1rem;

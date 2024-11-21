@@ -1,0 +1,7 @@
+mixin dropdown(dropdownData)
+  .element__wrapper.element__width-wide.dropdown
+    .element__label= dropdownData.label
+    label.element__input(for = dropdownData.id)= dropdownData.text
+    input(type="checkbox" id = dropdownData.id).dropdown__checkbox
+    i.material-icons.element__icon expand_more
+    .dropdown__expand

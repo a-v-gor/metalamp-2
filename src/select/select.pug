@@ -1,9 +1,0 @@
-mixin option(optionData)
-  option&attributes(attributes)= optionData.text
-
-mixin select(selectData)
-  .element__wrapper.element__width-wide
-    label.element__label(for!= selectData.id)= selectData.label
-    select.element__input(id = selectData.id)
-      +option({text: selectData.optionText})(disabled selected value="")
-    i.material-icons.element__icon expand_more

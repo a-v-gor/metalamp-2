@@ -1,5 +1,5 @@
 include ../input/input
-include ../select/select
+include ../dropdown/dropdown
 include ../toggle/toggle
 include ../like-button/like-button
 include ../rate-button/rate-button
@@ -10,7 +10,7 @@ include ../rate-button/rate-button
     form.form-elements__form
       +input({condition: 'Default', id: 'email', label: 'Text Field', placeholder: 'Email'})
       +input({condition: 'Hover / Focus', id: 'text', label: 'Text Field', placeholder: 'This is pretty awesome'})(autofocus)
-      +select({id: 'select', label: 'Dropdown', optionText: 'Сколько гостей'})
+      +dropdown({id: 'dropdown', label: 'Dropdown', text: 'Сколько гостей'})
       +input({id: 'input-masked', label: 'masked text field', placeholder: 'ДД.ММ.ГГГГ', pattern: '(0[1-9]|[12][0-9]|3[01]).(0[1-9]|1[012]).202[4-6]', title: 'Введите дату в формате ДД.ММ.ГГГГ'})
     include ../date-group/date-group
     include ../filter-date/filter-date
@@ -35,3 +35,4 @@ include ../rate-button/rate-button
   .form-elements__group-elements
     include ../range-slider/range-slider
     include ../buttons/buttons
+  .form-elements__group-elements
