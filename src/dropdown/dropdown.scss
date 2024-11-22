@@ -1,16 +1,15 @@
 .dropdown {
   &__checkbox {
-    width: 20px;
-    height: 20px;
-    background-color: #00ffff;
-
     &:checked {
-      background-color: #ff0000;
-
       ~ .dropdown__expand {
-        height: 50px;
+        height: 100px;
       }
     }
+  }
+
+  &__input {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
   }
 
   &__expand {
@@ -20,6 +19,10 @@
     width: 100%;
     height: 0;
     background: #00ffff;
+  }
+
+  &__option {
+    position: relative;
   }
 
   .element__icon {

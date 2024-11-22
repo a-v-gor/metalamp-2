@@ -1,7 +1,11 @@
 mixin dropdown(dropdownData)
-  .element__wrapper.element__width-wide.dropdown
+  .element__wrapper.element__width-wide.form-elements__element-wrapper.dropdown
+    if dropdownData.condition
+      .element__description= dropdownData.condition
     .element__label= dropdownData.label
-    label.element__input(for = dropdownData.id)= dropdownData.text
+    label.element__input.dropdown__input(for = dropdownData.id)= dropdownData.type == 'guests' ? 'Сколько гостей' : '2 спальни, 2 кровати...'
     input(type="checkbox" id = dropdownData.id).dropdown__checkbox
     i.material-icons.element__icon expand_more
     .dropdown__expand
+      .dropdown__option
+        .element__label спальни
