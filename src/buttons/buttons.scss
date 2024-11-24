@@ -2,6 +2,11 @@
   display: flex;
   flex-wrap: wrap;
   gap: 3rem 2rem;
+
+  .element__icon {
+    top: 0;
+    bottom: 0;
+  }
 }
 
 .button {
