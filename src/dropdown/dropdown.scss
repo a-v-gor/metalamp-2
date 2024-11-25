@@ -2,7 +2,14 @@
   &__checkbox {
     &:checked {
       ~ .dropdown__expand {
-        height: 100px;
+        z-index: 1;
+        height: 11.9rem;
+        padding: 0.7rem 0.7rem 0.7rem 1.5rem;
+        border: 0.1rem solid $color-dark-shade-50;
+      }
+
+      ~ .dropdown__input {
+        border-color: $color-dark-shade-50;
       }
     }
   }
@@ -14,13 +21,50 @@
 
   &__expand {
     position: absolute;
-    top: 6.4rem;
-    z-index: 1;
+    top: 6.3rem;
+    z-index: -1;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.7rem;
     order: 3;
     width: 100%;
     height: 0;
+    padding: 0;
     overflow: hidden;
-    background: #00ffff;
+    background-color: #ffffff;
+    border-top: 0.1rem solid transparent;
+    border-bottom-right-radius: 0.4rem;
+    border-bottom-left-radius: 0.4rem;
+  }
+
+  &__option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__set-option-wrapper {
+    display: flex;
+  }
+
+  &__set-option-num {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.8em;
+    border: 0.1rem solid $color-dark-shade-25;
+    border-radius: 50%;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__option-num {
+    width: 1.6rem;
+    text-align: center;
   }
 
   .element__icon {

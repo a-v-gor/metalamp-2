@@ -3,9 +3,25 @@ mixin dropdown(dropdownData)
     if dropdownData.condition
       .element__description= dropdownData.condition
     .element__label= dropdownData.label
-    label.element__input.dropdown__input(for = dropdownData.id)= dropdownData.type == 'guests' ? 'Сколько гостей' : '2 спальни, 2 кровати...'
     input(type="checkbox" id = dropdownData.id).dropdown__checkbox
+    label.element__input.dropdown__input(for = dropdownData.id)= dropdownData.type == 'guests' ? 'Сколько гостей' : 'Удобства'
     i.material-icons.element__icon expand_more
     .dropdown__expand
       .dropdown__option
         .element__label.dropdown__option-label спальни
+        .dropdown__set-option-wrapper
+          button.dropdown__set-option-num.dropdown__decrease-option-num -
+          input(type="number" value="0").element__label.dropdown__option-num
+          button.dropdown__set-option-num.dropdown__increase-option-num +
+      .dropdown__option
+        .element__label.dropdown__option-label кровати
+        .dropdown__set-option-wrapper
+          button.dropdown__set-option-num.dropdown__decrease-option-num -
+          input(type="number" value="0").element__label.dropdown__option-num
+          button.dropdown__set-option-num.dropdown__increase-option-num +
+      .dropdown__option
+        .element__label.dropdown__option-label ванные комнаты
+        .dropdown__set-option-wrapper
+          button.dropdown__set-option-num.dropdown__decrease-option-num -
+          input(type="number" value="0").element__label.dropdown__option-num
+          button.dropdown__set-option-num.dropdown__increase-option-num +

@@ -40,6 +40,20 @@ input {
   background-color: initial;
 }
 
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+}
+
+input[type='number'],
+input[type='number']:focus,
+input[type='number']:active {
+  outline: none;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
 @supports (-webkit-appearance: none) or (-moz-appearance: none) {
   input[type='checkbox'],
   input[type='radio'] {
