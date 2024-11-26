@@ -1,5 +1,5 @@
 mixin dropdown(dropdownData)
-  .element__wrapper.element__width-wide.form-elements__element-wrapper.dropdown
+  .element__wrapper.form-elements__element-wrapper.dropdown(class = dropdownData.type == 'guests' ? 'element__width-wide' : 'element__width-middle')
     if dropdownData.condition
       .element__description= dropdownData.condition
     .element__label= dropdownData.label
@@ -22,6 +22,6 @@ mixin dropdown(dropdownData)
       .dropdown__option
         .element__label.dropdown__option-label ванные комнаты
         .dropdown__set-option-wrapper
-          button.dropdown__set-option-num.dropdown__decrease-option-num -
+          button(disabled).dropdown__set-option-num.dropdown__set-option-num_unactive.dropdown__decrease-option-num -
           input(type="number" value="0").element__label.dropdown__option-num
           button.dropdown__set-option-num.dropdown__increase-option-num +

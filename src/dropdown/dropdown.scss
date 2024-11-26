@@ -45,6 +45,7 @@
 
   &__set-option-wrapper {
     display: flex;
+    column-gap: 0.7rem;
   }
 
   &__set-option-num {
@@ -54,8 +55,13 @@
     width: 3rem;
     height: 3rem;
     font-size: 1.8em;
+    color: $color-dark-shade-50;
     border: 0.1rem solid $color-dark-shade-25;
     border-radius: 50%;
+
+    &_unactive {
+      opacity: 0.38;
+    }
 
     &:hover {
       cursor: pointer;
