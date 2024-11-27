@@ -1,5 +1,5 @@
-export default function updateDropdown() {
-  const dropdown = document.getElementById('dropdown-convenience-exp');
+export default function updateDropdown(id) {
+  const dropdown = document.getElementById(id);
   const optionsArr = dropdown.querySelectorAll('.dropdown__option');
   const label = dropdown.querySelector('label');
   const optionsLabels = [
@@ -65,7 +65,8 @@ export default function updateDropdown() {
       }
     }
 
-    const updateOption = (event) => {      
+    const updateOption = (event) => {
+      event.preventDefault();
       if (event.target === decreaseButton) {
         input.value = Number(input.value) - 1
       } else {
