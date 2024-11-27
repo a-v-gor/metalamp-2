@@ -1,10 +1,10 @@
 mixin dropdown(dropdownData)
-  .element__wrapper.form-elements__element-wrapper.dropdown(class = dropdownData.type == 'guests' ? 'element__width-wide' : 'element__width-middle')
+  .element__wrapper.form-elements__element-wrapper.dropdown(id = dropdownData.id class = dropdownData.type == 'guests' ? 'element__width-wide' : 'element__width-middle')
     if dropdownData.condition
       .element__description= dropdownData.condition
     .element__label= dropdownData.label
-    input(type="checkbox" id = dropdownData.id).dropdown__checkbox
-    label.element__input.dropdown__input(for = dropdownData.id)= dropdownData.type == 'guests' ? 'Сколько гостей' : 'Удобства'
+    input(type="checkbox" id = dropdownData.id+'-inp' checked = dropdownData.id == 'dropdown-convenience-exp' ? true : false).dropdown__checkbox
+    label.element__input.dropdown__input(for = dropdownData.id+'-inp')= dropdownData.type == 'guests' ? 'Сколько гостей' : 'Удобства'
     i.material-icons.element__icon expand_more
     .dropdown__expand
       .dropdown__option
@@ -22,6 +22,6 @@ mixin dropdown(dropdownData)
       .dropdown__option
         .element__label.dropdown__option-label ванные комнаты
         .dropdown__set-option-wrapper
-          button(disabled).dropdown__set-option-num.dropdown__set-option-num_unactive.dropdown__decrease-option-num -
+          button.dropdown__set-option-num.dropdown__decrease-option-num -
           input(type="number" value="0").element__label.dropdown__option-num
           button.dropdown__set-option-num.dropdown__increase-option-num +
