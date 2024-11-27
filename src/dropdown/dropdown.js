@@ -2,24 +2,48 @@ export default function updateDropdown(id) {
   const dropdown = document.getElementById(id);
   const optionsArr = dropdown.querySelectorAll('.dropdown__option');
   const label = dropdown.querySelector('label');
-  const optionsLabels = [
-    ['спальня', 'кровать', 'ванная комната'],
-    ['спальни', 'кровати', 'ванные комнаты'],
-    ['спален', 'кроватей', 'ванных комнат']
-  ]
+  const type = dropdown.classList.contains('dropdown__guests') ? 'guests' : 'convenience';
   const optionsNums = [0, 0, 0];
 
+  const returnOptionString = (optionNum, labelsArr) => {
+    let labelsIndex = 0;
+    if (optionNum > 1 && optionNum < 5) {
+      labelsIndex = 1;
+    } else if (optionNum > 4) {
+      labelsIndex = 2;
+    }
+    return `${optionNum} ${labelsArr[labelsIndex]}`;
+  }
+
+  const updateGuestsLabel = () => {
+    const resultStringArr = [];
+    const guestsNum = optionsNums[0] + optionsNums[1];
+    const babyNum = optionsNums[2];
+    if (guestsNum > 0) {
+      const guestsStr = returnOptionString(guestsNum, ['гость', 'гостя', 'гостей']);
+      resultStringArr.push(guestsStr);
+    }
+    if (babyNum > 0) {
+      const babiesStr = returnOptionString(babyNum, ['младенец', 'младенца', 'младенцев']);
+      resultStringArr.push(babiesStr);
+    }
+    if (!resultStringArr.length) {
+      resultStringArr.push('Сколько гостей');
+    }
+    label.textContent = resultStringArr.join(', ');
+  }
+
   const updateLabel = () => {
+    const optionsLabels = [
+      ['спальня', 'спальни', 'спален'],
+      ['кровать', 'кровати', 'кроватей'],
+      ['ванная комната', 'ванные комнаты', 'ванных комнат']
+    ];
     const resultStringArr = [];
     optionsNums.forEach((item, index) => {
       if (item > 0) {
-        let labelsIndex = 0;
-        if (item > 1 && item < 5) {
-          labelsIndex = 1;
-        } else if (item > 4) {
-          labelsIndex = 2;
-        }
-        resultStringArr.push(`${item} ${optionsLabels[labelsIndex][index]}`);
+        const itemStr = returnOptionString(item, optionsLabels[index]);
+        resultStringArr.push(itemStr);
       }
     })
     if (!resultStringArr.length) {
@@ -31,7 +55,6 @@ export default function updateDropdown(id) {
     } else {
       label.textContent = resultStringArr[0];
     }
-    
   }
   
   const updateOptionsNums = (num, value) => {
@@ -74,9 +97,13 @@ export default function updateDropdown(id) {
       }
       updateButtons();
       updateOptionsNums(index, input.value);
-      updateLabel();
+      if (type === 'guests') {
+        updateGuestsLabel();
+      } else {
+        updateLabel();
+      }
     }
-
+    
     updateButtons();
     increaseButton.addEventListener('click', updateOption);
     decreaseButton.addEventListener('click', updateOption);
