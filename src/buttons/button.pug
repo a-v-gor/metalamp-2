@@ -2,7 +2,7 @@ mixin button (buttonData)
   if buttonData.type=='link'
     button.button-link(
       class=buttonData.hovered?'button-link_hovered':''
-      href=buttonData.link)= buttonData.text
+      )= buttonData.text
   else
     .element__wrapper.button__wrapper(
       class=buttonData.color=='dark'?'button-dark':''
