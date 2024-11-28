@@ -17,8 +17,6 @@ export default function updateDropdown(id) {
   }
 
   const updateGuestsLabel = () => {
-    console.log(optionsNums);
-    
     const resultStringArr = [];
     const guestsNum = optionsNums[0] + optionsNums[1];
     const babyNum = optionsNums[2];
