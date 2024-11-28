@@ -8,10 +8,10 @@
     position: absolute;
     top: 6.3rem;
     z-index: -1;
-    order: 3;
     display: flex;
     flex-direction: column;
     row-gap: 0;
+    order: 3;
     width: 100%;
     padding: 0;
     overflow: hidden;
@@ -65,9 +65,13 @@
   }
 
   &__buttons-wrapper {
-    height: 0;
     display: flex;
     justify-content: space-between;
+    height: 0;
+  }
+
+  &__unactive-button {
+    opacity: 0;
   }
 
   .element__icon {

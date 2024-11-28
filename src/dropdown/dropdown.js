@@ -2,8 +2,9 @@ export default function updateDropdown(id) {
   const dropdown = document.getElementById(id);
   const optionsArr = dropdown.querySelectorAll('.dropdown__option');
   const label = dropdown.querySelector('label');
+  const clearButton = dropdown.querySelector('.button-link');
   const type = dropdown.classList.contains('dropdown__guests') ? 'guests' : 'convenience';
-  const optionsNums = [0, 0, 0];
+  const optionsNums = dropdown.id === 'dropdown-guests-exp-1' ? [2, 1, 0] : [0, 0, 0];
 
   const returnOptionString = (optionNum, labelsArr) => {
     let labelsIndex = 0;
@@ -16,6 +17,8 @@ export default function updateDropdown(id) {
   }
 
   const updateGuestsLabel = () => {
+    console.log(optionsNums);
+    
     const resultStringArr = [];
     const guestsNum = optionsNums[0] + optionsNums[1];
     const babyNum = optionsNums[2];
@@ -61,21 +64,37 @@ export default function updateDropdown(id) {
     optionsNums[num] = +value;
   }
 
+  const unactiveButton = (button) => {
+    button.disabled = true;
+    if (!button.classList.contains('dropdown__set-option-num_unactive')) {
+      button.classList.add('dropdown__set-option-num_unactive');
+    }
+  }
+
+  const activeButton = (button) => {
+    button.disabled = false;
+    if (button.classList.contains('dropdown__set-option-num_unactive')) {
+      button.classList.remove('dropdown__set-option-num_unactive');
+    }
+  }
+
+  const checkClearButtonActive = () => {
+    if (clearButton !== null) {
+      if (Math.max(...optionsNums) > 0) {
+        clearButton.classList.remove('dropdown__unactive-button');
+        clearButton.disabled = false;
+      } else {
+        clearButton.classList.add('dropdown__unactive-button');
+        clearButton.disabled = true;
+      }
+    }
+  }
+
   optionsArr.forEach((element, index) => {
     const [decreaseButton, increaseButton] = element.querySelectorAll('button');
     const input = element.querySelector('input');
 
-    const unactiveButton = (button) => {
-      button.disabled = true;
-      button.classList.add('dropdown__set-option-num_unactive');
-    }
-
-    const activeButton = (button) => {
-      button.disabled = false;
-      button.classList.remove('dropdown__set-option-num_unactive');
-    }
-
-    const updateButtons = () => {
+    const updateOptionsButtons = () => {
       if (input.value == 0) {
         unactiveButton(decreaseButton);
       } else {
@@ -95,17 +114,44 @@ export default function updateDropdown(id) {
       } else {
         input.value = Number(input.value) + 1
       }
-      updateButtons();
+      updateOptionsButtons();
       updateOptionsNums(index, input.value);
       if (type === 'guests') {
         updateGuestsLabel();
       } else {
         updateLabel();
       }
+      checkClearButtonActive();
     }
-    
-    updateButtons();
+
+    updateOptionsButtons();
     increaseButton.addEventListener('click', updateOption);
     decreaseButton.addEventListener('click', updateOption);
   })
+
+  const clearForm = () => {
+    const inputs = dropdown.querySelectorAll('input[type=number]');
+
+    inputs.forEach((input) => input.value = 0);    
+    for(let i=0; i < 3; i += 1) {
+      updateOptionsNums(i, 0);
+    };
+
+    const decreaseButtons = dropdown.querySelectorAll('.dropdown__decrease-option-num');
+    const increaseButtons = dropdown.querySelectorAll('.dropdown__increase-option-num');
+
+    for (let i = 0; i < decreaseButtons.length; i += 1) {
+      unactiveButton(decreaseButtons[i]);
+      activeButton(increaseButtons[i]);
+    }
+    checkClearButtonActive();
+    updateGuestsLabel();
+  }
+  
+  if(clearButton !== null) {
+    clearButton.addEventListener('click', clearForm);
+  }
+  
+  checkClearButtonActive();
+  updateGuestsLabel();
 }

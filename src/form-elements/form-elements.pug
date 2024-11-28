@@ -37,6 +37,8 @@ include ../rate-button/rate-button
     include ../buttons/buttons
   .form-elements__group-elements
     +dropdown({id: 'dropdown-convenience', label: 'Dropdown', condition: 'Default'})
-    +dropdown({id: 'dropdown-convenience-exp', label: 'Dropdown', condition: 'expanded'})
+    +dropdown({id: 'dropdown-convenience-exp', label: 'Dropdown', condition: 'expanded', expanded: true})
   .form-elements__group-elements
-    +dropdown({id: 'dropdown-guests-exp', label: 'Dropdown', type: 'guests'})
+    +dropdown({id: 'dropdown-guests-exp', label: 'Dropdown', type: 'guests', expanded: true})
+  .form-elements__group-elements
+    +dropdown({id: 'dropdown-guests-exp-1', label: 'Dropdown', type: 'guests', expanded: true, withData: true})
