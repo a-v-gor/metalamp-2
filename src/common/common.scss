@@ -34,7 +34,7 @@ body {
 .screen-wrapper {
   display: flex;
   flex-wrap: wrap;
-  row-gap: 10rem;
+  gap: 14rem 3rem;
   justify-content: space-between;
   padding: 14.5rem 15rem;
   background-image: url('./img/logo-grey.svg');

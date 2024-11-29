@@ -1,0 +1,24 @@
+mixin expand-checkbox-list(data)
+  .element__wrapper.element__width-middle.expand-checkbox-list
+    input(type="checkbox" id = data.id+'-inp' checked = data.expanded == true ? true : false).dropdown__checkbox.expand-checkbox-list__checkbox
+    label.element__label.element__input.expand-checkbox-list__label(for = data.id+'-inp')= data.label
+    i.material-icons.element__icon.expand-checkbox-list__icon expand_more
+    .dropdown__expand.expand-checkbox-list__expand
+      .dropdown__option.input-buttons__input-wrapper.expand-checkbox-list__option
+        input(type='checkbox').input-buttons__input.checkbox-buttons__input#breakfast
+        label(for='breakfast').input-buttons__input-label Завтрак
+      .dropdown__option.input-buttons__input-wrapper.expand-checkbox-list__option
+        input(type='checkbox' checked).input-buttons__input.checkbox-buttons__input#table
+        label(for='table').input-buttons__input-label Письменный стол
+      .dropdown__option.input-buttons__input-wrapper.expand-checkbox-list__option
+        input(type='checkbox' checked).input-buttons__input.checkbox-buttons__input#high-chair
+        label(for='high-chair').input-buttons__input-label Стул для кормления
+      .dropdown__option.input-buttons__input-wrapper.expand-checkbox-list__option
+        input(type='checkbox' checked).input-buttons__input.checkbox-buttons__input#small-bed
+        label(for='small-bed').input-buttons__input-label Кроватка
+      .dropdown__option.input-buttons__input-wrapper.expand-checkbox-list__option
+        input(type='checkbox').input-buttons__input.checkbox-buttons__input#tv
+        label(for='tv').input-buttons__input-label Телевизор
+      .dropdown__option.input-buttons__input-wrapper.expand-checkbox-list__option
+        input(type='checkbox').input-buttons__input.checkbox-buttons__input#shampoo
+        label(for='shampoo').input-buttons__input-label Шампунь

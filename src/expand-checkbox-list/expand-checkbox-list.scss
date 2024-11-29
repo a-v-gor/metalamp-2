@@ -1,0 +1,43 @@
+.expand-checkbox-list {
+  &__label {
+    padding-left: 0;
+    font-size: 1.2em;
+    border: none;
+  }
+
+  &__icon {
+    top: 0;
+    z-index: -1;
+  }
+
+  &__option {
+    justify-content: start;
+    height: 0;
+  }
+
+  &__expand {
+    top: 4.6rem;
+    border-top: none;
+  }
+
+  &__options-wrapper {
+    row-gap: 1rem;
+  }
+}
+
+.expand-checkbox-list__checkbox:checked {
+  & ~ .expand-checkbox-list__expand {
+    height: 17.1rem;
+    padding: 0;
+    row-gap: 1rem;
+    border: none;
+
+    .expand-checkbox-list__option {
+      height: 2rem;
+    }
+  }
+
+  & ~ .expand-checkbox-list__icon {
+    transform: rotateX(180deg);
+  }
+}

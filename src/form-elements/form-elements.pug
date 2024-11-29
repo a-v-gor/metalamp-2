@@ -3,6 +3,7 @@ include ../dropdown/dropdown
 include ../toggle/toggle
 include ../like-button/like-button
 include ../rate-button/rate-button
+include ../expand-checkbox-list/expand-checkbox-list
 
 .screen-wrapper
   h2.title Form elements
@@ -42,3 +43,5 @@ include ../rate-button/rate-button
     +dropdown({id: 'dropdown-guests-exp', label: 'Dropdown', type: 'guests', expanded: true})
   .form-elements__group-elements
     +dropdown({id: 'dropdown-guests-exp-1', label: 'Dropdown', type: 'guests', expanded: true, withData: true})
+  .form-elements__group-elements
+    +expand-checkbox-list({id: 'expand-checkbox-list', label: 'expandable checkbox list', expanded: true})
