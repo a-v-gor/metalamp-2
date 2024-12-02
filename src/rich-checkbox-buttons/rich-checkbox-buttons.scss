@@ -1,0 +1,26 @@
+.rich-checkbox-buttons {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.9rem;
+
+  &__label {
+    padding-bottom: 0.7rem;
+  }
+
+  &__input-label:hover {
+    cursor: pointer;
+  }
+
+  &__input-label-title {
+    display: block;
+    padding-bottom: 0.5rem;
+    font-weight: 700;
+    font-size: 1.4em;
+    color: $color-dark-shade-75;
+  }
+
+  &__input-label-descript {
+    font-size: 1.2em;
+    color: $color-dark-shade-50;
+  }
+}

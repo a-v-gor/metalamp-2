@@ -4,6 +4,7 @@ include ../toggle/toggle
 include ../like-button/like-button
 include ../rate-button/rate-button
 include ../expand-checkbox-list/expand-checkbox-list
+include ../rich-checkbox-buttons/rich-checkbox-buttons
 
 .screen-wrapper
   h2.title Form elements
@@ -47,3 +48,5 @@ include ../expand-checkbox-list/expand-checkbox-list
     form 
       +expand-checkbox-list({id: 'expand-checkbox-list', label: 'expandable checkbox list'})
       +expand-checkbox-list({id: 'expand-checkbox-list-exp', label: 'expandable checkbox list', expanded: true})
+  .form-elements__group-elements
+    +rich-checkbox-buttons()
