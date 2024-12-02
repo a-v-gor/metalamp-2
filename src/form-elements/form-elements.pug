@@ -44,4 +44,6 @@ include ../expand-checkbox-list/expand-checkbox-list
   .form-elements__group-elements
     +dropdown({id: 'dropdown-guests-exp-1', label: 'Dropdown', type: 'guests', expanded: true, withData: true})
   .form-elements__group-elements
-    +expand-checkbox-list({id: 'expand-checkbox-list', label: 'expandable checkbox list', expanded: true})
+    form 
+      +expand-checkbox-list({id: 'expand-checkbox-list', label: 'expandable checkbox list'})
+      +expand-checkbox-list({id: 'expand-checkbox-list-exp', label: 'expandable checkbox list', expanded: true})
