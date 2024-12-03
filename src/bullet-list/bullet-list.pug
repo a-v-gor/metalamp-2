@@ -1,3 +1,7 @@
-mixin bullet-list()
-  .element__wrapper.element__width-middle
-    .element__label bullet list
+mixin bullet-list(data)
+  .element__wrapper.element__width-middle.bullet-list
+    .element__label.bullet-list__label= data.label
+    ul.bullet-list__list
+      li.bullet-list__list-item Нельзя с питомцами
+      li.bullet-list__list-item Без вечеринок и мероприятий
+      li.bullet-list__list-item Время прибытия — после 13:00, <br> а выезд до 12:00
