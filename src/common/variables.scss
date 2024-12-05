@@ -23,3 +23,23 @@ $color-gradient-blue: #66d2ea;
   -webkit-background-clip: text;
   background-clip: text;
 }
+
+@mixin colored-circle-with-text($color) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  font-weight: 700;
+  font-size: 1.2em;
+  color: #ffffff;
+  border-radius: 50%;
+
+  @if $color == 'purple' {
+    @include primary-gradient($property: background, $direction: bottom);
+  }
+
+  @if $color == 'green' {
+    @include secondary-gradient($property: background, $direction: bottom);
+  }
+}

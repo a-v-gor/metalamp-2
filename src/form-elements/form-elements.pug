@@ -37,6 +37,8 @@ include ../bullet-list/bullet-list
   .form-elements__group-elements
     include ../range-slider/range-slider
     include ../buttons/buttons
+    .element__wrapper.pagination
+      include ../pagination/pagination
   .form-elements__group-elements
     +dropdown({id: 'dropdown-convenience', label: 'Dropdown', condition: 'Default'})
     +dropdown({id: 'dropdown-convenience-exp', label: 'Dropdown', condition: 'expanded', expanded: true})
@@ -52,3 +54,4 @@ include ../bullet-list/bullet-list
     +rich-checkbox-buttons()
   .form-elements__group-elements
     +bullet-list({label: 'bullet list'})
+  .form-elements__group-elements
