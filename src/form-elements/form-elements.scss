@@ -1,7 +1,7 @@
 .form-elements {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  padding: 14.4rem 5.5rem 13.1rem 14.1rem;
+  grid-template-columns: repeat(3, 32rem);
+  padding: 14.4rem 14.1rem 13.1rem;
   row-gap: 99px;
 
   &__form {
@@ -26,6 +26,10 @@
     &:nth-child(8) {
       row-gap: 2rem;
       margin-bottom: 17.4rem;
+    }
+
+    &:last-child {
+      grid-column-end: span 2;
     }
   }
 }

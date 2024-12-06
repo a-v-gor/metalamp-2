@@ -6,6 +6,8 @@ include ../rate-button/rate-button
 include ../expand-checkbox-list/expand-checkbox-list
 include ../rich-checkbox-buttons/rich-checkbox-buttons
 include ../bullet-list/bullet-list
+include ../comment/comment
+
 .screen-wrapper.form-elements
   h2.title Form elements
   .form-elements__group-elements
@@ -55,3 +57,12 @@ include ../bullet-list/bullet-list
     +bullet-list({label: 'bullet list'})
   .form-elements__group-elements
     include ../room-info/room-info
+  .form-elements__group-elements
+    +comment({
+      id: 'comment', 
+      photoSrc: '../common/img/photo-sarafanov.jpg', 
+      name: 'Мурад Сарафанов', 
+      date: '5 дней назад', 
+      likes: 12, 
+      text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'
+    })
