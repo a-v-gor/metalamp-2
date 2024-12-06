@@ -1,4 +1,9 @@
 .form-elements {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 14.4rem 5.5rem 13.1rem 14.1rem;
+  row-gap: 99px;
+
   &__form {
     display: flex;
     flex-direction: column;
@@ -12,6 +17,15 @@
   &__group-elements {
     display: flex;
     flex-direction: column;
-    row-gap: 4rem;
+    row-gap: 4.2rem;
+
+    &:nth-child(5) {
+      margin-bottom: 3.7rem;
+    }
+
+    &:nth-child(8) {
+      row-gap: 2rem;
+      margin-bottom: 17.4rem;
+    }
   }
 }

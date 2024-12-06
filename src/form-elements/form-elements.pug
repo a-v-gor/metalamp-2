@@ -6,7 +6,7 @@ include ../rate-button/rate-button
 include ../expand-checkbox-list/expand-checkbox-list
 include ../rich-checkbox-buttons/rich-checkbox-buttons
 include ../bullet-list/bullet-list
-.screen-wrapper
+.screen-wrapper.form-elements
   h2.title Form elements
   .form-elements__group-elements
     form.form-elements__form
@@ -47,11 +47,11 @@ include ../bullet-list/bullet-list
   .form-elements__group-elements
     +dropdown({id: 'dropdown-guests-exp-1', label: 'Dropdown', type: 'guests', expanded: true, withData: true})
   .form-elements__group-elements
-    form 
-      +expand-checkbox-list({id: 'expand-checkbox-list', label: 'expandable checkbox list'})
-      +expand-checkbox-list({id: 'expand-checkbox-list-exp', label: 'expandable checkbox list', expanded: true})
+    +expand-checkbox-list({id: 'expand-checkbox-list', label: 'expandable checkbox list'})
+    +expand-checkbox-list({id: 'expand-checkbox-list-exp', label: 'expandable checkbox list', expanded: true})
   .form-elements__group-elements
     +rich-checkbox-buttons()
   .form-elements__group-elements
     +bullet-list({label: 'bullet list'})
   .form-elements__group-elements
+    include ../room-info/room-info
