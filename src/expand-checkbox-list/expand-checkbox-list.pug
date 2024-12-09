@@ -1,24 +1,24 @@
 mixin expand-checkbox-list(data)
   .element__wrapper.element__width-middle.expand-checkbox-list
-    input(type="checkbox" id = data.id+'-inp' checked = data.expanded == true ? true : false).dropdown__checkbox.expand-checkbox-list__checkbox
-    label.element__label.element__input.expand-checkbox-list__label(for = data.id+'-inp')= data.label
+    input(type="checkbox" id = data.id+"-inp" checked = data.expanded == true ? true : false).dropdown__checkbox.expand-checkbox-list__checkbox
+    label.element__label.element__input.expand-checkbox-list__label(for = data.id+"-inp")= data.label
     i.material-icons.element__icon.expand-checkbox-list__icon expand_more
     .dropdown__expand.expand-checkbox-list__expand
       .dropdown__option.input-buttons__input-wrapper.expand-checkbox-list__option
-        input(type='checkbox' id = data.id+'breakfast').input-buttons__input.checkbox-buttons__input
-        label(for=data.id+'breakfast').input-buttons__input-label Завтрак
+        input(type="checkbox" id = data.id+"breakfast").input-buttons__input.checkbox-buttons__input
+        label(for=data.id+"breakfast").input-buttons__input-label Завтрак
       .dropdown__option.input-buttons__input-wrapper.expand-checkbox-list__option
-        input(type='checkbox' checked id = data.id+'table').input-buttons__input.checkbox-buttons__input
-        label(for=data.id+'table').input-buttons__input-label Письменный стол
+        input(type="checkbox" checked id = data.id+"table").input-buttons__input.checkbox-buttons__input
+        label(for=data.id+"table").input-buttons__input-label Письменный стол
       .dropdown__option.input-buttons__input-wrapper.expand-checkbox-list__option
-        input(type='checkbox' id=data.id+'high-chair' checked).input-buttons__input.checkbox-buttons__input
-        label(for=data.id+'high-chair').input-buttons__input-label Стул для кормления
+        input(type="checkbox" id=data.id+"high-chair" checked).input-buttons__input.checkbox-buttons__input
+        label(for=data.id+"high-chair").input-buttons__input-label Стул для кормления
       .dropdown__option.input-buttons__input-wrapper.expand-checkbox-list__option
-        input(type='checkbox' id=data.id+'small-bed' checked).input-buttons__input.checkbox-buttons__input
-        label(for=data.id+'small-bed').input-buttons__input-label Кроватка
+        input(type="checkbox" id=data.id+"small-bed" checked).input-buttons__input.checkbox-buttons__input
+        label(for=data.id+"small-bed").input-buttons__input-label Кроватка
       .dropdown__option.input-buttons__input-wrapper.expand-checkbox-list__option
-        input(type='checkbox' id=data.id+'tv').input-buttons__input.checkbox-buttons__input
-        label(for=data.id+'tv').input-buttons__input-label Телевизор
+        input(type="checkbox" id=data.id+"tv").input-buttons__input.checkbox-buttons__input
+        label(for=data.id+"tv").input-buttons__input-label Телевизор
       .dropdown__option.input-buttons__input-wrapper.expand-checkbox-list__option
-        input(type='checkbox' id=data.id+'shampoo').input-buttons__input.checkbox-buttons__input
-        label(for=data.id+'shampoo').input-buttons__input-label Шампунь
+        input(type="checkbox" id=data.id+"shampoo").input-buttons__input.checkbox-buttons__input
+        label(for=data.id+"shampoo").input-buttons__input-label Шампунь

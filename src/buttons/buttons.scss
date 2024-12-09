@@ -2,11 +2,6 @@
   display: flex;
   flex-wrap: wrap;
   gap: 3rem 2rem;
-
-  .element__icon {
-    top: 0;
-    bottom: 0;
-  }
 }
 
 .button {
@@ -17,6 +12,11 @@
     padding: 0;
     overflow: hidden;
     border-radius: 2.2rem;
+
+    .element__icon {
+      top: 0;
+      bottom: 0;
+    }
 
     > * {
       position: absolute;

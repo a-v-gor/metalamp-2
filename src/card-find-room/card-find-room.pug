@@ -1,0 +1,11 @@
+include ../date-group/date-group
+include ../dropdown/dropdown
+include ../buttons/button
+
+mixin card-find-room
+  .card
+    form.card__form
+      h3.card__title Найдём номера под ваши пожелания
+      +date-group({id: "card-find-room-date", firstDateLabel: "прибытие", secondDateLabel: "выезд"})
+      +dropdown({id: "card-find-room-dropdown", label: "гости", type: "guests"})
+      +button({size:"large", color:"dark", text: "подобрать номер", withArrow: true})

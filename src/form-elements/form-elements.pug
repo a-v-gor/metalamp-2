@@ -1,5 +1,6 @@
 include ../input/input
 include ../dropdown/dropdown
+include ../date-group/date-group
 include ../toggle/toggle
 include ../like-button/like-button
 include ../rate-button/rate-button
@@ -12,11 +13,11 @@ include ../comment/comment
   h2.title Form elements
   .form-elements__group-elements
     form.form-elements__form
-      +input({condition: 'Default', id: 'email', label: 'Text Field', placeholder: 'Email'})
-      +input({condition: 'Hover / Focus', id: 'text', label: 'Text Field', placeholder: 'This is pretty awesome'})(autofocus)
-      +dropdown({id: 'dropdown', label: 'Dropdown', type: 'guests'})
-      +input({id: 'input-masked', label: 'masked text field', placeholder: 'ДД.ММ.ГГГГ', pattern: '(0[1-9]|[12][0-9]|3[01]).(0[1-9]|1[012]).202[4-6]', title: 'Введите дату в формате ДД.ММ.ГГГГ'})
-    include ../date-group/date-group
+      +input({condition: "Default", id: "email", label: "Text Field", placeholder: "Email"})
+      +input({condition: "Hover / Focus", id: "text", label: "Text Field", placeholder: "This is pretty awesome"})(autofocus)
+      +dropdown({id: "dropdown", label: "Dropdown", type: "guests"})
+      +input({id: "input-masked", label: "masked text field", placeholder: "ДД.ММ.ГГГГ", pattern: "(0[1-9]|[12][0-9]|3[01]).(0[1-9]|1[012]).202[4-6]", title: "Введите дату в формате ДД.ММ.ГГГГ"})
+    +date-group({firstDateLabel: "date Dropdown", secondDateLabel: "date Dropdown", secondDateValue: "2019-08-19", id: "date-group"})
     include ../filter-date/filter-date
     include ../form-subscribe-email/form-subscribe-email
   .form-elements__group-elements
@@ -26,46 +27,46 @@ include ../comment/comment
       include ../radio-buttons/radio-buttons
     .element__wrapper.toggle
       .element__label.input-buttons__legend Toggle
-      +toggle({checked: true, id: 'get-spec'})
-      +toggle({checked: false, id: 'get-spec-test'})
+      +toggle({checked: true, id: "get-spec"})
+      +toggle({checked: false, id: "get-spec-test"})
     .element__wrapper.element__width-tighter.input-buttons__input-wrapper
       .element__label.input-buttons__legend like button
-      +like-button({checked: false, id: 'like', value: '2'})
-      +like-button({checked: true, id: 'like-test', value: '12'})
+      +like-button({checked: false, id: "like", value: "2"})
+      +like-button({checked: true, id: "like-test", value: "12"})
     .element__wrapper.element__width-middle.input-buttons__input-wrapper
       .element__label.input-buttons__legend rate button
-      +rate-button({id: 'rate-button', checked: 4})
-      +rate-button({id: 'rate-button-test', checked: 5})
+      +rate-button({id: "rate-button", checked: 4})
+      +rate-button({id: "rate-button-test", checked: 5})
   .form-elements__group-elements
     include ../range-slider/range-slider
     include ../buttons/buttons
     .element__wrapper.pagination
       include ../pagination/pagination
   .form-elements__group-elements
-    +dropdown({id: 'dropdown-convenience', label: 'Dropdown', condition: 'Default'})
-    +dropdown({id: 'dropdown-convenience-exp', label: 'Dropdown', condition: 'expanded', expanded: true})
+    +dropdown({id: "dropdown-convenience", label: "Dropdown", condition: "Default"})
+    +dropdown({id: "dropdown-convenience-exp", label: "Dropdown", condition: "expanded", expanded: true})
   .form-elements__group-elements
-    +dropdown({id: 'dropdown-guests-exp', label: 'Dropdown', type: 'guests', expanded: true})
+    +dropdown({id: "dropdown-guests-exp", label: "Dropdown", type: "guests", expanded: true})
   .form-elements__group-elements
-    +dropdown({id: 'dropdown-guests-exp-1', label: 'Dropdown', type: 'guests', expanded: true, withData: true})
+    +dropdown({id: "dropdown-guests-exp-1", label: "Dropdown", type: "guests", expanded: true, withData: true})
   .form-elements__group-elements
-    +expand-checkbox-list({id: 'expand-checkbox-list', label: 'expandable checkbox list'})
-    +expand-checkbox-list({id: 'expand-checkbox-list-exp', label: 'expandable checkbox list', expanded: true})
+    +expand-checkbox-list({id: "expand-checkbox-list", label: "expandable checkbox list"})
+    +expand-checkbox-list({id: "expand-checkbox-list-exp", label: "expandable checkbox list", expanded: true})
   .form-elements__group-elements
     +rich-checkbox-buttons()
   .form-elements__group-elements
-    +bullet-list({label: 'bullet list'})
+    +bullet-list({label: "bullet list"})
   .form-elements__group-elements
     include ../room-info/room-info
   .form-elements__group-elements
     +comment({
-      id: 'comment', 
-      photoSrc: '../common/img/photo-sarafanov.jpg', 
-      name: 'Мурад Сарафанов', 
-      date: '5 дней назад', 
+      id: "comment", 
+      photoSrc: "../common/img/photo-sarafanov.jpg", 
+      name: "Мурад Сарафанов", 
+      date: "5 дней назад", 
       likes: 12, 
       arrText: [
-        'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий.',
-        'И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'
+        "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий.",
+        "И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."
       ]
     })

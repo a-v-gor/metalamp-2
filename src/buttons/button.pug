@@ -1,15 +1,15 @@
 mixin button (buttonData)
-  if buttonData.type=='link'
+  if buttonData.type=="link"
     button.button-link(
-      class=buttonData.hovered?'button-link_hovered':''
+      class=buttonData.hovered?"button-link_hovered":""
       )= buttonData.text
   else
     .element__wrapper.button__wrapper(
-      class=buttonData.color=='dark'?'button-dark':''
-      class=buttonData.color=='light'?'button-light':''
-      class=buttonData.size=='small'?'button__small-width':''
-      class=buttonData.size=='large'?'element__width-wide':''
-      class=buttonData.hovered?'button_hovered':''
+      class=buttonData.color=="dark"?"button-dark":""
+      class=buttonData.color=="light"?"button-light":""
+      class=buttonData.size=="small"?"button__small-width":""
+      class=buttonData.size=="large"?"element__width-wide":""
+      class=buttonData.hovered?"button_hovered":""
       )
       .button__back
       button.button__button= buttonData.text
