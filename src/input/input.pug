@@ -3,4 +3,4 @@ mixin input(inputData)
     if inputData.condition
       .element__description= inputData.condition
     label.element__label(for!= inputData.id)= inputData.label
-    input.element__input(placeholder = inputData.placeholder, id = inputData.id, type = inputData.type,  pattern=inputData.pattern title=inputData.title)&attributes(attributes)
+    input.element__input(placeholder=inputData.placeholder, id=inputData.id, type=inputData.type,  pattern=inputData.pattern title=inputData.title)&attributes(attributes)

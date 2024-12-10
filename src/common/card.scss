@@ -1,6 +1,6 @@
 .card {
   width: 38rem;
-  padding: 3.9rem 2.9rem 3rem;
+  padding: 3.9rem 2.9rem 2.9rem;
   background-color: #ffffff;
   border: 0.1rem solid $color-dark-shade-12;
   border-radius: 0.4rem;
@@ -16,9 +16,24 @@
     display: flex;
     flex-direction: column;
     row-gap: 2.2rem;
+  }
 
-    & > .button__wrapper {
-      margin-top: 0.8rem;
-    }
+  &__fieldset {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+
+  &__link {
+    align-self: center;
+    font-size: 1.4em;
+    color: $color-dark-shade-100;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0.8rem;
   }
 }

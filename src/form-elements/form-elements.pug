@@ -1,5 +1,6 @@
 include ../input/input
 include ../dropdown/dropdown
+include ../radio-buttons/radio-buttons
 include ../date-group/date-group
 include ../toggle/toggle
 include ../like-button/like-button
@@ -22,9 +23,7 @@ include ../comment/comment
     include ../form-subscribe-email/form-subscribe-email
   .form-elements__group-elements
     include ../checkbox-buttons/checkbox-buttons
-    .element__wrapper.element__width-tight.radio-buttons
-      .element__label.input-buttons__legend Radio Buttons
-      include ../radio-buttons/radio-buttons
+    +radio-buttons({label: true})
     .element__wrapper.toggle
       .element__label.input-buttons__legend Toggle
       +toggle({checked: true, id: "get-spec"})
