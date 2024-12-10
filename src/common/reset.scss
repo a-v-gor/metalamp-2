@@ -27,9 +27,8 @@ button {
   background-color: unset;
 }
 
-select,
-progress[value] {
-  appearance: none;
+h3 {
+  font-size: unset;
 }
 
 input[type='date']::-webkit-calendar-picker-indicator {
@@ -53,6 +52,11 @@ input[type='number']:active {
   outline: none;
   -moz-appearance: textfield;
   appearance: textfield;
+}
+
+select,
+progress[value] {
+  appearance: none;
 }
 
 @supports (-webkit-appearance: none) or (-moz-appearance: none) {
