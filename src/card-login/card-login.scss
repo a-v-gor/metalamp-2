@@ -1,0 +1,12 @@
+.card-login {
+  padding-bottom: 3.1rem;
+
+  &__form {
+    row-gap: 2.1rem;
+  }
+
+  & .button__wrapper {
+    position: relative;
+    bottom: 0.1rem;
+  }
+}
