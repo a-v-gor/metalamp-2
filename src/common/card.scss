@@ -1,10 +1,17 @@
 .card {
+  position: relative;
   width: 38rem;
   padding: 3.9rem 2.9rem 2.9rem;
-  background-color: #ffffff;
   border: 0.1rem solid $color-dark-shade-12;
   border-radius: 0.4rem;
   box-shadow: 0 0 2.5rem $color-dark-shade-20;
+
+  &__background {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    background-color: #ffffff;
+  }
 
   &__title {
     font-weight: 700;
@@ -32,6 +39,7 @@
 
   &__footer {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     padding-top: 0.8rem;

@@ -3,15 +3,37 @@ include ../dropdown/dropdown
 
 mixin card-room-cost
   .card.card-room-cost
-    form.card__form
-    .card-room-cost__header
-      .card-room-cost__title-wrapper
-        h3.card-room-cost__title
-          span.card-room-cost__num-sign № 
-          span.card__title 888
-        .card-room-cost__lux-descr люкс
-      .card-room-cost__price-wrapper
-        span.card-room-cost__price 9 990₽ 
-        span.card-room-cost__price-descr в сутки
-    +date-group({id: "card-room-cost-date", firstDateLabel: "прибытие", secondDateLabel: "выезд"})
-    +dropdown({id: "card-room-cost-dropdown", label: "гости", type: "guests", withData: true})
+    .card__background
+    form.card__form.card-room-cost__form
+      .card-room-cost__header
+        .card-room-cost__title-wrapper
+          h3.card-room-cost__title
+            span.card-room-cost__num-sign № 
+            span.card__title 888
+          .card-room-cost__lux-descr люкс
+        .card-room-cost__price-wrapper
+          span.card-room-cost__price 9 990₽ 
+          span.card-room-cost__price-descr в сутки
+      +date-group({id: "card-room-cost-date", firstDateLabel: "прибытие", secondDateLabel: "выезд", firstDateValue: "2019-08-19", secondDateValue: "2019-08-23"})
+      +dropdown({id: "card-room-cost-dropdown", label: "гости", type: "guests", withData: true})
+      .card-room-cost__price-strings-wrapper
+        .card-room-cost__price-string
+          .card-room-cost__string-text 9 990₽ х 4 суток
+          .card-room-cost__string-info
+          .card-room-cost__string-price 39 960₽
+        .card-room-cost__price-string
+          .card-room-cost__string-text Сбор за услуги: скидка 2 179₽
+          .card-room-cost__string-info
+            span.card-room-cost__string-info-icon i
+          .card-room-cost__string-price 0₽
+        .card-room-cost__price-string
+          .card-room-cost__string-text Сбор за дополнительные услуги
+          .card-room-cost__string-info
+            span.card-room-cost__string-info-icon i
+          .card-room-cost__string-price 300₽
+        .card__footer.card-room-cost__footer
+          .card-room-cost__result-string
+            .card-room-cost__result-text Итого
+            .card-room-cost__result-dots
+            .card-room-cost__result-cost 38 081₽
+          +button({size:"large", color:"dark", text: "забронировать", withArrow: true})

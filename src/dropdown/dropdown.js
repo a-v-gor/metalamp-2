@@ -4,7 +4,7 @@ export default function updateDropdown(id) {
   const label = dropdown.querySelector('label');
   const clearButton = dropdown.querySelector('.button-link');
   const type = dropdown.classList.contains('dropdown__guests') ? 'guests' : 'convenience';
-  const optionsNums = dropdown.id === 'dropdown-guests-exp-1' ? [2, 1, 0] : [0, 0, 0];
+  const optionsNums = dropdown.id === 'dropdown-guests-exp-1'||dropdown.id === 'card-room-cost-dropdown' ? [2, 1, 0] : [0, 0, 0];
 
   const returnOptionString = (optionNum, labelsArr) => {
     let labelsIndex = 0;

@@ -4,6 +4,7 @@ include ../buttons/button
 
 mixin card-find-room
   .card
+    .card__background
     form.card__form
       h3.card__title Найдём номера под ваши пожелания
       +date-group({id: "card-find-room-date", firstDateLabel: "прибытие", secondDateLabel: "выезд"})
