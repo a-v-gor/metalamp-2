@@ -1,0 +1,40 @@
+- 
+  function createArr(firstNum, lastNum, descr) {
+    const arr = [];
+    for (let i = firstNum; i <= lastNum; i += 1) {
+      if (i === 8) {
+        descr = 'today'
+      }
+      if (i === 19 || i === 23) {
+        descr = 'selectedBorder'
+      }
+      if (i > 19 && i < 23) {
+        descr = 'selected'
+      }
+      arr.push({value: i, descr: descr})
+      descr = '';
+    }
+    return arr
+  }
+  const arrDates = []
+  arrDates.push(...createArr(29, 31, 'unactive'), ...createArr(1, 31), ...createArr(1, 1, 'unactive'))
+  const dayNames = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс']
+
+.card.card-calendar
+  .card__background
+  .card__header.card-calendar__header
+    .material-icons.card-calendar__prev-month arrow_back
+    h3.card__title.card-calendar__title Август 2019
+    .material-icons.card-calendar__next-month arrow_forward
+  .card-calendar__calendar-wrapper
+    .card-calendar__days-names
+      each day in dayNames
+        .card-calendar__calendar-item.card-calendar__day-name= day
+    .card-calendar__dates-wrapper
+      each date in arrDates
+        .card-calendar__calendar-item.card-calendar__date(
+          class = date.descr == 'unactive' ? 'card-calendar__date_unactive' :
+            date.descr == 'today' ? 'card-calendar__date-today' : 
+            date.descr == 'selectedBorder' ? 'card-calendar__date-selected-border' : 
+            date.descr == 'selected' ? 'card-calendar__date-selected' : ''
+            )= date.value

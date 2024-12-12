@@ -1,0 +1,80 @@
+.card-calendar {
+  width: 32rem;
+  padding: 1.9rem;
+  border: 0.1rem solid $color-dark-shade-25;
+
+  &__header {
+    display: flex;
+    align-items: center;
+  }
+
+  &__prev-month,
+  &__next-month {
+    color: $color-purple;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__title {
+    flex-grow: 1;
+    font-size: 1.9em;
+    text-align: center;
+  }
+
+  &__calendar-wrapper {
+    padding-top: 3rem;
+  }
+
+  &__calendar-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3.97rem;
+    height: 4rem;
+    font-size: 1.2em;
+  }
+
+  &__days-names {
+    display: flex;
+  }
+
+  &__day-name {
+    font-weight: 700;
+    color: $color-purple;
+  }
+
+  &__dates-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__date {
+    position: relative;
+    color: $color-dark-shade-50;
+
+    &_unactive {
+      color: $color-dark-shade-25;
+    }
+  }
+
+  &__date-today {
+    @include colored-circle-with-text('green');
+  }
+
+  &__date-selected-border {
+    @include colored-circle-with-text('purple');
+  }
+
+  &__date-selected-border::after,
+  &__date-selected::after {
+    content: ' ';
+    position: absolute;
+    width: 3.97rem;
+    height: 4rem;
+    opacity: 0.25;
+
+    @include primary-gradient($property: background, $direction: bottom);
+  }
+}
