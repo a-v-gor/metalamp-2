@@ -5,8 +5,10 @@
       if (i === 8) {
         descr = 'today'
       }
-      if (i === 19 || i === 23) {
-        descr = 'selectedBorder'
+      if (i === 19) {
+        descr = 'selectedStart'
+      } else if (i === 23) {
+        descr = 'selectedEnd'
       }
       if (i > 19 && i < 23) {
         descr = 'selected'
@@ -35,6 +37,10 @@
         .card-calendar__calendar-item.card-calendar__date(
           class = date.descr == 'unactive' ? 'card-calendar__date_unactive' :
             date.descr == 'today' ? 'card-calendar__date-today' : 
-            date.descr == 'selectedBorder' ? 'card-calendar__date-selected-border' : 
+            date.descr == 'selectedStart' ? 'card-calendar__date-selected-start' : 
+            date.descr == 'selectedEnd' ? 'card-calendar__date-selected-end' : 
             date.descr == 'selected' ? 'card-calendar__date-selected' : ''
             )= date.value
+    .card-calendar__buttons-wrapper
+      +button({type:"link", text: "очистить"})
+      +button({type:"link", text: "применить"})

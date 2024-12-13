@@ -2,6 +2,7 @@
   width: 32rem;
   padding: 1.9rem;
   border: 0.1rem solid $color-dark-shade-25;
+  box-shadow: 0 1rem 2rem $color-dark-shade-5;
 
   &__header {
     display: flex;
@@ -63,10 +64,17 @@
     @include colored-circle-with-text('green');
   }
 
-  &__date-selected-border {
+  &__date-selected-start,
+  &__date-selected-end {
     @include colored-circle-with-text('purple');
+
+    &::after {
+      z-index: -1;
+    }
   }
 
+  &__date-selected-start::after,
+  &__date-selected-end::after,
   &__date-selected-border::after,
   &__date-selected::after {
     content: ' ';
@@ -76,5 +84,21 @@
     opacity: 0.25;
 
     @include primary-gradient($property: background, $direction: bottom);
+  }
+
+  &__date-selected-start::after {
+    border-start-start-radius: 50%;
+    border-end-start-radius: 50%;
+  }
+
+  &__date-selected-end::after {
+    border-start-end-radius: 50%;
+    border-end-end-radius: 50%;
+  }
+
+  &__buttons-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2rem;
   }
 }
