@@ -44,4 +44,8 @@
     align-items: center;
     padding-top: 0.8rem;
   }
+
+  &_small-shadow {
+    box-shadow: 0 1rem 2rem $color-dark-shade-5;
+  }
 }
