@@ -1,3 +1,11 @@
-mixin card-room-review
+mixin card-room-review (data)
   .card.card_small-shadow.card-room-review
     .card__background
+    .card-room-review__slider-wrapper
+      .card-room-review__images-wrapper
+        img.card-room-review__image(src= data.images[0])
+      .card-room-review__slider-arrows
+        .card-room-review__prev-arrow
+          .card-room-review__arrow.material-icons expand_more
+        .card-room-review__next-arrow
+          .card-room-review__arrow.material-icons expand_more
