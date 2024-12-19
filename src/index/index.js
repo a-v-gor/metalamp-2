@@ -4,7 +4,7 @@ import updateRatingButton from "../rate-button/rate-button";
 
 
 const dropdowns = document.querySelectorAll('.dropdown');
-dropdowns.forEach((dropdown) => updateDropdown(dropdown.id))
-updateRatingButton('rate-button');
-updateRatingButton('rate-button-test');
+const ratingButtons = document.querySelectorAll('.rate-button__form');
+dropdowns.forEach((dropdown) => updateDropdown(dropdown.id));
+ratingButtons.forEach((ratingButton) => updateRatingButton(ratingButton.id));
 rangeSlider();

@@ -1,3 +1,5 @@
+include ../rate-button/rate-button
+
 mixin card-room-review (data)
   .card.card_small-shadow.card-room-review
     .card__background
@@ -9,3 +11,24 @@ mixin card-room-review (data)
           .card-room-review__arrow.material-icons expand_more
         .card-room-review__next-arrow
           .card-room-review__arrow.material-icons expand_more
+      .card-room-review__slider-buttons
+        .card-room-review__slider-button.card-room-review__slider-button_active
+        .card-room-review__slider-button 
+        .card-room-review__slider-button 
+        .card-room-review__slider-button 
+    .card-room-review__info-wrapper
+      .card-room-review__info-string.card__detailed-header-wrapper
+        .card__detailed-title-wrapper
+          h3
+            span.card__num-sign № 
+            span.card__title= data.num
+          if data.lux
+            .card__lux-descr люкс
+        .card__detailed-subtitle-wrapper
+          span.card__detailed-subtitle= data.cost+'₽' 
+          span.card__detailed-subtitle-descr в сутки
+      .card-room-review__info-string.card__detailed-header-wrapper
+        +rate-button({id: data.id+"rate", checked: data.rate})
+        .card__detailed-subtitle-wrapper.card-room-review__detailed-subtitle-wrapper
+          span.card__detailed-subtitle= data.numReviews
+          span.card__detailed-subtitle-descr.card-room-review__detailed-subtitle-descr Отзывов
