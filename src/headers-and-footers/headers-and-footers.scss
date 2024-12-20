@@ -1,0 +1,12 @@
+.headers-and-footers {
+  position: relative;
+  padding: 0;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 4rem;
+    width: 100%;
+    padding: 14rem 0;
+  }
+}
