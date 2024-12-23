@@ -2,6 +2,7 @@ include ../input/input
 include ../dropdown/dropdown
 include ../radio-buttons/radio-buttons
 include ../date-group/date-group
+include ../form-subscribe-email/form-subscribe-email
 include ../toggle/toggle
 include ../like-button/like-button
 include ../rate-button/rate-button
@@ -20,7 +21,7 @@ include ../comment/comment
       +input({id: "input-masked", label: "masked text field", placeholder: "ДД.ММ.ГГГГ", pattern: "(0[1-9]|[12][0-9]|3[01]).(0[1-9]|1[012]).202[4-6]", title: "Введите дату в формате ДД.ММ.ГГГГ"})
     +date-group({firstDateLabel: "date Dropdown", secondDateLabel: "date Dropdown", secondDateValue: "2019-08-19", id: "date-group"})
     include ../filter-date/filter-date
-    include ../form-subscribe-email/form-subscribe-email
+    +form-subscribe-email({id: "subscribe", title: "subscription text field"})
   .form-elements__group-elements
     include ../checkbox-buttons/checkbox-buttons
     +radio-buttons({label: true})

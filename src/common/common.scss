@@ -50,3 +50,13 @@ body {
     background-color: #f6f4f4;
   }
 }
+
+.header-footer__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0 14rem;
+  background: #ffffff;
+  box-shadow: 0 1rem 2rem $color-dark-shade-5;
+}

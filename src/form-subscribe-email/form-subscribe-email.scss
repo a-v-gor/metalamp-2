@@ -1,4 +1,11 @@
 .form-subscribe-email {
+  row-gap: 2rem;
+
+  &__description {
+    font-size: 1.4em;
+    line-height: 1.7;
+  }
+
   .element__icon {
     @include text-gradient(bottom);
   }

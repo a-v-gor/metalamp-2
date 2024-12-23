@@ -1,4 +1,7 @@
-form.element__wrapper.element__width-middle.form-subscribe-email
-  label.element__label(for = "subscribe") subscription text field
-  input.element__input(placeholder = "Email", id = "subscribe", type = "email")
-  input(type="submit" value="arrow_forward").material-icons.element__icon
+mixin form-subscribe-email(data)
+  form.element__wrapper.element__width-middle.form-subscribe-email
+    label.element__label(for = data.id)= data.title
+    if data.description
+      p.form-subscribe-email__description= data.description
+    input.element__input(placeholder = "Email", id = data.id, type = "email")
+    input(type="submit" value="arrow_forward").material-icons.element__icon

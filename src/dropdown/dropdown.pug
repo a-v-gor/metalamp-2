@@ -8,7 +8,7 @@ mixin dropdown(dropdownData)
       .element__description= dropdownData.condition
     .element__label= dropdownData.label
     input(type="checkbox" id = dropdownData.id+"-inp" checked = dropdownData.expanded == true ? true : false).dropdown__checkbox
-    label.element__input.dropdown__input(for = dropdownData.id+"-inp")= dropdownData.type == "guests" ? dropdownData.withData == true? "3 гостя" : "Сколько гостей" : "Удобства"
+    label.element__input.dropdown__input(for = dropdownData.id+"-inp")= dropdownData.type == "guests" ? (dropdownData.withData == true? "3 гостя" : "Сколько гостей") : "Удобства"
     i.material-icons.element__icon expand_more
     .dropdown__expand
       .dropdown__options-wrapper
