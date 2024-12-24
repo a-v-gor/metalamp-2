@@ -1,11 +1,13 @@
 .footer {
   flex-direction: column;
-  padding: 10rem 14rem 10.5rem;
+  padding: 0;
 
   &__menu {
     display: flex;
     justify-content: space-between;
     width: 100%;
+    padding: 10rem 14rem 10.5rem;
+    border-bottom: 0.1rem solid $color-dark-shade-15;
   }
 
   &__info-text {
@@ -58,6 +60,29 @@
     flex-direction: column;
     align-items: start;
     row-gap: 1.8rem;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 7rem;
+    padding: 0 14rem;
+    font-size: 1.4em;
+  }
+
+  &__socials {
+    display: flex;
+    column-gap: 2.4rem;
+  }
+
+  &__social {
+    font-size: 1.7em;
+    /* stylelint-disable-next-line font-family-no-missing-generic-family-keyword */
+    font-family: 'Font Awesome 5 Brands';
+
+    @include text-gradient(bottom);
   }
 
   .element__label {

@@ -1,9 +1,10 @@
 include ../buttons/button
+include ../logo/logo
 
 mixin header(data)
   .header-footer__wrapper.header__wrapper 
     .header
-      img(src="../common/img/logo.svg" alt="Логотип Toxin")
+      +logo()
       .header__menu
         nav.header__nav
           ul.header__nav-ul
