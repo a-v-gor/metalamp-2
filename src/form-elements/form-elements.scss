@@ -1,8 +1,8 @@
 .form-elements {
   display: grid;
-  grid-template-columns: repeat(3, 32rem);
+  grid-template-columns: 32rem 26.7rem 32rem;
+  grid-template-rows: 59.2rem 16.7rem 24.1rem;
   padding: 14.4rem 14.1rem 13.1rem;
-  row-gap: 99px;
 
   &__form {
     display: flex;
@@ -21,6 +21,7 @@
 
     &:nth-child(5) {
       margin-bottom: 3.7rem;
+      row-gap: 2rem;
     }
 
     &:nth-child(8) {
@@ -28,8 +29,23 @@
       margin-bottom: 17.4rem;
     }
 
+    &:nth-child(9),
+    &:nth-child(10) {
+      padding-top: 1.4rem;
+    }
+
     &:last-child {
       grid-column-end: span 2;
+      padding-top: 1rem;
     }
+  }
+
+  &__rate-buttons {
+    justify-content: space-between;
+    width: 26rem;
+  }
+
+  .form-subscribe-email {
+    row-gap: 0;
   }
 }

@@ -1,36 +1,37 @@
 include ../buttons/button
 
-mixin dropdown(dropdownData)
+mixin dropdown(data)
   .element__wrapper.form-elements__element-wrapper.dropdown(
-      id = dropdownData.id class = dropdownData.type == "guests" ? "element__width-wide dropdown__guests" : "element__width-middle dropdown__convenience"
+      id = data.id class = data.type == "guests" ? "element__width-wide dropdown__guests" : "element__width-middle dropdown__convenience"
       )
-    if dropdownData.condition
-      .element__description= dropdownData.condition
-    .element__label= dropdownData.label
-    input(type="checkbox" id = dropdownData.id+"-inp" checked = dropdownData.expanded == true ? true : false).dropdown__checkbox
-    label.element__input.dropdown__input(for = dropdownData.id+"-inp")= dropdownData.type == "guests" ? (dropdownData.withData == true? "3 гостя" : "Сколько гостей") : "Удобства"
+    if data.condition
+      .element__description= data.condition
+    .element__label= data.label
+    input(type="checkbox" id = data.id+"-inp" checked = data.expanded == true ? true : false).dropdown__checkbox
+    label.element__input.dropdown__input(for = data.id+"-inp")= data.type == "guests" ? (data.withData == true? "3 гостя" : "Сколько гостей") : "Удобства"
     i.material-icons.element__icon expand_more
     .dropdown__expand
       .dropdown__options-wrapper
         .dropdown__option
-          .element__label.dropdown__option-label= dropdownData.type == "guests" ? "взрослые" : "спальни"
+          .element__label.dropdown__option-label= data.type == "guests" ? "взрослые" : "спальни"
           .dropdown__set-option-wrapper
             button.dropdown__set-option-num.dropdown__decrease-option-num -
-            input(type="number" value = dropdownData.withData == true? "2" : "0").element__label.dropdown__option-num
+            input(type="number" value = data.withData == true? "2" : "0").element__label.dropdown__option-num
             button.dropdown__set-option-num.dropdown__increase-option-num +
         .dropdown__option
-          .element__label.dropdown__option-label= dropdownData.type == "guests" ? "дети" : "кровати"
+          .element__label.dropdown__option-label= data.type == "guests" ? "дети" : "кровати"
           .dropdown__set-option-wrapper
             button.dropdown__set-option-num.dropdown__decrease-option-num -
-            input(type="number" value = dropdownData.withData == true? "1" : "0").element__label.dropdown__option-num
+            input(type="number" value = data.withData == true?
+               data.type == "guests" ? "1" : "2" : "0").element__label.dropdown__option-num
             button.dropdown__set-option-num.dropdown__increase-option-num +
         .dropdown__option
-          .element__label.dropdown__option-label= dropdownData.type == "guests" ? "младенцы" : "ванные комнаты"
+          .element__label.dropdown__option-label= data.type == "guests" ? "младенцы" : "ванные комнаты"
           .dropdown__set-option-wrapper
             button.dropdown__set-option-num.dropdown__decrease-option-num -
             input(type="number" value="0").element__label.dropdown__option-num
             button.dropdown__set-option-num.dropdown__increase-option-num +
-      if dropdownData.type == "guests"
+      if data.type == "guests"
         .dropdown__buttons-wrapper
           +button({type:"link", text: "очистить"})
           +button({type:"link", text: "применить"})

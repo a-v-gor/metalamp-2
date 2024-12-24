@@ -26,14 +26,14 @@ include ../comment/comment
     include ../checkbox-buttons/checkbox-buttons
     +radio-buttons({label: true})
     .element__wrapper.toggle
-      .element__label.input-buttons__legend Toggle
+      .element__label.input-buttons__legend.form-elements__toggle-lable Toggle
       +toggle({checked: true, id: "get-spec"})
       +toggle({checked: false, id: "get-spec-test"})
     .element__wrapper.element__width-tighter.input-buttons__input-wrapper
       .element__label.input-buttons__legend like button
       +like-button({checked: false, id: "like", value: "2"})
       +like-button({checked: true, id: "like-test", value: "12"})
-    .element__wrapper.element__width-middle.input-buttons__input-wrapper
+    .element__wrapper.input-buttons__input-wrapper.form-elements__rate-buttons
       .element__label.input-buttons__legend rate button
       +rate-button({id: "rate-button", checked: 4})
       +rate-button({id: "rate-button-test", checked: 5})
@@ -43,8 +43,8 @@ include ../comment/comment
     .element__wrapper.pagination
       include ../pagination/pagination
   .form-elements__group-elements
-    +dropdown({id: "dropdown-convenience", label: "Dropdown", condition: "Default"})
-    +dropdown({id: "dropdown-convenience-exp", label: "Dropdown", condition: "expanded", expanded: true})
+    +dropdown({id: "dropdown-convenience", label: "Dropdown", condition: "Default", withData: true})
+    +dropdown({id: "dropdown-convenience-exp", label: "Dropdown", condition: "expanded", expanded: true, withData: true})
   .form-elements__group-elements
     +dropdown({id: "dropdown-guests-exp", label: "Dropdown", type: "guests", expanded: true})
   .form-elements__group-elements

@@ -39,11 +39,13 @@
     z-index: -1;
     display: block;
     font-size: 1em;
+    color: $color-dark-shade-25;
   }
 
   &__input-label {
     position: absolute;
     top: 0.4rem;
     left: 2.2rem;
+    color: $color-dark-shade-25;
   }
 }
