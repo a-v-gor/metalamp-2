@@ -9,4 +9,33 @@
     width: 100%;
     padding: 14rem 0;
   }
+
+  &__tight-footer {
+    width: 76.8rem;
+    margin: 0 auto;
+
+    .footer {
+      padding-bottom: 11.7rem;
+    }
+
+    .footer__info-text,
+    .footer__nav-ul,
+    .footer__subscribe {
+      display: none;
+    }
+
+    .footer__menu {
+      justify-content: center;
+      padding: 12rem 0 2rem;
+      border: none;
+    }
+
+    .footer__info-wrapper {
+      width: unset;
+    }
+
+    .footer__footer {
+      flex-direction: column;
+    }
+  }
 }

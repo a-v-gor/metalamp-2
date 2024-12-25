@@ -1,5 +1,7 @@
 include ../form-subscribe-email/form-subscribe-email
 include ../logo/logo
+include ../copyright/copyright
+include ../socials/socials
 
 mixin footer
   .header-footer__wrapper.footer
@@ -31,8 +33,5 @@ mixin footer
       .footer__subscribe
         +form-subscribe-email({id: "footer-subscribe", title: "Подписка", description: "Получайте специальные предложения и новости сервиса"})
     .footer__footer
-      .footer__copyright Copyright © 2018 Toxin отель. Все права защищены.
-      .footer__socials
-        .footer__social &#xf099;
-        .footer__social &#xf082;
-        .footer__social &#xf16d;
+      +copyright()
+      +socials()

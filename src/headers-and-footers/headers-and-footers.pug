@@ -1,5 +1,8 @@
 include ../header/header
 include ../footer/footer
+include ../logo/logo
+include ../copyright/copyright
+include ../socials/socials
 
 .screen-wrapper.headers-and-footers
   h2.title Headers & Footers
@@ -8,3 +11,5 @@ include ../footer/footer
     +header()
     +header({userName: 'Юлий Цезарь'})
     +footer()
+    .headers-and-footers__tight-footer
+      +footer()
