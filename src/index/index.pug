@@ -3,13 +3,13 @@ html(lang="ru")
   head
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    link(rel="shortcut icon", href="../index/images/favicon.ico", type="image/x-icon")
-    title UI kit
-    link(href="./index.scss" rel="stylesheet")
+    link(rel="shortcut icon", href="../common/img/favicon.ico", type="image/x-icon")
+    title Main page
     script(src="./index.js" defer) 
   body
-    h1.title UI kit
-    include ../colors-and-type/colors-and-type
-    include ../form-elements/form-elements
-    include ../cards/cards
-    include ../headers-and-footers/headers-and-footers
+    h1 Main page
+    ul
+      li
+        a(href='./ui-kit.html' target="_blank" rel="noopener noreferrer") UI kit
+      li
+        a(href='./website-pages.html' target="_blank" rel="noopener noreferrer") Website pages

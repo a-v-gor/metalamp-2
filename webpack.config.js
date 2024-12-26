@@ -7,8 +7,9 @@ module.exports = {
   plugins: [
     new PugPlugin({
       entry: {
-        // define many page templates here
-        index: './src/index/index.pug', // => dist/index.html
+        index: './src/index/index.pug',
+        'ui-kit': './src/ui-kit/ui-kit.pug',
+        'website-pages': './src/website-pages/website-pages.pug',
       },
       js: {
         // JS output filename
@@ -44,11 +45,6 @@ module.exports = {
       }
     ],
   },
-  resolve: {
-    alias: {
-    "@images": path.resolve(__dirname, "./src/assets/images/"),
-   }
- },
   devServer: {
     static: {
       directory: path.join(__dirname, 'dist'),
@@ -61,8 +57,5 @@ module.exports = {
     },
     port: 8080,
   },
-  devtool: 'source-map',
-  externals: {
-    jquery: 'jQuery',
-  }
+  devtool: 'source-map'
 };
