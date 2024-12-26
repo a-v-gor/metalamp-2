@@ -63,6 +63,25 @@
   }
 }
 
+.button-in-header {
+  &__wrapper {
+    height: 3.4rem;
+  }
+
+  &__width-wide {
+    width: 19.6rem;
+  }
+
+  &__small-width {
+    width: 8.7rem;
+
+    .button-in-header__button {
+      width: 8.3rem;
+      height: 3rem;
+    }
+  }
+}
+
 .button-dark {
   color: #ffffff;
 

@@ -1,17 +1,20 @@
-mixin button (buttonData)
-  if buttonData.type=="link"
+mixin button (data)
+  if data.type=="link"
     button.button-link(
-      class=buttonData.hovered?"button-link_hovered":""
-      )= buttonData.text
+      class=data.hovered?"button-link_hovered":""
+      )= data.text
   else
     .element__wrapper.button__wrapper(
-      class=buttonData.color=="dark"?"button-dark":""
-      class=buttonData.color=="light"?"button-light":""
-      class=buttonData.size=="small"?"button__small-width":""
-      class=buttonData.size=="large"?"element__width-wide":""
-      class=buttonData.hovered?"button_hovered":""
+      class=data.inHeader?"button-in-header__wrapper":""
+      class=data.color=="dark"?"button-dark":""
+      class=data.color=="light"?"button-light":""
+      class=data.size=="small"?data.inHeader?"button-in-header__small-width":"button__small-width":""
+      class=data.size=="large"?data.inHeader?"button-in-header__width-wide":"element__width-wide":""
+      class=data.hovered?"button_hovered":""
       )
       .button__back
-      button.button__button= buttonData.text
-      if buttonData.withArrow == true
+      button(
+        class=data.inHeader?"button__button button-in-header__button":"button__button"
+      )= data.text
+      if data.withArrow == true
         i.material-icons.element__icon arrow_forward

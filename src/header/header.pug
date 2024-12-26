@@ -23,8 +23,8 @@ mixin header(data)
         .header__user-block 
           - const userName = data && data.userName ? data.userName : ''
             if userName.length == 0
-              +button({size:"small", color:"light", text: "войти"})
-              +button({size:"large", color:"dark", text: "зарегистрироваться"})
+              +button({size:"small", color:"light", text: "войти", inHeader: true})
+              +button({size:"large", color:"dark", text: "зарегистрироваться", inHeader: true})
             else
               .header__user-border
               .header__user-name= userName
