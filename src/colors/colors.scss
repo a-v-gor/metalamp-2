@@ -53,10 +53,16 @@
     }
   }
 
+  &__description-wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+  }
+
   &__color {
     width: 7rem;
     height: 7rem;
-    border-radius: 0.7rem;
+    border-radius: 0.6rem;
   }
 
   &__name {
