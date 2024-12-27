@@ -3,7 +3,7 @@ include ../footer/footer
 include ../card-find-room/card-find-room
 
 doctype html
-html(lang="en")
+html(lang="ru")
   head
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
@@ -11,8 +11,9 @@ html(lang="en")
     link(href="./website-pages.scss" rel="stylesheet")
     title Website pages
   body.page__body
-    +header()
-    main.page__main 
-      +card-find-room()
-      .page__info Лучшие номера для вашей работы, отдыха и просто вдохновения
+    +header({noUser: true})
+    main.page__main-wrapper 
+      .page__main 
+        +card-find-room()
+        .page__info Лучшие номера для вашей работы, отдыха и просто вдохновения
     +footer()

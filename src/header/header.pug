@@ -1,31 +1,8 @@
-include ../buttons/button
 include ../logo/logo
+include ../menu-header/menu-header
 
 mixin header(data)
   header.header-footer__wrapper.header__wrapper 
     .header
       +logo()
-      .header__menu
-        nav.header__nav
-          ul.header__nav-ul
-            li.header__nav-li
-              .header__nav-li-text.header__nav-li-text_active О нас
-            li.header__nav-li 
-              .header__nav-li-text Услуги
-              .header__nav-li-icon.material-icons expand_more 
-            li.header__nav-li
-              .header__nav-li-text Вакансии
-            li.header__nav-li
-              .header__nav-li-text Новости
-            li.header__nav-li
-              .header__nav-li-text Соглашения
-              .header__nav-li-icon.material-icons expand_more 
-        .header__user-block 
-          - const userName = data && data.userName ? data.userName : ''
-            if userName.length == 0
-              +button({size:"small", color:"light", text: "войти", inHeader: true})
-              +button({size:"large", color:"dark", text: "зарегистрироваться", inHeader: true})
-            else
-              .header__user-border
-              .header__user-name= userName
-
+      +menu-header({noUser: data.noUser, userName: data.userName})

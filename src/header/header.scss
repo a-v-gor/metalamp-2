@@ -8,46 +8,4 @@
   &__wrapper {
     height: 7rem;
   }
-
-  &__menu {
-    display: flex;
-    align-items: center;
-    column-gap: 2rem;
-  }
-
-  &__nav-ul {
-    display: flex;
-    column-gap: 2rem;
-  }
-
-  &__nav-li {
-    display: flex;
-    align-items: center;
-    column-gap: 0.1rem;
-  }
-
-  &__nav-li-text {
-    font-size: 1.4em;
-
-    &_active {
-      font-weight: 700;
-    }
-  }
-
-  &__user-block {
-    display: flex;
-    align-items: center;
-    column-gap: 2rem;
-  }
-
-  &__user-border {
-    width: 0.1rem;
-    height: 3rem;
-    background-color: $color-dark-shade-10;
-  }
-
-  &__user-name {
-    font-size: 1.4em;
-    color: $color-dark-shade-50;
-  }
 }

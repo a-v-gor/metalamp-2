@@ -50,7 +50,7 @@ module.exports = {
       directory: path.join(__dirname, 'dist'),
     },
     watchFiles: {
-      paths: ['src/**/*.*'], 
+      paths: ['src/**/*'], 
         options: {
           usePolling: true,
         },

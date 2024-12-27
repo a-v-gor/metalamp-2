@@ -7,17 +7,24 @@
     min-height: 100vh;
   }
 
-  &__main {
-    display: flex;
+  &__main-wrapper {
     flex-grow: 1;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-    padding: 7rem 13.4rem 2rem 14rem;
+    height: calc(100vh - 7rem);
+    max-height: 83rem;
+    padding: 7rem 13.4rem 2rem 13.3rem;
     background-image: url('../common/img/background-page.jpg');
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: cover;
+  }
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 116rem;
+    height: 100%;
+    margin: 0 auto;
   }
 
   &__info {
