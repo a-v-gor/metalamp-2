@@ -1,7 +1,9 @@
 .menu-header {
-  display: flex;
-  align-items: center;
-  column-gap: 2rem;
+  &__content-wrapper {
+    display: flex;
+    align-items: center;
+    column-gap: 2rem;
+  }
 
   &__input {
     display: none;
@@ -59,7 +61,12 @@
       }
     }
 
-    &__ul {
+    &__ul,
+    &__user-block {
+      row-gap: 2rem;
+    }
+
+    &__content-wrapper {
       position: fixed;
       top: 0;
       right: -100%;
@@ -68,7 +75,7 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      row-gap: 2rem;
+      row-gap: 3rem;
       align-items: center;
       padding: 0 8rem;
       overflow-y: auto;
@@ -112,9 +119,14 @@
       transform: rotate(90deg);
     }
 
-    &__input:checked ~ &__ul {
+    &__input:checked ~ &__content-wrapper {
       right: 0;
       visibility: visible;
+
+      .menu-header__ul,
+      .menu-header__user-block {
+        flex-direction: column;
+      }
     }
 
     &__input:checked ~ &__substrate {

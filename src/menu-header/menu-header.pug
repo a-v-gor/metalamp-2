@@ -2,28 +2,29 @@ include ../buttons/button
 
 mixin menu-header(data)
   .menu-header
-    nav.menu-header__nav
-      input.menu-header__input(type="checkbox")#nav-input
-      label.menu-header__label(for="nav-input")
-        i.menu-header__icon
-      ul.menu-header__ul
-        li.menu-header__li
-          .menu-header__li-text.menu-header__li-text_active О нас
-        li.menu-header__li 
-          .menu-header__li-text Услуги
-          .menu-header__li-icon.material-icons expand_more 
-        li.menu-header__li
-          .menu-header__li-text Вакансии
-        li.menu-header__li
-          .menu-header__li-text Новости
-        li.menu-header__li
-          .menu-header__li-text Соглашения
-          .menu-header__li-icon.material-icons expand_more 
-      .menu-header__substrate
-    .menu-header__user-block
-      if data.noUser === true
-        +button({size:"small", color:"light", text: "войти", inHeader: true})
-        +button({size:"large", color:"dark", text: "зарегистрироваться", inHeader: true})
-      else
-        .menu-header__user-border
-        .menu-header__user-name= data.userName
+    input.menu-header__input(type="checkbox")#nav-input
+    label.menu-header__label(for="nav-input")
+      i.menu-header__icon
+    .menu-header__content-wrapper
+      nav.menu-header__nav
+        ul.menu-header__ul
+          li.menu-header__li
+            .menu-header__li-text.menu-header__li-text_active О нас
+          li.menu-header__li 
+            .menu-header__li-text Услуги
+            .menu-header__li-icon.material-icons expand_more 
+          li.menu-header__li
+            .menu-header__li-text Вакансии
+          li.menu-header__li
+            .menu-header__li-text Новости
+          li.menu-header__li
+            .menu-header__li-text Соглашения
+            .menu-header__li-icon.material-icons expand_more 
+        .menu-header__substrate
+      .menu-header__user-block
+        if data.noUser === true
+          +button({size:"small", color:"light", text: "войти", inHeader: true})
+          +button({size:"large", color:"dark", text: "зарегистрироваться", inHeader: true})
+        else
+          .menu-header__user-border
+          .menu-header__user-name= data.userName
