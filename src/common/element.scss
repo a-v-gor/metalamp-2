@@ -83,4 +83,20 @@
       cursor: pointer;
     }
   }
+
+  @media (width <= 479px) {
+    &__label {
+      font-size: 1em;
+    }
+
+    &__input {
+      height: 2.8rem;
+      padding: 0.7rem;
+      font-size: 1.1em;
+    }
+
+    &__width-wide {
+      width: 25.8rem;
+    }
+  }
 }

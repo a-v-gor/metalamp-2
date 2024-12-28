@@ -34,4 +34,35 @@
     line-height: 1.7;
     text-align: right;
   }
+
+  @media (width <= 1199px) {
+    &__main-wrapper {
+      padding: 2rem 5rem 1rem;
+    }
+  }
+
+  @media (width <= 699px) {
+    &__main-wrapper {
+      display: flex;
+      flex-direction: column;
+      height: auto;
+    }
+
+    &__main {
+      flex-grow: 1;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__info {
+      align-self: auto;
+      text-align: center;
+    }
+  }
+
+  @media (width <= 479px) {
+    &__main-wrapper {
+      padding: 0.5rem 0;
+    }
+  }
 }

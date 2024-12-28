@@ -49,7 +49,7 @@
     &__label {
       position: fixed;
       top: 2rem;
-      right: 4.9rem;
+      right: 5rem;
       z-index: 4;
       display: flex;
       align-items: center;
@@ -83,6 +83,11 @@
       background: #ffffff;
       box-shadow: 0 0 0 9999px rgba(255, 255, 255, 50%);
       visibility: hidden;
+
+      .menu-header__ul,
+      .menu-header__user-block {
+        flex-direction: column;
+      }
     }
 
     &__icon,
@@ -122,11 +127,6 @@
     &__input:checked ~ &__content-wrapper {
       right: 0;
       visibility: visible;
-
-      .menu-header__ul,
-      .menu-header__user-block {
-        flex-direction: column;
-      }
     }
 
     &__input:checked ~ &__substrate {

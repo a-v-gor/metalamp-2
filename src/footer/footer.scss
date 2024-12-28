@@ -74,4 +74,56 @@
   .element__label {
     padding: 0;
   }
+
+  @media (width <= 1199px) {
+    &__nav-ul {
+      display: none;
+    }
+
+    &__menu {
+      justify-content: space-around;
+      padding: 10rem 5rem 5rem;
+    }
+
+    &__footer {
+      padding: 0 5rem;
+    }
+  }
+
+
+  @media (width <= 999px) {
+    padding-bottom: 11.7rem;
+
+    &__info-text,
+    &__subscribe {
+      display: none;
+    }
+
+    &__menu {
+      justify-content: center;
+      padding: 12rem 0 2rem;
+      border: none;
+    }
+
+    &__info-wrapper {
+      width: unset;
+    }
+
+    &__footer {
+      flex-direction: column;
+    }
+  }
+
+  @media (width <= 699px) {
+    padding: 0;
+
+    &__menu {
+      padding: 1rem 0;
+    }
+
+    &__footer {
+      height: auto;
+      row-gap: 1rem;
+    }
+  }
 }

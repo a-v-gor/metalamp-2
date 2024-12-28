@@ -66,4 +66,9 @@ body {
   padding: 0 14rem;
   background: #ffffff;
   box-shadow: 0 1rem 2rem $color-dark-shade-5;
+
+  @media (width <= 1199px) {
+    padding-right: 5rem;
+    padding-left: 5rem;
+  }
 }
