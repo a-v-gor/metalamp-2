@@ -8,6 +8,7 @@ mixin card-find-room
     form.card__form
       h3.card__title Найдём номера под ваши пожелания
       +date-group({id: "card-find-room-date", firstDateLabel: "прибытие", secondDateLabel: "выезд"})
+      include ../card-calendar/card-calendar
       +dropdown({id: "card-find-room-dropdown", label: "гости", type: "guests"})
       .card__footer
         +button({size:"large", color:"dark", text: "подобрать номер", withArrow: true})

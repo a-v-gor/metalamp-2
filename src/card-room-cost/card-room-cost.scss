@@ -12,6 +12,7 @@
   }
 
   &__price-string-wrapper {
+    position: relative;
     display: flex;
     width: 100%;
     font-size: 1.4em;
@@ -48,6 +49,7 @@
   }
 
   &__result-string {
+    position: relative;
     display: flex;
     width: 100%;
     font-weight: 700;
