@@ -1,0 +1,20 @@
+include ../header/header
+include ../card-find-room/card-find-room
+include ../footer/footer
+
+mixin landing-page
+  doctype html
+  html(lang="ru")
+    head
+      meta(charset="UTF-8")
+      meta(name="viewport", content="width=device-width, initial-scale=1.0")
+      link(rel="shortcut icon", href="../common/img/favicon.ico", type="image/x-icon")
+      link(href="./website-pages.scss" rel="stylesheet")
+      title Website pages
+    body.page__body
+      +header({noUser: true})
+      main.page__main-wrapper 
+        .page__main 
+          +card-find-room()
+          .page__info Лучшие номера для вашей работы, отдыха и просто вдохновения
+      +footer()

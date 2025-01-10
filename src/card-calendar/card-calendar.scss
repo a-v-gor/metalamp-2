@@ -67,17 +67,18 @@
   &__date-selected-end {
     @include colored-circle-with-text('purple');
 
-    &::after {
+    &::before {
       z-index: -1;
     }
   }
 
-  &__date-selected-start::after,
-  &__date-selected-end::after,
-  &__date-selected-border::after,
-  &__date-selected::after {
+  &__date-selected-start::before,
+  &__date-selected-end::before,
+  &__date-selected-border::before,
+  &__date-selected::before {
     content: ' ';
     position: absolute;
+    z-index: -1;
     width: 3.97rem;
     height: 4rem;
     opacity: 0.25;
@@ -85,14 +86,24 @@
     @include primary-gradient($property: background, $direction: bottom);
   }
 
-  &__date-selected-start::after {
+  &__date-selected-start::before {
     border-start-start-radius: 50%;
     border-end-start-radius: 50%;
   }
 
-  &__date-selected-end::after {
+  &__date-selected-end::before {
     border-start-end-radius: 50%;
     border-end-end-radius: 50%;
+  }
+
+  &__date-selected-start::after,
+  &__date-selected-end::after {
+    content: ' ';
+    position: absolute;
+    z-index: -1;
+    width: 2rem;
+    height: 2rem;
+    background: #ffffff;
   }
 
   &__buttons-wrapper {
