@@ -1,14 +1,18 @@
+//- include ../buttons/button
+include ../card-calendar/card-calendar
 include ../date-group/date-group
-include ../dropdown/dropdown
-include ../buttons/button
+//- include ../dropdown/dropdown
 
-mixin card-find-room
+mixin card-find-room(data)
   .card
     .card__background
     form.card__form
       h3.card__title Найдём номера под ваши пожелания
-      +date-group({id: "card-find-room-date", firstDateLabel: "прибытие", secondDateLabel: "выезд"})
-      include ../card-calendar/card-calendar
-      +dropdown({id: "card-find-room-dropdown", label: "гости", type: "guests"})
-      .card__footer
-        +button({size:"large", color:"dark", text: "подобрать номер", withArrow: true})
+      +date-group({id: data.id+"-date", firstDateLabel: "прибытие", secondDateLabel: "выезд"})
+      if (data.calendar == true)
+        +card-calendar({active: true})
+      else
+        +card-calendar({active: false})
+      //- +dropdown({id: data.id+"-dropdown", label: "гости", type: "guests"})
+      //- .card__footer
+      //-   +button({size:"large", color:"dark", text: "подобрать номер", withArrow: true})

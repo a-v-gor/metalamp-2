@@ -2,16 +2,18 @@ include ../card-find-room/card-find-room
 include ../card-reg-account/card-reg-account
 include ../card-room-cost/card-room-cost
 include ../card-login/card-login
+include ../card-calendar/card-calendar
 include ../card-room-review/card-room-review
 
 .screen-wrapper.cards
   h2.title Cards
   .screen-wrapper__dark-background
   .cards__wrapper
-    +card-find-room()
+    //- +card-find-room({id: 'card-find-room', calendar: true})
     +card-reg-account()
     +card-room-cost()
     +card-login()
-    include ../card-calendar/card-calendar
+    .cards__card-wrapper
+      +card-calendar({active: true})
     +card-room-review({id: 'card-room-review', num: '888', lux: true, images: ['../common/img/room-888.jpg'], cost: '9 990', rate: 5, numReviews: 145})
     +card-room-review({id: 'card-room-review-test', num: '840', images: ['../common/img/room-840.jpg'], cost: '9 990', rate: 4, numReviews: 65})

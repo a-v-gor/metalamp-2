@@ -1,7 +1,19 @@
 .card-calendar {
+  position: absolute;
+  top: -100%;
+  z-index: 1;
+  display: none;
   width: 32rem;
   padding: 1.9rem;
+  background-color: #ffffff;
   border: 0.1rem solid $color-dark-shade-25;
+  opacity: 0;
+
+  &_active {
+    top: 18.9rem;
+    display: initial;
+    opacity: 1;
+  }
 
   &__header {
     display: flex;
@@ -81,7 +93,7 @@
     content: ' ';
     position: absolute;
     z-index: -1;
-    width: 3.97rem;
+    width: 3.98rem;
     height: 4rem;
     opacity: 0.25;
 
