@@ -2,7 +2,7 @@ include ../header/header
 include ../card-find-room/card-find-room
 include ../footer/footer
 
-mixin landing-page
+mixin landing-page(data)
   doctype html
   html(lang="ru")
     head
@@ -16,6 +16,6 @@ mixin landing-page
       main.page__main-wrapper 
         .page__main-background
         .page__main 
-          +card-find-room({id: "card-find-room", activeCalendar: true})
+          +card-find-room({id: "card-find-room", activeCalendar: data.withCalendar})
           .page__info Лучшие номера для вашей работы, отдыха и просто вдохновения
       +footer()
