@@ -13,6 +13,10 @@
   &__card-wrapper {
     position: relative;
     height: 36.7rem;
+
+    .card {
+      top: 0;
+    }
   }
 
   .card-room-cost {

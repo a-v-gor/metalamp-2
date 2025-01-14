@@ -1,7 +1,7 @@
-//- include ../buttons/button
-include ../card-calendar/card-calendar
+include ../buttons/button
 include ../date-group/date-group
-//- include ../dropdown/dropdown
+include ../dropdown/dropdown
+include ../card-calendar/card-calendar
 
 mixin card-find-room(data)
   .card
@@ -9,10 +9,7 @@ mixin card-find-room(data)
     form.card__form
       h3.card__title Найдём номера под ваши пожелания
       +date-group({id: data.id+"-date", firstDateLabel: "прибытие", secondDateLabel: "выезд"})
-      if (data.calendar == true)
-        +card-calendar({active: true})
-      else
-        +card-calendar({active: false})
-      //- +dropdown({id: data.id+"-dropdown", label: "гости", type: "guests"})
-      //- .card__footer
-      //-   +button({size:"large", color:"dark", text: "подобрать номер", withArrow: true})
+      +dropdown({id: data.id+"-dropdown", label: "гости", type: "guests"})
+      +card-calendar({active: data.activeCalendar})
+      .card__footer
+        +button({size:"large", color:"dark", text: "подобрать номер", withArrow: true})
