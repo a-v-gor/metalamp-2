@@ -8,6 +8,7 @@
   }
 
   &__main-wrapper {
+    position: relative;
     flex-grow: 1;
     height: calc(100vh - 7rem);
     max-height: 83rem;

@@ -9,13 +9,13 @@ mixin landing-page(data)
       meta(charset="UTF-8")
       meta(name="viewport", content="width=device-width, initial-scale=1.0")
       link(rel="shortcut icon", href="../common/img/favicon.ico", type="image/x-icon")
-      link(href="./website-pages.scss" rel="stylesheet")
-      title Website pages
+      link(href="./landing-page.scss" rel="stylesheet")
+      title= data.title
     body.page__body
       +header({noUser: true})
       main.page__main-wrapper 
         .page__main-background
         .page__main 
-          +card-find-room({id: "card-find-room", activeCalendar: data.withCalendar})
+          +card-find-room({id: data.id, activeCalendar: data.withCalendar, expandGuests: data.expandGuests, withGuests: data.withGuests})
           .page__info Лучшие номера для вашей работы, отдыха и просто вдохновения
       +footer()

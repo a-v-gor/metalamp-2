@@ -10,6 +10,9 @@ module.exports = {
         index: './src/index/index.pug',
         'ui-kit': './src/ui-kit/ui-kit.pug',
         'website-pages': './src/website-pages/website-pages.pug',
+        'landing-page': './src/landing-page/landing-page-with-card-find-room.pug',
+        'landing-page-with-date': './src/landing-page/landing-page-with-card-date.pug',
+        'landing-page-with-guests': './src/landing-page/landing-page-with-guests.pug',
       },
       js: {
         // JS output filename

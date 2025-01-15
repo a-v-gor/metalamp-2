@@ -1,3 +1,19 @@
 include ../landing-page/landing-page
 
-+landing-page({withCalendar: false})
+doctype html
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="shortcut icon", href="../common/img/favicon.ico", type="image/x-icon")
+    link(href="../index/index.scss" rel="stylesheet")
+    title Main page
+  body
+    h1 Website pages
+    ul
+      li
+        a(href='./landing-page.html' target="_blank" rel="noopener noreferrer") Landing page
+      li
+        a(href='./landing-page-with-date.html' target="_blank" rel="noopener noreferrer") Landing page/Dates Dropdown
+      li
+        a(href='./landing-page-with-guests.html' target="_blank" rel="noopener noreferrer") Landing page/Guests Dropdown
