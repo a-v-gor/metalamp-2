@@ -1,0 +1,14 @@
+include ../header/header
+
+mixin search-room(data)
+  doctype html
+  html(lang="ru")
+    head
+      meta(charset="UTF-8")
+      meta(name="viewport", content="width=device-width, initial-scale=1.0")
+      link(rel="shortcut icon", href="../common/img/favicon.ico", type="image/x-icon")
+      link(href="../index/index.scss" rel="stylesheet")
+      title= data.title
+    body.page__body
+      +header({noUser: true})
+      main.page__main.wrapper
