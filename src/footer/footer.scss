@@ -2,12 +2,15 @@
   flex-direction: column;
   padding: 0;
 
-  &__menu {
-    display: flex;
-    justify-content: space-between;
+  &__menu-wrapper {
     width: 100%;
     padding: 10rem 14rem 10.5rem;
     border-bottom: 0.1rem solid $color-dark-shade-15;
+  }
+
+  &__menu {
+    display: flex;
+    justify-content: space-between;
   }
 
   &__info-text {
@@ -62,13 +65,16 @@
     row-gap: 1.8rem;
   }
 
+  &__footer-wrapper {
+    width: 100%;
+    padding: 0 14rem;
+  }
+
   &__footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
     height: 7rem;
-    padding: 0 14rem;
   }
 
   .element__label {
@@ -80,9 +86,12 @@
       display: none;
     }
 
+    &__menu-wrapper {
+      padding: 10rem 5rem 5rem;
+    }
+
     &__menu {
       justify-content: space-around;
-      padding: 10rem 5rem 5rem;
     }
 
     &__footer {
@@ -99,10 +108,13 @@
       display: none;
     }
 
-    &__menu {
-      justify-content: center;
+    &__menu-wrapper {
       padding: 12rem 0 2rem;
       border: none;
+    }
+
+    &__menu {
+      justify-content: center;
     }
 
     &__info-wrapper {
@@ -117,7 +129,7 @@
   @media (width <= 699px) {
     padding: 0;
 
-    &__menu {
+    &__menu-wrapper {
       padding: 1rem 0;
     }
 

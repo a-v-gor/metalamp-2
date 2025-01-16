@@ -3,6 +3,6 @@ include ../menu-header/menu-header
 
 mixin header(data)
   header.header-footer__wrapper.header__wrapper 
-    .header
+    .header.wrapper
       +logo()
       +menu-header({noUser: data.noUser, userName: data.userName})
