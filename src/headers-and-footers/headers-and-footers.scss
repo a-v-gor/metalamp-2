@@ -24,10 +24,13 @@
       display: none;
     }
 
-    .footer__menu {
-      justify-content: center;
+    .footer__menu-wrapper {
       padding: 12rem 0 2rem;
       border: none;
+    }
+
+    .footer__menu {
+      justify-content: center;
     }
 
     .footer__info-wrapper {

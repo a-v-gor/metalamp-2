@@ -9,11 +9,13 @@ html(lang="ru")
     link(href="../index/index.scss" rel="stylesheet")
     title Website pages
   body
-    h1 Website pages
-    ul
-      li
-        a(href='./landing-page.html' target="_blank" rel="noopener noreferrer") Landing page
-      li
-        a(href='./landing-page-with-date.html' target="_blank" rel="noopener noreferrer") Landing page/Dates Dropdown
-      li
-        a(href='./landing-page-with-guests.html' target="_blank" rel="noopener noreferrer") Landing page/Guests Dropdown
+    header.service-page__block.service-page__header
+      h1.service-page__title Website pages
+    main.service-page__block.service-page__main
+      ul.service-page__ul
+        li.service-page__li
+          a(href='./landing-page.html' target="_blank" rel="noopener noreferrer") Landing page
+        li.service-page__li
+          a(href='./landing-page-with-date.html' target="_blank" rel="noopener noreferrer") Landing page/Dates Dropdown
+        li.service-page__li
+          a(href='./landing-page-with-guests.html' target="_blank" rel="noopener noreferrer") Landing page/Guests Dropdown

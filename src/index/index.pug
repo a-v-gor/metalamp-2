@@ -6,11 +6,12 @@ html(lang="ru")
     link(rel="shortcut icon", href="../common/img/favicon.ico", type="image/x-icon")
     link(href="./index.scss" rel="stylesheet")
     title Main page
-    script(src="./index.js" defer) 
   body
-    h1 Main page
-    ul
-      li
-        a(href='./ui-kit.html' target="_blank" rel="noopener noreferrer") UI kit
-      li
-        a(href='./website-pages.html' target="_blank" rel="noopener noreferrer") Website pages
+    header.service-page__block.service-page__header
+      h1.service-page__title Main page
+    main.service-page__block.service-page__main
+      ul.service-page__ul
+        li.service-page__li
+          a(href='./ui-kit.html' target="_blank" rel="noopener noreferrer") UI kit
+        li.service-page__li
+          a(href='./website-pages.html' target="_blank" rel="noopener noreferrer") Website pages
