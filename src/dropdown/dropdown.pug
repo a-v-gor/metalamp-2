@@ -9,7 +9,7 @@ mixin dropdown(data)
     .element__label= data.label
     input(type="checkbox" id = data.id+"-inp" checked = data.expanded == true ? true : false).dropdown__checkbox
     label.element__input.dropdown__input(for = data.id+"-inp")= data.type == "guests" ? (data.withData == true? "3 гостя" : "Сколько гостей") : "Удобства"
-    i.material-icons.element__icon expand_more
+    label(for = data.id+"-inp").material-icons.element__icon expand_more
     .dropdown__expand
       .dropdown__options-wrapper
         .dropdown__option
@@ -29,7 +29,7 @@ mixin dropdown(data)
           .element__label.dropdown__option-label= data.type == "guests" ? "младенцы" : "ванные комнаты"
           .dropdown__set-option-wrapper
             button.dropdown__set-option-num.dropdown__decrease-option-num -
-            input(type="number" value="0").element__label.dropdown__option-num
+            input(type="number" value = data.withBaby == true ? "1" : "0").element__label.dropdown__option-num
             button.dropdown__set-option-num.dropdown__increase-option-num +
       if data.type == "guests"
         .dropdown__buttons-wrapper

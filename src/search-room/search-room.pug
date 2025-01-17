@@ -1,4 +1,6 @@
 include ../header/header
+include ../filter-date/filter-date
+include ../dropdown/dropdown
 
 mixin search-room(data)
   doctype html
@@ -8,9 +10,11 @@ mixin search-room(data)
       meta(name="viewport", content="width=device-width, initial-scale=1.0")
       link(rel="shortcut icon", href="../common/img/favicon.ico", type="image/x-icon")
       link(href="../index/index.scss" rel="stylesheet")
+      script(src="./search-room.js" defer) 
       title= data.title
     body.page__body
       +header({noUser: true})
       main.page__main.wrapper
-        aside 
-          
+        aside
+          +filter-date({title: "даты пребывания в отеле"})
+          +dropdown({id: "search-room-dropdown-guests", label: "гости", type: "guests", expanded: false, withData: true, withBaby: true})
