@@ -1,6 +1,7 @@
 export default function rangeSlider() {
-  let labelMin = document.getElementById('range-label-min');
-  let labelMax = document.getElementById('range-label-max');
+  const labels = document.querySelectorAll('.range-slider__label');
+  let labelMin = labels[0];
+  let labelMax = labels[1];
   const inputs = document.querySelectorAll('.range-slider__input');
   const inputWrapper = document.getElementById('range-input-wrapper');
   const wrapperClientRect = inputWrapper.getBoundingClientRect();  

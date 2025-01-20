@@ -7,6 +7,7 @@ include ../form-subscribe-email/form-subscribe-email
 include ../toggle/toggle
 include ../like-button/like-button
 include ../rate-button/rate-button
+include ../range-slider/range-slider
 include ../expand-checkbox-list/expand-checkbox-list
 include ../rich-checkbox-buttons/rich-checkbox-buttons
 include ../bullet-list/bullet-list
@@ -39,7 +40,7 @@ include ../comment/comment
       +rate-button({id: "rate-button", checked: 4})
       +rate-button({id: "rate-button-test", checked: 5})
   .form-elements__group-elements
-    include ../range-slider/range-slider
+    +range-slider({id: "range", title: "Range Slider"})
     include ../buttons/buttons
     .element__wrapper.pagination
       include ../pagination/pagination

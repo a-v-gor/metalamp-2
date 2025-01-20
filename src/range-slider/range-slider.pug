@@ -1,12 +1,13 @@
-.form-elements__element-wrapper.element__wrapper.element__width-middle.range-slider__element-wrapper
-  .element__description
-    label.range-slider__label(id="range-label-min")
-    i= " - "
-    label.range-slider__label(id="range-label-max")
-  .element__label Range Slider
-  .range-slider__input-wrapper#range-input-wrapper
-    input.range-slider__input(type="range" min="0" max="15000" step="100" value="5000")
-    input.range-slider__input(type="range" min="0" max="15000" step="100" value="10000")
-    .range-slider__track.range-slider__track_unactive
-    .range-slider__track.range-slider__track_active
-    .range-slider__track.range-slider__track_unactive
+mixin range-slider(data)
+  .form-elements__element-wrapper.element__wrapper.element__width-middle.range-slider__element-wrapper
+    .element__description
+      label.range-slider__label(id=data.id+"label-min")
+      i= " - "
+      label.range-slider__label(id=data.id+"label-max")
+    .element__label= data.title
+    .range-slider__input-wrapper(id=data.id+"-input-wrapper")
+      input.range-slider__input(type="range" min="0" max="15000" step="100" value="5000")
+      input.range-slider__input(type="range" min="0" max="15000" step="100" value="10000")
+      .range-slider__track.range-slider__track_unactive
+      .range-slider__track.range-slider__track_active
+      .range-slider__track.range-slider__track_unactive
