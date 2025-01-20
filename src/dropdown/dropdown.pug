@@ -2,7 +2,7 @@ include ../buttons/button
 
 mixin dropdown(data)
   .element__wrapper.form-elements__element-wrapper.dropdown(
-      id = data.id class = data.type == "guests" ? "element__width-wide dropdown__guests" : "element__width-middle dropdown__convenience"
+      id = data.id class = data.type == "guests" ? "dropdown__guests" : "element__width-middle dropdown__convenience"
       )
     if data.condition
       .element__description= data.condition

@@ -15,6 +15,6 @@ mixin search-room(data)
     body.page__body
       +header({noUser: true})
       main.page__main.wrapper
-        aside
+        aside.element__width-middle
           +filter-date({title: "даты пребывания в отеле"})
           +dropdown({id: "search-room-dropdown-guests", label: "гости", type: "guests", expanded: false, withData: true, withBaby: true})
