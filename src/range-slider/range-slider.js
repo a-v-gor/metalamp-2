@@ -29,8 +29,8 @@ export default function rangeSlider() {
   }
 
   const updateInput = (event)=> {
-    const mouseCoordinateX = event.clientX;
-
+    const mouseCoordinateX = event.type == "mousemove" ? event.clientX : event.changedTouches[0].clientX;
+    
     const makeElementUnactive = (element) => {
       if(element.classList.contains('range-slider__input_active')) {
         element.classList.remove('range-slider__input_active')
@@ -58,10 +58,10 @@ export default function rangeSlider() {
     }
 
     updateLabelsInfo();
-    updateTrack();
+    updateTracksViews();
   }
 
-  const updateTrack = () => {
+  const updateTracksViews = () => {
     const [trackFirst, trackActive, trackLast] = document.querySelectorAll('.range-slider__track');
     trackFirst.style.width = returnCurrentMinValueCoordinateX() - wrapperClientRect.x + 'px';
     trackActive.style.width = returnCurrentMaxValueCoordinateX() - returnCurrentMinValueCoordinateX() + 'px';
@@ -84,8 +84,9 @@ export default function rangeSlider() {
   }
 
   updateLabelsInfo();
-  updateTrack();
+  updateTracksViews();
   inputWrapper.addEventListener('mousemove', updateInput);
-  inputs[0].addEventListener('input', updateTrack);
-  inputs[1].addEventListener('input', updateTrack);
+  inputWrapper.addEventListener('touchmove', updateInput);
+  inputs[0].addEventListener('input', updateTracksViews);
+  inputs[1].addEventListener('input', updateTracksViews);
 }
