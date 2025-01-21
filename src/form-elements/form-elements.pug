@@ -20,7 +20,7 @@ include ../comment/comment
     form.form-elements__form
       +input({condition: "Default", id: "email", label: "Text Field", placeholder: "Email"})
       +input({condition: "Hover / Focus", id: "text", label: "Text Field", placeholder: "This is pretty awesome"})(autofocus)
-      +dropdown({id: "dropdown", label: "Dropdown", type: "guests"})
+      +dropdown({id: "dropdown", title: "Dropdown", type: "guests"})
       +input({id: "input-masked", label: "masked text field", placeholder: "ДД.ММ.ГГГГ", pattern: "(0[1-9]|[12][0-9]|3[01]).(0[1-9]|1[012]).202[4-6]", title: "Введите дату в формате ДД.ММ.ГГГГ"})
     +date-group({firstDateLabel: "date Dropdown", secondDateLabel: "date Dropdown", secondDateValue: "2019-08-19", id: "date-group"})
     +filter-date({title: "filter date dropdown"})
@@ -46,17 +46,17 @@ include ../comment/comment
     .element__wrapper.pagination
       include ../pagination/pagination
   .form-elements__group-elements
-    +dropdown({id: "dropdown-convenience", label: "Dropdown", condition: "Default", withData: true})
-    +dropdown({id: "dropdown-convenience-exp", label: "Dropdown", condition: "expanded", expanded: true, withData: true})
+    +dropdown({id: "dropdown-convenience", title: "Dropdown", condition: "Default", withData: true})
+    +dropdown({id: "dropdown-convenience-exp", title: "Dropdown", condition: "expanded", expanded: true, withData: true})
   .form-elements__group-elements
-    +dropdown({id: "dropdown-guests-exp", label: "Dropdown", type: "guests", expanded: true})
+    +dropdown({id: "dropdown-guests-exp", title: "Dropdown", type: "guests", expanded: true})
   .form-elements__group-elements
-    +dropdown({id: "dropdown-guests-exp-1", label: "Dropdown", type: "guests", expanded: true, withData: true})
+    +dropdown({id: "dropdown-guests-exp-1", title: "Dropdown", type: "guests", expanded: true, withData: true})
   .form-elements__group-elements
     +expand-checkbox-list({id: "expand-checkbox-list", label: "expandable checkbox list"})
     +expand-checkbox-list({id: "expand-checkbox-list-exp", label: "expandable checkbox list", expanded: true})
   .form-elements__group-elements
-    +rich-checkbox-buttons()
+    +rich-checkbox-buttons({title: "rich Checkbox Buttons"})
   .form-elements__group-elements
     +bullet-list({label: "bullet list"})
   .form-elements__group-elements

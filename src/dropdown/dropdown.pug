@@ -6,7 +6,7 @@ mixin dropdown(data)
       )
     if data.condition
       .element__description= data.condition
-    .element__label= data.label
+    .element__label= data.title
     input(type="checkbox" id = data.id+"-inp" checked = data.expanded == true ? true : false).dropdown__checkbox
     label.element__input.dropdown__input(for = data.id+"-inp")= data.type == "guests" ? (data.withData == true? "3 гостя" : "Сколько гостей") : "Удобства"
     label(for = data.id+"-inp").material-icons.element__icon expand_more

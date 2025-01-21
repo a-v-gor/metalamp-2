@@ -1,6 +1,6 @@
-mixin rich-checkbox-buttons()
+mixin rich-checkbox-buttons(data)
   .element__wrapper.element__width-middle.rich-checkbox-buttons
-    .element__label.rich-checkbox-buttons__label rich Checkbox Buttons
+    .element__label.rich-checkbox-buttons__label= data.title
     .input-buttons__input-wrapper
       input(type="checkbox").input-buttons__input.checkbox-buttons__input#wide-hall
       label(for="wide-hall").rich-checkbox-buttons__input-label
