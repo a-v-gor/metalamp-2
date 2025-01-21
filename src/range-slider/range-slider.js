@@ -28,46 +28,6 @@ export default function rangeSlider() {
     return Math.ceil((returnInputMax().value/15000)*wrapperClientRect.width) + wrapperClientRect.x;
   }
 
-  const updateInput = (event)=> {
-    const mouseCoordinateX = event.type == "mousemove" ? event.clientX : event.changedTouches[0].clientX;
-    
-    const makeElementUnactive = (element) => {
-      if(element.classList.contains('range-slider__input_active')) {
-        element.classList.remove('range-slider__input_active')
-      }
-      if(!element.classList.contains('range-slider__input_unactive')) {
-        element.classList.add('range-slider__input_unactive')
-      }
-    }
-
-    const makeElementActive = (element) => {
-      if(element.classList.contains('range-slider__input_unactive')) {
-        element.classList.remove('range-slider__input_unactive')
-      }
-      if(!element.classList.contains('range-slider__input_active')) {
-        element.classList.add('range-slider__input_active')
-      }
-    }    
-
-    if (Math.abs(mouseCoordinateX - returnCurrentMinValueCoordinateX()) < Math.abs(mouseCoordinateX - returnCurrentMaxValueCoordinateX())) {
-      makeElementActive(returnInputMin());
-      makeElementUnactive(returnInputMax());
-    } else if (Math.abs(mouseCoordinateX - returnCurrentMinValueCoordinateX()) > Math.abs(mouseCoordinateX - returnCurrentMaxValueCoordinateX())) {
-      makeElementUnactive(returnInputMin());
-      makeElementActive(returnInputMax());
-    }
-
-    updateLabelsInfo();
-    updateTracksViews();
-  }
-
-  const updateTracksViews = () => {
-    const [trackFirst, trackActive, trackLast] = document.querySelectorAll('.range-slider__track');
-    trackFirst.style.width = returnCurrentMinValueCoordinateX() - wrapperClientRect.x + 'px';
-    trackActive.style.width = returnCurrentMaxValueCoordinateX() - returnCurrentMinValueCoordinateX() + 'px';
-    trackLast.style.width = wrapperClientRect.x + wrapperClientRect.width - returnCurrentMaxValueCoordinateX() + 'px';
-  }
-
   const updateLabelsInfo = () => {
     const formatStr = (num) => {
       const numStr = String(num);
@@ -83,10 +43,24 @@ export default function rangeSlider() {
     labelMax.textContent = formatStr(returnInputMax().value);
   }
 
+  const updateInputs = (event)=> {
+    if (Math.abs(event.target.value - returnInputMin().value) > Math.abs(event.target.value - returnInputMax().value)) {
+      returnInputMax().value = event.target.value
+    } else {
+      returnInputMin().value = event.target.value
+    }
+
+    updateLabelsInfo();
+    updateTracksViews();
+  }
+
+  const updateTracksViews = () => {
+    const [trackFirst, trackActive, trackLast] = document.querySelectorAll('.range-slider__track');
+    trackFirst.style.width = returnCurrentMinValueCoordinateX() - wrapperClientRect.x + 'px';
+    trackActive.style.width = returnCurrentMaxValueCoordinateX() - returnCurrentMinValueCoordinateX() + 'px';
+    trackLast.style.width = wrapperClientRect.x + wrapperClientRect.width - returnCurrentMaxValueCoordinateX() + 'px';
+  }
+
   updateLabelsInfo();
-  updateTracksViews();
-  inputWrapper.addEventListener('mousemove', updateInput);
-  inputWrapper.addEventListener('touchmove', updateInput);
-  inputs[0].addEventListener('input', updateTracksViews);
-  inputs[1].addEventListener('input', updateTracksViews);
+  inputs[2].addEventListener('input', updateInputs);
 }

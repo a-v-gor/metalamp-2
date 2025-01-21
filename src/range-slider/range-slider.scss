@@ -21,14 +21,6 @@
     -webkit-appearance: none;
     appearance: none;
 
-    &_active {
-      z-index: 1;
-    }
-
-    &_unactive {
-      z-index: 0;
-    }
-
     &::-webkit-slider-thumb {
       @include secondary-gradient($property: background, $direction: bottom);
 
@@ -38,6 +30,12 @@
       border-radius: 50%;
       -webkit-appearance: none;
       appearance: none;
+    }
+
+    &:nth-child(3) {
+      &::-webkit-slider-thumb {
+        opacity: 0;
+      }
     }
   }
 
