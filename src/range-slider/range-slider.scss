@@ -54,4 +54,12 @@
       border: 0.1rem solid $color-dark-shade-25;
     }
   }
+
+  &__description {
+    position: relative;
+    bottom: 0.4rem;
+    order: 1;
+    font-size: 1.2em;
+    color: $color-dark-shade-50;
+  }
 }
