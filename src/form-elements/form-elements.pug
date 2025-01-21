@@ -1,5 +1,6 @@
 include ../input/input
 include ../dropdown/dropdown
+include ../checkbox-buttons/checkbox-buttons
 include ../radio-buttons/radio-buttons
 include ../date-group/date-group
 include ../filter-date/filter-date
@@ -25,7 +26,7 @@ include ../comment/comment
     +filter-date({title: "filter date dropdown"})
     +form-subscribe-email({id: "subscribe", title: "subscription text field"})
   .form-elements__group-elements
-    include ../checkbox-buttons/checkbox-buttons
+    +checkbox-buttons({title: "Checkbox Buttons"})
     +radio-buttons({label: true})
     .element__wrapper.toggle
       .element__label.input-buttons__legend.form-elements__toggle-lable Toggle

@@ -2,6 +2,7 @@ include ../header/header
 include ../filter-date/filter-date
 include ../dropdown/dropdown
 include ../range-slider/range-slider
+include ../checkbox-buttons/checkbox-buttons
 
 mixin search-room(data)
   doctype html
@@ -20,3 +21,4 @@ mixin search-room(data)
           +filter-date({title: "даты пребывания в отеле"})
           +dropdown({id: "search-room-dropdown-guests", label: "гости", type: "guests", expanded: false, withData: true, withBaby: true})
           +range-slider({id: "range", title: "диапазон цены", description: true})
+          +checkbox-buttons({title: "правила дома"})
