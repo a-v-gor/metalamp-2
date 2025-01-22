@@ -1,0 +1,30 @@
+.search-room {
+  &__main-wrapper {
+    padding-top: 3rem;
+  }
+
+  &__aside {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.7rem;
+  }
+
+  &__aside-child {
+    &:nth-child(2) {
+      margin-top: 0.4rem;
+    }
+
+    &:nth-child(3),
+    &:nth-child(6) {
+      margin-top: 1.3rem;
+    }
+
+    &:nth-child(4) {
+      margin-top: 0.7rem;
+    }
+
+    &:nth-child(5) {
+      margin-top: 1.6rem;
+    }
+  }
+}

@@ -4,6 +4,7 @@ include ../dropdown/dropdown
 include ../range-slider/range-slider
 include ../checkbox-buttons/checkbox-buttons
 include ../rich-checkbox-buttons/rich-checkbox-buttons
+include ../expand-checkbox-list/expand-checkbox-list
 
 mixin search-room(data)
   doctype html
@@ -17,11 +18,19 @@ mixin search-room(data)
       title= data.title
     body.page__body
       +header({noUser: true})
-      main.page__main.wrapper
-        aside.element__width-middle
-          +filter-date({title: "даты пребывания в отеле"})
-          +dropdown({id: "search-room-dropdown-guests", title: "гости", type: "guests", expanded: false, withData: true, withBaby: true})
-          +range-slider({id: "range", title: "диапазон цены", description: true})
-          +checkbox-buttons({title: "правила дома"})
-          +rich-checkbox-buttons({title: "доступность"})
-          +dropdown({id: "dropdown-convenience", title: "удобства номера", withData: true})
+      main.page__main.wrapper.search-room__main-wrapper
+        aside.element__width-middle.search-room__aside
+          .search-room__aside-child
+            +filter-date({title: "даты пребывания в отеле"})
+          .search-room__aside-child
+            +dropdown({id: "search-room-dropdown-guests", title: "гости", type: "guests", expanded: false, withData: true, withBaby: true})
+          .search-room__aside-child
+            +range-slider({id: "range", title: "диапазон цены", description: true})
+          .search-room__aside-child
+            +checkbox-buttons({title: "правила дома"})
+          .search-room__aside-child
+            +rich-checkbox-buttons({title: "доступность"})
+          .search-room__aside-child
+            +dropdown({id: "dropdown-convenience", title: "удобства номера", withData: true})
+          .search-room__aside-child
+            +expand-checkbox-list({id: "expand-checkbox-list", label: "дополнительные удобства"})
