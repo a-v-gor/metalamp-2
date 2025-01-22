@@ -17,6 +17,7 @@ mixin search-room(data)
       script(src="./search-room.js" defer) 
       title= data.title
     body.page__body
+      h1.title Поиск номера в Toxin отель.
       +header({noUser: true})
       main.page__main.wrapper.search-room__main-wrapper
         aside.element__width-middle.search-room__aside
@@ -34,3 +35,5 @@ mixin search-room(data)
             +dropdown({id: "dropdown-convenience", title: "удобства номера", withData: true})
           .search-room__aside-child
             +expand-checkbox-list({id: "expand-checkbox-list", label: "дополнительные удобства"})
+        section.search-room__results
+          h2.type__h2 Номера, которые мы для вас подобрали
