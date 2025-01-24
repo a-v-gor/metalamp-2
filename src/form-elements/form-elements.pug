@@ -9,6 +9,7 @@ include ../toggle/toggle
 include ../like-button/like-button
 include ../rate-button/rate-button
 include ../range-slider/range-slider
+include ../pagination/pagination
 include ../expand-checkbox-list/expand-checkbox-list
 include ../rich-checkbox-buttons/rich-checkbox-buttons
 include ../bullet-list/bullet-list
@@ -44,7 +45,7 @@ include ../comment/comment
     +range-slider({id: "range", title: "Range Slider"})
     include ../buttons/buttons
     .element__wrapper.pagination
-      include ../pagination/pagination
+      +pagination({withTitle: true})
   .form-elements__group-elements
     +dropdown({id: "dropdown-convenience", title: "Dropdown", condition: "Default", withData: true})
     +dropdown({id: "dropdown-convenience-exp", title: "Dropdown", condition: "expanded", expanded: true, withData: true})

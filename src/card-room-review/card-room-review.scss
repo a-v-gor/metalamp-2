@@ -10,6 +10,7 @@
     left: 0;
     height: 15.1rem;
     overflow: hidden;
+    border-radius: 4px 4px 0 0;
 
     &:hover {
       .card-room-review__slider-arrows {
@@ -100,7 +101,7 @@
     }
 
     .card__detailed-title-wrapper {
-      column-gap: 0.1rem;
+      column-gap: 0.8rem;
     }
   }
 

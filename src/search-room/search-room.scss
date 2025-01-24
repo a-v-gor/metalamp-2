@@ -1,6 +1,17 @@
 .search-room {
   &__main-wrapper {
     padding-top: 3rem;
+    padding-bottom: 7.5rem;
+    border-bottom: 0.1rem solid $color-dark-shade-25;
+
+    .pagination__wrapper {
+      position: relative;
+      right: 0.7rem;
+    }
+  }
+
+  &__main {
+    column-gap: 6rem;
   }
 
   &__aside {
@@ -26,5 +37,13 @@
     &:nth-child(5) {
       margin-top: 1.6rem;
     }
+  }
+
+  &__rooms-cards {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2.1rem;
+    margin-bottom: 4rem;
+    gap: 2.1rem 1.2rem;
   }
 }

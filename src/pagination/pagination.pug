@@ -1,11 +1,13 @@
-.element__label.pagination__label pagination
-.pagination__wrapper
-  .pagination__num-pages-wrapper
-    .pagination__num-page 1
-    .pagination__num-page 2
-    .pagination__num-page 3
-    .pagination__num-page ...
-    .pagination__num-page 15
-    .pagination__num-page
-      .material-icons.pagination__icon arrow_forward
-  p.pagination__text 1 – 12 из 100+ вариантов аренды
+mixin pagination(data)
+  if (data.withTitle === true) 
+    .element__label.pagination__label pagination
+  .pagination__wrapper
+    .pagination__num-pages-wrapper
+      .pagination__num-page 1
+      .pagination__num-page 2
+      .pagination__num-page 3
+      .pagination__num-page ...
+      .pagination__num-page 15
+      .pagination__num-page
+        .material-icons.pagination__icon arrow_forward
+    p.pagination__text 1 – 12 из 100+ вариантов аренды

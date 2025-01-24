@@ -5,6 +5,9 @@ include ../range-slider/range-slider
 include ../checkbox-buttons/checkbox-buttons
 include ../rich-checkbox-buttons/rich-checkbox-buttons
 include ../expand-checkbox-list/expand-checkbox-list
+include ../card-room-review/card-room-review
+include ../pagination/pagination
+include ../footer/footer
 
 mixin search-room(data)
   doctype html
@@ -17,23 +20,38 @@ mixin search-room(data)
       script(src="./search-room.js" defer) 
       title= data.title
     body.page__body
-      h1.title Поиск номера в Toxin отель.
       +header({noUser: true})
-      main.page__main.wrapper.search-room__main-wrapper
-        aside.element__width-middle.search-room__aside
-          .search-room__aside-child
-            +filter-date({title: "даты пребывания в отеле"})
-          .search-room__aside-child
-            +dropdown({id: "search-room-dropdown-guests", title: "гости", type: "guests", expanded: false, withData: true, withBaby: true})
-          .search-room__aside-child
-            +range-slider({id: "range", title: "диапазон цены", description: true})
-          .search-room__aside-child
-            +checkbox-buttons({title: "правила дома"})
-          .search-room__aside-child
-            +rich-checkbox-buttons({title: "доступность"})
-          .search-room__aside-child
-            +dropdown({id: "dropdown-convenience", title: "удобства номера", withData: true})
-          .search-room__aside-child
-            +expand-checkbox-list({id: "expand-checkbox-list", label: "дополнительные удобства"})
-        section.search-room__results
-          h2.type__h2 Номера, которые мы для вас подобрали
+      main.search-room__main-wrapper
+        .page__main.wrapper.search-room__main
+          aside.element__width-middle.search-room__aside
+            .search-room__aside-child
+              +filter-date({title: "даты пребывания в отеле"})
+            .search-room__aside-child
+              +dropdown({id: "search-room-dropdown-guests", title: "гости", type: "guests", expanded: false, withData: true, withBaby: true})
+            .search-room__aside-child
+              +range-slider({id: "range", title: "диапазон цены", description: true})
+            .search-room__aside-child
+              +checkbox-buttons({title: "правила дома"})
+            .search-room__aside-child
+              +rich-checkbox-buttons({title: "доступность"})
+            .search-room__aside-child
+              +dropdown({id: "dropdown-convenience", title: "удобства номера", withData: true})
+            .search-room__aside-child
+              +expand-checkbox-list({id: "expand-checkbox-list", label: "дополнительные удобства"})
+          section.search-room__results
+            h1.type__h1 Номера, которые мы для вас подобрали
+            .search-room__rooms-cards
+              +card-room-review({id: 'card-room-888', num: '888', lux: true, images: ['../common/img/room-888.jpg'], cost: '9 990', rate: 5, numReviews: 145})
+              +card-room-review({id: 'card-room-840', num: '840', images: ['../common/img/room-840.jpg'], cost: '9 990', rate: 4, numReviews: 65})
+              +card-room-review({id: 'card-room-980', num: '980', lux: true, images: ['../common/img/room-980.jpg'], cost: '8 500', rate: 3, numReviews: 35})
+              +card-room-review({id: 'card-room-856', num: '856', images: ['../common/img/room-856.jpg'], cost: '7 300', rate: 5, numReviews: 19})
+              +card-room-review({id: 'card-room-740', num: '740', images: ['../common/img/room-740.jpg'], cost: '6 000', rate: 4, numReviews: 44})
+              +card-room-review({id: 'card-room-982', num: '982', images: ['../common/img/room-982.jpg'], cost: '5 800', rate: 3, numReviews: 56})
+              +card-room-review({id: 'card-room-678', num: '678', images: ['../common/img/room-678.jpg'], cost: '5 500', rate: 5, numReviews: 45})
+              +card-room-review({id: 'card-room-450', num: '450', images: ['../common/img/room-450.jpg'], cost: '5 300', rate: 4, numReviews: 39})
+              +card-room-review({id: 'card-room-350', num: '350', images: ['../common/img/room-350.jpg'], cost: '5 000', rate: 3, numReviews: 77})
+              +card-room-review({id: 'card-room-666', num: '666', images: ['../common/img/room-666.jpg'], cost: '5 000', rate: 5, numReviews: 25})
+              +card-room-review({id: 'card-room-444', num: '444', images: ['../common/img/room-444.jpg'], cost: '5 000', rate: 3, numReviews: 15})
+              +card-room-review({id: 'card-room-352', num: '352', images: ['../common/img/room-352.jpg'], cost: '5 000', rate: 3, numReviews: 55})
+            +pagination({withTitle: false})
+      +footer()

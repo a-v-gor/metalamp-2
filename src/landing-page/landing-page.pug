@@ -16,7 +16,7 @@ mixin landing-page(data)
       +header({noUser: true})
       main.page__main-wrapper 
         .page__main-background
-        .page__main.wrapper
+        .page__main.wrapper.landing-page__main
           +card-find-room({id: data.id, activeCalendar: data.withCalendar, expandGuests: data.expandGuests, withGuests: data.withGuests})
           .page__info Лучшие номера для вашей работы, отдыха и просто вдохновения
       +footer()
