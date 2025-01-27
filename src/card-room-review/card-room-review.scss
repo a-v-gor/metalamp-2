@@ -119,4 +119,25 @@
     right: 0.4rem;
     bottom: 0.2rem;
   }
+
+  @media (width <= 699px) {
+    &__slider-wrapper,
+    &__info-wrapper {
+      max-width: calc(100vw - 10rem);
+    }
+  }
+
+  @media (width <= 479px) {
+    .card__title {
+      font-size: 1.2em;
+    }
+
+    .card__detailed-title-wrapper {
+      column-gap: 0.4rem;
+    }
+
+    &__detailed-subtitle-descr {
+      font-size: 1.1em;
+    }
+  }
 }

@@ -1,7 +1,6 @@
 .search-room {
   &__main-wrapper {
-    padding-top: 3rem;
-    padding-bottom: 7.5rem;
+    padding: 3rem 14rem 7.5rem;
     border-bottom: 0.1rem solid $color-dark-shade-25;
 
     .pagination__wrapper {
@@ -11,7 +10,17 @@
   }
 
   &__main {
+    width: fit-content;
+    max-width: 95vw;
     column-gap: 6rem;
+  }
+
+  &__aside-label {
+    display: none;
+  }
+
+  &__aside-collapse {
+    display: none;
   }
 
   &__aside {
@@ -42,8 +51,67 @@
   &__rooms-cards {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 83.4rem;
     margin-top: 2.1rem;
     margin-bottom: 4rem;
     gap: 2.1rem 1.2rem;
+  }
+
+  @media (width <= 1199px) {
+    &__main-wrapper {
+      padding-right: 5rem;
+      padding-left: 5rem;
+    }
+  }
+
+  @media (width <= 699px) {
+    &__main-wrapper {
+      padding-right: 1rem;
+      padding-left: 1rem;
+    }
+
+    &__main {
+      align-items: baseline;
+      column-gap: unset;
+    }
+
+    &__aside {
+      position: absolute;
+      top: 7rem;
+      left: -100%;
+      z-index: 1;
+      display: flex;
+      width: 28.6rem;
+      padding: 0 1rem;
+      background: #ffffff;
+    }
+
+    &__aside-label {
+      position: sticky;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      display: inherit;
+      background: #ffffff;
+    }
+
+    &__aside-input:checked {
+      & ~ .search-room__aside-label > .search-room__aside-expand {
+        display: none;
+      }
+
+      & ~ .search-room__aside-label > .search-room__aside-collapse {
+        display: inherit;
+      }
+
+      & ~ .search-room__aside {
+        left: 0;
+      }
+
+      & ~ .search-room__aside-label {
+        left: 28.1rem;
+      }
+    }
   }
 }

@@ -1,0 +1,7 @@
+.filter-date {
+  @media (width <= 479px) {
+    & .element__icon {
+      top: 2rem;
+    }
+  }
+}

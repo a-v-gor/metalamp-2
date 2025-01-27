@@ -23,6 +23,12 @@
   &__options-wrapper {
     row-gap: 1rem;
   }
+
+  @media (width <= 479px) {
+    &__icon {
+      top: 0.3rem;
+    }
+  }
 }
 
 .expand-checkbox-list__checkbox:checked {

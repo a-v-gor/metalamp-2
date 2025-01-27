@@ -138,4 +138,10 @@
       row-gap: 1rem;
     }
   }
+
+  @media (width <= 479px) {
+    &__footer-wrapper {
+      padding: 0;
+    }
+  }
 }

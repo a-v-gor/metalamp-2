@@ -39,4 +39,18 @@
     font-size: 1.4em;
     color: $color-dark-shade-75;
   }
+
+  @media (width <= 479px) {
+    &__num-page,
+    &__num-page:first-child,
+    &__num-page:last-child {
+      width: 3rem;
+      height: 3rem;
+      font-size: 1em;
+    }
+
+    &__text {
+      font-size: 1.1em;
+    }
+  }
 }

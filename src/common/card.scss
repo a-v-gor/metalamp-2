@@ -104,5 +104,22 @@
     &__title {
       font-size: 1.8em;
     }
+
+    &__num-sign {
+      font-size: 1em;
+    }
+
+    &__lux-descr {
+      padding-bottom: 0.1rem;
+      font-size: 1em;
+    }
+
+    &__detailed-subtitle {
+      font-size: 1.2em;
+    }
+
+    &__detailed-subtitle-descr {
+      font-size: 1em;
+    }
   }
 }

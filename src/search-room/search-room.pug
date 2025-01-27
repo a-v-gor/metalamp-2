@@ -23,6 +23,10 @@ mixin search-room(data)
       +header({noUser: true})
       main.search-room__main-wrapper
         .page__main.wrapper.search-room__main
+          input.search-room__aside-input(type="checkbox")#aside-input
+          label.search-room__aside-label(for="aside-input")
+            i.search-room__aside-icon.search-room__aside-expand.material-icons keyboard_double_arrow_right
+            i.search-room__aside-icon.search-room__aside-collapse.material-icons keyboard_double_arrow_left
           aside.element__width-middle.search-room__aside
             .search-room__aside-child
               +filter-date({title: "даты пребывания в отеле"})
