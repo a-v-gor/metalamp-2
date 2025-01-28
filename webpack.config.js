@@ -15,6 +15,7 @@ module.exports = {
         'landing-page-with-guests': './src/landing-page/landing-page-with-guests.pug',
         'search-room-filter': './src/search-room-filter/search-room-filter.pug',
         'search-room-preferences': './src/search-room-preferences/search-room-preferences.pug',
+        'search-room-expand': './src/search-room-expand/search-room-expand.pug',
       },
       js: {
         // JS output filename

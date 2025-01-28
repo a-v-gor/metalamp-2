@@ -44,7 +44,10 @@ mixin search-room(data)
               else 
                 +dropdown({id: "dropdown-convenience", title: "удобства номера", withData: true})
             .search-room__aside-child
-              +expand-checkbox-list({id: "expand-checkbox-list", label: "дополнительные удобства"})
+              if data.withExpandedList == true
+                +expand-checkbox-list({id: "expand-checkbox-list-exp", label: "дополнительные удобства", expanded: true})
+              else
+                +expand-checkbox-list({id: "expand-checkbox-list", label: "дополнительные удобства"})
           section.search-room__results
             h1.type__h1 Номера, которые мы для вас подобрали
             .search-room__rooms-cards
