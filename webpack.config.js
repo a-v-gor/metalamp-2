@@ -13,7 +13,8 @@ module.exports = {
         'landing-page': './src/landing-page/landing-page-with-card-find-room.pug',
         'landing-page-with-date': './src/landing-page/landing-page-with-card-date.pug',
         'landing-page-with-guests': './src/landing-page/landing-page-with-guests.pug',
-        'search-room': './src/search-room/search-room-filter.pug',
+        'search-room-filter': './src/search-room-filter/search-room-filter.pug',
+        'search-room-preferences': './src/search-room-preferences/search-room-preferences.pug',
       },
       js: {
         // JS output filename

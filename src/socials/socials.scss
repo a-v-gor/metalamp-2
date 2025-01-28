@@ -9,5 +9,9 @@
     font-family: 'Font Awesome 5 Brands';
 
     @include text-gradient(bottom);
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 }

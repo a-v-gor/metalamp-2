@@ -15,6 +15,10 @@
     column-gap: 6rem;
   }
 
+  &__aside-input {
+    display: none;
+  }
+
   &__aside-label {
     display: none;
   }
@@ -69,6 +73,10 @@
     &__main-wrapper {
       padding-right: 1rem;
       padding-left: 1rem;
+    }
+
+    &__aside-input {
+      display: inherit;
     }
 
     &__main {
