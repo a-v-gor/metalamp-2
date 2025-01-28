@@ -2,7 +2,7 @@ mixin expand-checkbox-list(data)
   .element__wrapper.element__width-middle.expand-checkbox-list
     input(type="checkbox" id = data.id+"-inp" checked = data.expanded == true ? true : false).dropdown__checkbox.expand-checkbox-list__checkbox
     label.element__label.element__input.expand-checkbox-list__label(for = data.id+"-inp")= data.label
-    i.material-icons.element__icon.expand-checkbox-list__icon expand_more
+    label(for = data.id+"-inp").material-icons.element__icon.expand-checkbox-list__icon expand_more
     .dropdown__expand.expand-checkbox-list__expand
       .dropdown__option.input-buttons__input-wrapper.expand-checkbox-list__option
         input(type="checkbox" id = data.id+"breakfast").input-buttons__input.checkbox-buttons__input
