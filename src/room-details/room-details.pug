@@ -1,0 +1,18 @@
+include ../header/header
+
+doctype html
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="shortcut icon", href="../common/img/favicon.ico", type="image/x-icon")
+    link(href="../index/index.scss" rel="stylesheet")
+    script(src="../search-room/search-room.js" defer) 
+    title Room details
+  body.page__body
+    +header({noUser: true})
+    main
+      section 
+        h1.title Номер 888
+        .room-details__img-wrapper 
+          img(src='../common/img/room-details-888-1.jpg')
