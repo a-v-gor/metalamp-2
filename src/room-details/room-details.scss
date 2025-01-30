@@ -20,7 +20,28 @@
     }
   }
 
+  &__main-wrapper {
+    padding: 7rem 0;
+  }
+
+  &__block-title {
+    padding-bottom: 2rem;
+  }
+
   &__img {
     height: 100%;
+  }
+
+  @media (width <= 699px) {
+    &__images {
+      display: block;
+    }
+
+    &__img-wrapper {
+      &:nth-child(2),
+      &:nth-child(3) {
+        display: none;
+      }
+    }
   }
 }

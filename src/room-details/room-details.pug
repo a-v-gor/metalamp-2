@@ -1,4 +1,5 @@
 include ../header/header
+include ../room-info/room-info
 
 doctype html
 html(lang="ru")
@@ -21,3 +22,11 @@ html(lang="ru")
             img.room-details__img(src='../common/img/room-details-888-2.jpg')
           .room-details__img-wrapper
             img.room-details__img(src='../common/img/room-details-888-3.jpg')
+        .room-details__main-wrapper.wrapper
+          .room-details__main
+            .room-details__main-block 
+              h2.type__h2.room-details__block-title Сведения о номере
+              +room-info({comfort: true, convience: true, cosiness: true})
+            .room-details__main-block 
+              h2.type__h2.room-details__block-title Впечатления от номера
+              
