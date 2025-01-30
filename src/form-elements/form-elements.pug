@@ -13,6 +13,7 @@ include ../pagination/pagination
 include ../expand-checkbox-list/expand-checkbox-list
 include ../rich-checkbox-buttons/rich-checkbox-buttons
 include ../bullet-list/bullet-list
+include ../room-info/room-info
 include ../comment/comment
 
 .screen-wrapper.form-elements
@@ -61,7 +62,7 @@ include ../comment/comment
   .form-elements__group-elements
     +bullet-list({label: "bullet list"})
   .form-elements__group-elements
-    include ../room-info/room-info
+    +room-info({comfort: true, convience: true})
   .form-elements__group-elements
     +comment({
       id: "comment", 

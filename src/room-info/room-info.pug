@@ -1,11 +1,20 @@
-.room-info
-  .room-info__element-wrapper
-    .material-icons.room-info__icon insert_emoticon
-    .room-info__description-wrapper
-      .room-info__title Комфорт
-      .room-info__text Шумопоглощающие стены
-  .room-info__element-wrapper
-    .material-icons.room-info__icon location_city
-    .room-info__description-wrapper
-      .room-info__title Удобство
-      .room-info__text Окно в каждой из спален
+mixin room-info(data)
+  .room-info
+    if data.comfort == true
+      .room-info__element-wrapper
+        .material-icons.room-info__icon insert_emoticon
+        .room-info__description-wrapper
+          .room-info__title Комфорт
+          .room-info__text Шумопоглощающие стены
+    if data.convience == true
+      .room-info__element-wrapper
+        .material-icons.room-info__icon location_city
+        .room-info__description-wrapper
+          .room-info__title Удобство
+          .room-info__text Окно в каждой из спален
+    if data.cosiness == true
+      .room-info__element-wrapper
+        .material-icons.room-info__icon whatshot
+        .room-info__description-wrapper
+          .room-info__title Уют
+          .room-info__text Номер оснащён камином

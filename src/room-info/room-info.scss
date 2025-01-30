@@ -9,6 +9,10 @@
     padding-bottom: 2rem;
     column-gap: 1rem;
     border-bottom: 0.1rem solid $color-dark-shade-10;
+
+    &:nth-child(3) {
+      border-bottom: none;
+    }
   }
 
   &__icon {
