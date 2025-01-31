@@ -32,6 +32,107 @@
     height: 100%;
   }
 
+  &__diagram {
+    display: flex;
+    align-items: end;
+    padding-top: 0.1rem;
+    column-gap: 3rem;
+  }
+
+  &__diagram-circle {
+    position: relative;
+    width: 12rem;
+    height: 12rem;
+  }
+
+  &__diagram-inner-elem {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+
+  &__diagram-satisfact {
+    @include primary-gradient($property: background, $direction: bottom);
+
+    mask: conic-gradient(rgb(255 255 255 / 0%) 0 1deg, #ffffff 1deg 89deg, rgb(255 255 255 / 0%) 89deg);
+  }
+
+  &__diagram-good {
+    @include secondary-gradient($property: background, $direction: left);
+
+    mask: conic-gradient(rgb(255 255 255 / 0%) 0 91deg, #ffffff 91deg 179deg, rgb(255 255 255 / 0%) 179deg);
+  }
+
+  &__diagram-fabulous {
+    background: linear-gradient(to bottom, #ffe39c, #ffba9c);
+    mask: conic-gradient(rgb(255 255 255 / 0%) 0 181deg, #ffffff 181deg 359deg, rgb(255 255 255 / 0%) 359deg 360deg);
+  }
+
+  &__diagram-voices-info {
+    top: 0.4rem;
+    left: 0.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 11.2rem;
+    height: 11.2rem;
+    font-weight: 700;
+    color: $color-purple;
+    background: #ffffff;
+  }
+
+  &__diagram-voices-num {
+    position: relative;
+    bottom: 0.3rem;
+    font-size: 2.4em;
+  }
+
+  &__diagram-voices-text {
+    position: relative;
+    bottom: 0.2rem;
+    font-size: 1.2em;
+    text-transform: uppercase;
+  }
+
+  &__diagram-legend {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.6rem;
+  }
+
+  &__diagram-legend-item {
+    display: flex;
+    align-items: center;
+    font-size: 1.4em;
+    column-gap: 0.5rem;
+
+    &::before {
+      content: ' ';
+      display: block;
+      width: 1rem;
+      height: 1rem;
+      border-radius: 50%;
+    }
+
+    &:nth-child(1)::before {
+      background: linear-gradient(to bottom, #ffe39c, #ffba9c);
+    }
+
+    &:nth-child(2)::before {
+      @include secondary-gradient($property: background, $direction: bottom);
+    }
+
+    &:nth-child(3)::before {
+      @include primary-gradient($property: background, $direction: bottom);
+    }
+
+    &:nth-child(4)::before {
+      background: linear-gradient(to bottom, #909090, #3d4975);
+    }
+  }
+
   @media (width <= 699px) {
     &__images {
       display: block;
