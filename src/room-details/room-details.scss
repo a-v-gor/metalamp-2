@@ -21,7 +21,39 @@
   }
 
   &__main-wrapper {
-    padding: 7rem 0;
+    padding: 0 0 6.1rem;
+    border-bottom: 0.1rem solid $color-dark-shade-25;
+  }
+
+  &__main {
+    display: grid;
+    grid-template-columns: 29.2rem 34.9rem 38rem;
+    gap: 1.5rem 7rem;
+    padding-top: 7rem;
+  }
+
+  &__reviews-block-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    grid-area: 2 / 1 / 3 / 3;
+  }
+
+  &__reviews-subtitle {
+    font-size: 1.4em;
+    color: $color-dark-shade-50;
+  }
+
+  &__reviews {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2.2rem;
+    padding-bottom: 1.6rem;
+  }
+
+  &__card-block {
+    grid-area: 1 / 3 / 4 / 4;
   }
 
   &__block-title {
@@ -131,6 +163,19 @@
     &:nth-child(4)::before {
       background: linear-gradient(to bottom, #909090, #3d4975);
     }
+  }
+
+  &__rules-title {
+    padding-left: 2rem;
+  }
+
+  &__paragraph {
+    font-size: 1.4em;
+    line-height: 1.7;
+  }
+
+  &__cancel {
+    padding-right: 0.4rem;
   }
 
   @media (width <= 699px) {
