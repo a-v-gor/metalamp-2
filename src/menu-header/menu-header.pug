@@ -9,7 +9,7 @@ mixin menu-header(data)
       nav.menu-header__nav
         ul.menu-header__ul
           li.menu-header__li
-            .menu-header__li-text.menu-header__li-text_active О нас
+            .menu-header__li-text(class = data.activeAboutUs == true ? "menu-header__li-text_active" : "") О нас
           li.menu-header__li 
             .menu-header__li-text Услуги
             .menu-header__li-icon.material-icons expand_more 
