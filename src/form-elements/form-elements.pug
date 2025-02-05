@@ -26,7 +26,8 @@ include ../comment/comment
       +input({id: "input-masked", label: "masked text field", placeholder: "ДД.ММ.ГГГГ", pattern: "(0[1-9]|[12][0-9]|3[01]).(0[1-9]|1[012]).202[4-6]", title: "Введите дату в формате ДД.ММ.ГГГГ"})
     +date-group({firstDateLabel: "date Dropdown", secondDateLabel: "date Dropdown", secondDateValue: "2019-08-19", id: "date-group"})
     +filter-date({title: "filter date dropdown"})
-    +form-subscribe-email({id: "subscribe", title: "subscription text field"})
+    .element__width-middle
+      +form-subscribe-email({id: "subscribe", title: "subscription text field"})
   .form-elements__group-elements
     +checkbox-buttons({title: "Checkbox Buttons"})
     +radio-buttons({label: true})

@@ -57,24 +57,3 @@ body {
     background-color: #f6f4f4;
   }
 }
-
-.header-footer__wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  padding: 0 14rem;
-  background: #ffffff;
-  box-shadow: 0 1rem 2rem $color-dark-shade-5;
-
-  @media (width <= 1199px) {
-    padding-right: 5rem;
-    padding-left: 5rem;
-  }
-}
-
-.wrapper {
-  width: 100%;
-  max-width: 116rem;
-  margin: 0 auto;
-}

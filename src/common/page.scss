@@ -37,6 +37,23 @@
     text-align: right;
   }
 
+  &__content-wrapper {
+    width: 100%;
+    padding: 0 14rem;
+    background: #ffffff;
+
+    @media (width <= 1199px) {
+      padding-right: 5rem;
+      padding-left: 5rem;
+    }
+  }
+
+  &__content {
+    width: 100%;
+    max-width: 116rem;
+    margin: 0 auto;
+  }
+
   @media (width <= 1199px) {
     &__main-wrapper {
       padding: 2rem 5rem 1rem;

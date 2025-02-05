@@ -4,36 +4,36 @@ include ../copyright/copyright
 include ../socials/socials
 
 mixin footer
-  footer.header-footer__wrapper.footer
-    .footer__menu-wrapper
-      .footer__menu.wrapper
-        .footer__info-wrapper 
-          +logo()
-          p.footer__info-text Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
-        ul.footer__nav-ul
-          li.footer__nav-li 
-            ul.footer__nav-item 
-              li.footer__nav-item-head навигация
-              li.footer__nav-item-link О нас
-              li.footer__nav-item-link Новости
-              li.footer__nav-item-link Служба поддержки
-              li.footer__nav-item-link Услуги
-          li.footer__nav-li 
-            ul.footer__nav-item 
-              li.footer__nav-item-head о нас
-              li.footer__nav-item-link О сервисе
-              li.footer__nav-item-link Наша команда
-              li.footer__nav-item-link Вакансии
-              li.footer__nav-item-link Инвесторы
-          li.footer__nav-li 
-            ul.footer__nav-item 
-              li.footer__nav-item-head Служба поддержки
-              li.footer__nav-item-link Соглашения
-              li.footer__nav-item-link Сообщества
-              li.footer__nav-item-link Связь с нами
-        .footer__subscribe
-          +form-subscribe-email({id: "footer-subscribe", title: "Подписка", description: "Получайте специальные предложения и новости сервиса"})
-    .footer__footer-wrapper
-      .footer__footer.wrapper
-        +copyright()
-        +socials()
+  footer.page__content-wrapper.footer__wrapper
+      .footer__menu-wrapper
+        .footer__menu.page__content
+          .footer__info-wrapper 
+            +logo()
+            p.footer__info-text Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
+          ul.footer__nav-ul
+            li.footer__nav-li 
+              ul.footer__nav-item 
+                li.footer__nav-item-head навигация
+                li.footer__nav-item-link О нас
+                li.footer__nav-item-link Новости
+                li.footer__nav-item-link Служба поддержки
+                li.footer__nav-item-link Услуги
+            li.footer__nav-li 
+              ul.footer__nav-item 
+                li.footer__nav-item-head о нас
+                li.footer__nav-item-link О сервисе
+                li.footer__nav-item-link Наша команда
+                li.footer__nav-item-link Вакансии
+                li.footer__nav-item-link Инвесторы
+            li.footer__nav-li 
+              ul.footer__nav-item 
+                li.footer__nav-item-head Служба поддержки
+                li.footer__nav-item-link Соглашения
+                li.footer__nav-item-link Сообщества
+                li.footer__nav-item-link Связь с нами
+          .footer__subscribe
+            +form-subscribe-email({id: "footer-subscribe", title: "Подписка", description: "Получайте специальные предложения и новости сервиса"})
+      .page__content
+        .footer__footer
+          +copyright()
+          +socials()
