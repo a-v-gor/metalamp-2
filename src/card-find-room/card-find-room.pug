@@ -10,6 +10,6 @@ mixin card-find-room(data)
       h3.card__title Найдём номера под ваши пожелания
       +date-group({id: data.id+"-date", firstDateLabel: "прибытие", secondDateLabel: "выезд"})
       +card-calendar({active: data.activeCalendar})
-      +dropdown({id: data.id+"-dropdown", label: "гости", type: "guests", expanded: data.expandGuests, withData: data.withGuests})
+      +dropdown({id: data.id+"-dropdown", title: "гости", type: "guests", expanded: data.expandGuests, withData: data.withGuests})
       .card__footer
         +button({size:"large", color:"dark", text: "подобрать номер", withArrow: true})

@@ -121,5 +121,13 @@
     &__detailed-subtitle-descr {
       font-size: 1em;
     }
+
+    &__footer .element__icon {
+      top: 0.9rem;
+    }
+
+    .dropdown__expand {
+      top: 4.5rem;
+    }
   }
 }

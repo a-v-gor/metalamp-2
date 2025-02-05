@@ -116,12 +116,6 @@
 
     &__footer {
       flex-direction: column;
-    }
-  }
-
-  @media (width <= 768px) {
-    &__footer {
-      flex-direction: column;
       row-gap: 2.3rem;
       padding-bottom: 18.7rem;
     }
@@ -137,6 +131,7 @@
     &__footer {
       height: auto;
       row-gap: 1rem;
+      padding-bottom: 0;
     }
   }
 

@@ -75,7 +75,8 @@
   }
 
   @media (width <= 479px) {
-    .element__icon {
+    &__convenience .element__icon,
+    &__guests .element__icon {
       top: 2rem;
     }
   }
