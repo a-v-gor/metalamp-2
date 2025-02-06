@@ -12,6 +12,12 @@
     "@stylistic/string-quotes": "single",
     "at-rule-no-unknown": null,
     "property-no-vendor-prefix": null,
-    "scss/at-rule-no-unknown": true
-  }
+    "scss/at-rule-no-unknown": true,
+    "declaration-block-no-duplicate-properties": [
+      true,
+      {
+        "ignore": ["consecutive-duplicates-with-different-syntaxes"]
+      }
+    ]
+  }  
 }

@@ -32,6 +32,10 @@
     padding-top: 7rem;
   }
 
+  &__main-child-block {
+    max-width: 71.2rem;
+  }
+
   &__reviews-block-wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -178,9 +182,39 @@
     padding-right: 0.4rem;
   }
 
+  @media (width < 1440px) {
+    &__main {
+      grid-template-columns: repeat(2, auto);
+      width: min-content;
+    }
+
+    &__card-block {
+      display: flex;
+      justify-content: center;
+      grid-area: 1 / 1 / 2 / 3;
+    }
+
+    &__reviews-block-wrapper {
+      grid-area: 3 / 1 / 4 / 3;
+    }
+  }
+
+  @media (width < 768px) {
+    &__main {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    &__card-block {
+      order: -1;
+    }
+  }
+
   @media (width <= 699px) {
     &__images {
       display: block;
+      height: auto;
     }
 
     &__img-wrapper {
@@ -188,6 +222,13 @@
       &:nth-child(3) {
         display: none;
       }
+    }
+
+    &__img {
+      width: 100%;
+      width: -moz-available;          /* WebKit-based browsers will ignore this. */
+      width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+      width: fill-available;
     }
   }
 }
