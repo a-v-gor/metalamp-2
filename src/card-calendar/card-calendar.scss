@@ -126,4 +126,58 @@
     justify-content: space-between;
     padding-top: 2rem;
   }
+
+  @media (width < 480px) {
+    width: 25rem;
+
+    &_active {
+      top: 14rem;
+    }
+
+    &__prev-month,
+    &__next-month {
+      font-size: 1.6em;
+    }
+
+    &__title {
+      font-size: 1.4em;
+    }
+
+    &__calendar-wrapper {
+      padding-top: 1rem;
+    }
+
+    &__calendar-item {
+      width: 3rem;
+      height: 3rem;
+      font-size: 1em;
+    }
+
+    &__date-selected::before {
+      width: 3rem;
+      height: 3.4rem;
+    }
+
+    &__date-selected-start::before,
+    &__date-selected-end::before {
+      width: 3.2rem;
+      height: 3.4rem;
+    }
+
+    &__date-selected-start::before {
+      right: 0;
+    }
+
+    &__date-selected-end::before {
+      left: 0;
+    }
+
+    &__buttons-wrapper {
+      padding-top: 1rem;
+    }
+
+    .button-link {
+      font-size: 1em;
+    }
+  }
 }
