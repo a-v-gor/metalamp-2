@@ -17,6 +17,7 @@ module.exports = {
         'search-room-preferences': './src/search-room-preferences/search-room-preferences.pug',
         'search-room-expand': './src/search-room-expand/search-room-expand.pug',
         'room-details': './src/room-details/room-details.pug',
+        'registration': './src/registration-page/registration-page.pug',
       },
       js: {
         // JS output filename

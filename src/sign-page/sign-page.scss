@@ -1,0 +1,28 @@
+.sign-page {
+  &__main-wrapper {
+    display: flex;
+    justify-content: center;
+    max-height: 68.3rem;
+    padding: 1.9rem;
+
+    .card {
+      left: 0.3rem;
+    }
+  }
+
+  &__background {
+    background-image: url('../common/img/background-sign-page.jpg');
+  }
+
+  @media (width < 700px) {
+    &__main-wrapper {
+      align-items: center;
+    }
+  }
+
+  @media (width < 480px) {
+    &__main-wrapper .button-dark {
+      height: 2.5rem;
+    }
+  }
+}

@@ -1,8 +1,8 @@
 include ../header/header
-include ../card-find-room/card-find-room
+include ../card-reg-account/card-reg-account
 include ../footer/footer
 
-mixin landing-page(data)
+mixin sign-page(data)
   doctype html
   html(lang="ru")
     head
@@ -14,9 +14,8 @@ mixin landing-page(data)
     body.page__body
       h1.title Toxin отель.
       +header({noUser: true})
-      main.page__main-wrapper 
-        .page__main-background
-        .page__main.landing-page__main
-          +card-find-room({id: data.id, activeCalendar: data.withCalendar, expandGuests: data.expandGuests, withGuests: data.withGuests})
-          .page__info Лучшие номера для вашей работы, отдыха и просто вдохновения
+      main.page__main-wrapper.sign-page__main-wrapper
+        .page__main-background.sign-page__background
+        if data.registration == true
+          +card-reg-account()
       +footer()
