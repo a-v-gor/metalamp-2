@@ -18,6 +18,7 @@ module.exports = {
         'search-room-expand': './src/search-room-expand/search-room-expand.pug',
         'room-details': './src/room-details/room-details.pug',
         'registration': './src/registration-page/registration-page.pug',
+        'sign-in': './src/sign-in-page/sign-in-page.pug'
       },
       js: {
         // JS output filename
