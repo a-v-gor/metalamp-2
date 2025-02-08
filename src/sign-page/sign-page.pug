@@ -1,5 +1,6 @@
 include ../header/header
 include ../card-reg-account/card-reg-account
+include ../card-login/card-login
 include ../footer/footer
 
 mixin sign-page(data)
@@ -14,8 +15,10 @@ mixin sign-page(data)
     body.page__body
       h1.title Toxin отель.
       +header({noUser: true})
-      main.page__main-wrapper.sign-page__main-wrapper
+      main.page__main-wrapper.sign-page__main-wrapper(class = data.registration == true ? "registration-page__main-wrapper" : "sign-in-page__main-wrapper")
         .page__main-background.sign-page__background
         if data.registration == true
           +card-reg-account()
+        if data.signIn == true
+          +card-login()
       +footer()
