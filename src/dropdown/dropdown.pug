@@ -8,7 +8,7 @@ mixin dropdown(data)
       .element__description= data.condition
     .element__label= data.title
     input(type="checkbox" id = data.id+"-inp" checked = data.expanded == true ? true : false).dropdown__checkbox
-    label.element__input.dropdown__input(for = data.id+"-inp")= data.type == "guests" ? (data.withData == true? "3 гостя" : "Сколько гостей") : "Удобства"
+    label.element__input.dropdown__input(for = data.id+"-inp")= data.type == "guests" ? (data.withData == true? "3 гостя" : "Сколько гостей") : (data.withData == true? "2 спальни, 2 кровати" : "Удобства")
     label(for = data.id+"-inp").material-icons.element__icon expand_more
     .dropdown__expand
       .dropdown__options-wrapper
@@ -33,5 +33,6 @@ mixin dropdown(data)
             button.dropdown__set-option-num.dropdown__increase-option-num +
       if data.type == "guests"
         .dropdown__buttons-wrapper
-          +button({type:"link", text: "очистить"})
           +button({type:"link", text: "применить"})
+          if data.withData == true
+            +button({type:"link", text: "очистить"})

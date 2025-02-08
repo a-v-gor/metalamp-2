@@ -21,7 +21,8 @@
     -webkit-appearance: none;
     appearance: none;
 
-    &::-webkit-slider-thumb {
+    &::-webkit-slider-thumb,
+    &::-moz-range-thumb {
       @include secondary-gradient($property: background, $direction: bottom);
 
       width: 1.6rem;
@@ -33,7 +34,8 @@
     }
 
     &:nth-child(3) {
-      &::-webkit-slider-thumb {
+      &::-webkit-slider-thumb,
+      &::-moz-range-thumb {
         opacity: 0;
       }
     }
