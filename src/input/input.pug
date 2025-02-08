@@ -1,6 +1,0 @@
-mixin input(inputData)
-  .form-elements__element-wrapper.element__wrapper.element__width-wide
-    if inputData.condition
-      .element__description= inputData.condition
-    label.element__label(for!= inputData.id)= inputData.label
-    input.element__input(placeholder=inputData.placeholder, id=inputData.id, type=inputData.type,  pattern=inputData.pattern title=inputData.title)&attributes(attributes)

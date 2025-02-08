@@ -1,8 +1,0 @@
-include ../logo/logo
-include ../menu-header/menu-header
-
-mixin header(data)
-  header.page__content-wrapper.header__wrapper 
-    .page__content.header
-      +logo()
-      +menu-header({noUser: data.noUser, userName: data.userName, activeAboutUs: data.activeAboutUs})
