@@ -21,7 +21,6 @@
     -webkit-appearance: none;
     appearance: none;
 
-    &::-webkit-slider-thumb,
     &::-moz-range-thumb {
       @include secondary-gradient($property: background, $direction: bottom);
 
@@ -33,8 +32,22 @@
       appearance: none;
     }
 
+    &::-webkit-slider-thumb {
+      @include secondary-gradient($property: background, $direction: bottom);
+
+      width: 1.6rem;
+      height: 1.6rem;
+      border: solid 0.2rem #ffffff;
+      border-radius: 50%;
+      -webkit-appearance: none;
+      appearance: none;
+    }
+
     &:nth-child(3) {
-      &::-webkit-slider-thumb,
+      &::-webkit-slider-thumb {
+        opacity: 0;
+      }
+
       &::-moz-range-thumb {
         opacity: 0;
       }

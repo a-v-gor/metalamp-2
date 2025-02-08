@@ -68,7 +68,8 @@ progress[value] {
 
 @supports (-webkit-appearance: none) or (-moz-appearance: none) {
   input[type='checkbox'],
-  input[type='radio'] {
+  input[type='radio'],
+  input[type='range'] {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
