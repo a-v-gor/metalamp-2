@@ -2,7 +2,7 @@ export default function updateDropdown(id) {
   const dropdown = document.getElementById(id);
   const optionsArr = dropdown.querySelectorAll('.dropdown__option');
   const label = dropdown.querySelector('label');
-  const clearButton = dropdown.querySelectorAll('.button-link')[1];
+  const clearButton = dropdown.querySelectorAll('.button-link')[1] || null;
   const type = dropdown.classList.contains('dropdown__guests') ? 'guests' : 'convenience';
   const optionsNums = dropdown.id === 'dropdown-guests-exp-1'||dropdown.id === 'card-room-cost-dropdown' ? [2, 1, 0] :
     dropdown.id === 'dropdown-convenience' || dropdown.id === 'dropdown-convenience-exp' ? [2, 2, 0] :
